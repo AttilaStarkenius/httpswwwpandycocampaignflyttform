@@ -1,0 +1,4 @@
+﻿Github publish project first create functions 
+then design, making similar pages 
+as https://www.pandy.co/campaign/flytt-form 
+and https://www.hemfrid.se/

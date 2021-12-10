@@ -1,0 +1,1000 @@
+﻿@*@{
+        ViewData["Title"] = "Home Page";
+    }
+
+    <div class="text-center">
+        <h1 class="display-4">Welcome</h1>
+        <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    </div>*@
+
+@*8.10.2021. I begin working with httpswwwpandycocampaignflyttform which will include my try to make
+        similar look as https://www.pandy.co/campaign/flytt-form and https://www.hemfrid.se/
+
+        10.10.2021. When I debug the web page Index.cshtml looks in browser like this: httpswwwpandycocampaignflyttform
+    Home
+    Privacy
+    Welcome
+    Learn about building Web apps with ASP.NET Core.
+
+    © 2021 - httpswwwpandycocampaignflyttform - Privacy
+
+    10.10.2021. First I take a look at https://www.pandy.co/campaign/flytt-form
+    and see that first there is Logo at top left side that, which of clicking
+    leads to page https://www.pandy.co/
+    I begin with that creating a "button" that has the logo image and is a link to https://www.pandy.co/
+    <button onclick="toHomePage()">pandy</button>
+
+*@
+
+@*<button onclick="toHomePage()">pandy</button>*@
+
+@* 12.10.2021. obviously nothing happens when clicking the button
+    because I have no site that link is pointing at so I create the function toHomePage()
+    with the code required to make the button
+    click lead user to page https://www.pandy.co/
+    13.10.2021. I use page https://stackoverflow.com/questions/5025941/is-there-a-way-to-get-a-button-element-to-link-to-a-location-without-wrapping
+    as help: <button onclick="window.location='https://www.pandy.co/';">pandy</button>
+*@
+
+<script>
+
+    // When the user scrolls the page, execute myFunction
+    window.onscroll = function () { myFunction() };
+
+    // Get the header
+    var header = document.getElementById("myHeader");
+
+    // Get the offset position of the navbar
+    var sticky = header.offsetTop;
+
+    // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+    function myFunction() {
+        if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+        } else {
+            header.classList.remove("sticky");
+        }
+    }
+
+    //I try: document.getElementById('textbox_id').value
+
+    //Save all input values to variables to be able to use them:
+    var size = document.getElementById('name').value;
+
+    var date = document.getElementById('start').value;
+
+    var streetAddress = document.getElementById('Gatuadress').value;
+
+    var zipCode = document.getElementById('Postnummer').value;
+
+    var floor = document.getElementById('Våning').value;
+
+    var elevator = document.getElementById('Hiss').value;
+
+
+
+    alert(size);
+
+    alert(document.getElementById('name').value);
+
+    const input = document.querySelector('input');
+    const log = document.getElementById('values');
+
+    input.addEventListener('input', updateValue);
+
+    function updateValue(e) {
+        log.textContent = e.target.value;
+
+        let theText = name.value;
+
+
+        //22.10.2021. When I debug the web page looks like this:
+        //httpswwwpandycocampaignflyttform
+        //Home
+        //Privacy
+        //pandy Dropdown
+        //Welcome
+        //Kostnadsfri flyttplanering
+
+        //Vi planerar din flytt med garanterat fasta priser
+
+
+        //Berätta kort om er flytt
+
+        //Hur stort bor ni ?
+
+        //    När flyttar ni ?
+        //        2018 - 07 - 22
+
+        //© 2021 - httpswwwpandycocampaignflyttform - Privacy
+        //I use https://stackoverflow.com/questions/32378590/set-date-input-fields-max-date-to-today
+        //but in opposite way, min date has to be today because it can't be earlier:
+        //document.getElementById("datefield").setAttribute("min", today);
+
+
+        var today = new Date();
+        var dd = today.getDate();
+        var mm = today.getMonth() + 1; //January is 0!
+        var yyyy = today.getFullYear();
+
+        if (dd < 10) {
+            dd = '0' + dd;
+        }
+
+        if (mm < 10) {
+            mm = '0' + mm;
+        }
+
+        today = yyyy + '-' + mm + '-' + dd;
+        document.getElementById("datefield").setAttribute("min", today);
+
+        $(function () {
+            $("#datepicker").datepicker();
+        });
+
+        const input = document.createElement("input");
+        input.setAttribute("type", "text");
+        document.body.appendChild(input);
+
+        //function handleSelect(elm) {
+        //    window.location = elm.value/* + ".php"; *//* .html if html file */
+        //}
+
+        //21.10.2021.function handleSelect(elm) {
+        //    window.location = elm.value/* + ".php"; *//* .html if html file */
+        //}
+        //doesn't work - clicking dropdown item doesn't lead anywhere so I change button to select:
+
+
+        /* When the user clicks on the button,
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        function myFloorFunction() {
+            document.getElementById("Våning").classList.toggle("show");
+        }
+
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+
+        Våning
+
+</script>
+
+@* 10.20.2021. now dropdownlist appears but I have to add correct links in the
+        dropdownlist - clicking a dropdownlist item doesn't lead to any website
+        also I notice it has to be hoverable so I add this:  /* Show the dropdown menu on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    '
+    which makes drowpdown list to open when hovering
+*@
+
+@* 21.10.2021. The dropdown menu items need to lead to specific websites so I use the website
+        https://stackoverflow.com/questions/27200833/hyperlink-and-dropdown-menu-in-javascript
+        as a help:
+        <script type="text/javascript">
+                window.addEventListener("load",go,false);
+
+
+                function go()
+                {
+                 var e = document.getElementById("dropdown");
+                 e.addEventListener("change",trigger,false);
+                }
+                function trigger()
+                {
+                var e = document.getElementById("dropdown");
+                 var url = e.options[e.selectedIndex].value;
+                 window.open(url);
+                 window.confirm("url successfull open");
+                }
+                </script>
+
+        I adjust that code to this page:
+        <script type="text/javascript">
+                window.addEventListener("load",go,false);
+
+
+                function go()
+                {
+                 var e = document.getElementById("dropdown");
+                 e.addEventListener("change",trigger,false);
+                }
+                function trigger()
+                {
+                var e = document.getElementById("dropdown");
+                 var url = e.options[e.selectedIndex].value;
+                 window.open(url);
+                 window.confirm("url successfull open");
+                }
+
+    /* When the user clicks on the button,
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+                </script>
+*@
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+<script src="C:\Users\symph\.nuget\packages\jquery\3.6.0\"></script>
+
+@* 22.10.2021. I add header with fixed position:
+                <div class="header" id="myHeader">
+              <h2>My Header</h2>
+            </div>
+            /* Style the header */
+        .header {
+          padding: 10px 16px;
+          background: #555;
+          color: #f1f1f1;
+        }
+
+        /* Page content */
+        .content {
+          padding: 16px;
+        }
+
+        /* The sticky class is added to the header with JS when it reaches its scroll position */
+        .sticky {
+          position: fixed;
+          top: 0;
+          width: 100%
+        }
+
+        /* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+        .sticky + .content {
+          padding-top: 102px;
+        }
+        // When the user scrolls the page, execute myFunction
+    window.onscroll = function() {myFunction()};
+
+    // Get the header
+    var header = document.getElementById("myHeader");
+
+    // Get the offset position of the navbar
+    var sticky = header.offsetTop;
+
+    // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+    function myFunction() {
+      if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+      } else {
+        header.classList.remove("sticky");
+      }
+    }
+*@
+
+<div class="header" id="myHeader" position="fixed">
+    @*<h2>My Header</h2>*@
+    <button class="pandyButton" onclick="window.location='https://www.pandy.co/';" @*position="fixed"*@>pandy</button>
+    <div class="dropdown" position="fixed">
+        <button onclick="myFunction()" onchange="javascript:handleSelect(this)" class="dropbtn">Våra tjänster</button>
+        @*Only våra tjänster is fixed position*@
+        <div position="fixed" id="myDropdown" class="dropdown-content">
+            <a href="https://www.pandy.co/campaign/flytt-form">Flytthjälp</a>
+            <a href="https://www.pandy.co/campaign/hemstad">Hemstäd</a>
+            <a href="https://www.pandy.co/campaign/flyttstad">Flyttstäd</a>
+            <a href="https://www.pandy.co/campaign/fixare">Fixare</a>
+            <a href="https://www.pandy.co/campaign/fonsterputs">Fönsterputs</a>
+        </div>
+    </div>
+    <button class="pandyförhemmetButton" onclick="window.location='https://www.pandy.co/hemmet';">Pandy för hemmet</button>
+    @* 22.10.2021. I add phone number image:
+        <img src="https://uploads-ssl.webflow.com/5a71f6b2b54d35000195bbbd/5f918e92a95769026cf2e062_phone.svg" loading="lazy" alt="" class="phone-color">
+    *@
+    @* 26.10.2021.and phone number itself: <div class="phoneNumber">08-332 118</div> *@
+    <img width="30" height="30" src="https://uploads-ssl.webflow.com/5a71f6b2b54d35000195bbbd/5f918e92a95769026cf2e062_phone.svg" loading="lazy" alt="" class="phone-color">
+    @*<div class="phoneNumber">08-332 118</div>*@
+    @* 26.10.2021. I replace unclickable div with a like in this website: https://stackoverflow.com/questions/17897213/how-to-call-a-phone-number-through-javascript-without-using-a-tag
+            <table>
+            <tr onclick="window.open('tel:08 332 118');">
+                <td>Phone: 08 332 118</td>
+            </tr>
+        </table>
+
+
+    *@
+
+
+    <table>
+        <tr onclick="window.open('tel:08 332 118');">
+            <td>Phone: 08 332 118</td>
+        </tr>
+    </table>
+
+
+</div>
+
+
+<button onclick="window.location='https://www.pandy.co/';">pandy</button>
+
+
+
+@* 13.10.2021. Then I think "Våra tjänster" is dropdown menu which
+        I try to make like this: <div class="dropdown">
+      <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+      <div id="myDropdown" class="dropdown-content">
+        <a href="#">Flytthjälp</a>
+        <a href="#">Hemstäd</a>
+        <a href="#">Flyttstäd</a>
+        <a href="#">Fixare</a>
+        <a href="#">Fönsterputs</a>
+      </div>
+    </div>
+*@
+
+@*<div class="dropdown">
+        <button onclick="myFunction()" onchange="javascript:handleSelect(this)" class="dropbtn">Våra tjänster</button>
+        <div id="myDropdown" class="dropdown-content">
+            <a href="https://www.pandy.co/campaign/flytt-form">Flytthjälp</a>
+            <a href="https://www.pandy.co/campaign/hemstad">Hemstäd</a>
+            <a href="https://www.pandy.co/campaign/flyttstad">Flyttstäd</a>
+            <a href="https://www.pandy.co/campaign/fixare">Fixare</a>
+            <a href="https://www.pandy.co/campaign/fonsterputs">Fönsterputs</a>
+        </div>
+    </div>*@
+@* 21.10.2021. I find solution to issue why links don't lead to any website I change this:
+            <div class="dropdown">
+            <button onclick="myFunction()" onchange="javascript:handleSelect(this)" class="dropbtn">Dropdown</button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="">Flytthjälp</a>
+                <a href="https://www.pandy.co/campaign/hemstad">Hemstäd</a>
+                <a href="#">Flyttstäd</a>
+                <a href="#">Fixare</a>
+                <a href="#">Fönsterputs</a>
+            </div>
+        </div>
+
+        to this:
+        <div class="dropdown">
+        <button onclick="myFunction()" onchange="javascript:handleSelect(this)" class="dropbtn">Dropdown</button>
+        <div id="myDropdown" class="dropdown-content">
+            <a href="https://www.pandy.co/campaign/flytt-form">Flytthjälp</a>
+            <a href="https://www.pandy.co/campaign/hemstad">Hemstäd</a>
+            <a href="https://www.pandy.co/campaign/flyttstad">Flyttstäd</a>
+            <a href="https://www.pandy.co/campaign/fixare">Fixare</a>
+            <a href="https://www.pandy.co/campaign/fonsterputs">Fönsterputs</a>
+        </div>
+    </div>
+*@
+
+@* 22.10.2021. Then I add text ""Kostnadsfri flyttplanering
+    Vi planerar din flytt med garanterat fasta priser":
+    <div class="text-left">
+        <h1 class="display-4">Welcome</h1>
+        <p>Kostnadsfri flyttplanering</p> <br/>
+            <p>Vi planerar din flytt med garanterat fasta priser</p>
+    </div>*@
+
+
+<div class="text-left">
+    <h1 class="display-4">Welcome</h1>
+    <p>Kostnadsfri flyttplanering</p> @*<br />*@
+    <p>Vi planerar din flytt med garanterat fasta priser</p><br />
+</div>
+
+@* 22.10.2021. I also add:         <p>Berätta kort om er flytt    </p>
+        and html datepicker:p>När flyttar ni? <input type="date" id="start" name="trip-start"
+           value="2018-07-22"
+           min="2018-01-01" max="2018-12-31">
+        var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth() + 1; //January is 0!
+    var yyyy = today.getFullYear();
+
+    if (dd < 10) {
+       dd = '0' + dd;
+    }
+
+    if (mm < 10) {
+       mm = '0' + mm;
+    }
+
+    today = yyyy + '-' + mm + '-' + dd;
+    document.getElementById("datefield").setAttribute("max", today);
+
+*@
+<p>Berätta kort om er flytt    </p>
+@* I add label m²: <label>m²</label>
+    and also: <label>(Tips: På vardagar är våra flyttar billigare!)</label>
+    I try to fix so that Hur stort bor ni?<input type="text" id="name" name="name"> can save information user writes:
+
+*@
+<p>
+    Hur stort bor ni?
+    @*<input type="text" id="name" name="name">*@
+    <input type="number" onchange="alert(document.getElementById('name').value)" placeholder="Ange storlek" name="name" id="name" /><label></label>
+<p id="values"></p>
+
+
+@* 22.10.2021. <input placeholder="Enter some text" name="name"/><label>m²</label>
+    <p id="values"></p> doesn't work
+    I try alert box: alert(name);
+    I make input text field "numbers only"
+    at least onchange="alert(document.getElementById('name').value)" works.
+
+*@
+<p>
+    När flyttar ni? <input type="date" id="start" name="trip-start"
+                           value="2021-10-22"
+                           min="2021-10-22" max="2026-10-22"> @*<p>Date: <input type="text" id="datepicker">*@
+                        <label>(Tips: På vardagar är våra flyttar billigare!)</label>
+                    <p>
+                        Mellan vilka adresser sker flytten?
+                    </p>
+                    <p>Från(Nuvarande adress)</p>
+                    @* I test this instead:
+                                                            <input placeholder="Enter some text" name="name"/>
+                                                    <p id="values"></p>
+                                                    const input = document.querySelector('input');
+                        const log = document.getElementById('values');
+
+                        input.addEventListener('input', updateValue);
+
+                        function updateValue(e) {
+                          log.textContent = e.target.value;
+                        }
+                        22.10.2021. I add street, zip code, floor and is there an elevator? option
+                    *@
+                    </p>
+
+                    <input type="text" onchange="alert(document.getElementById('name').value)" placeholder="Gatuadress" name="Gatuadress" id="Gatuadress" /><label></label>
+                    <input type="number" onchange="alert(document.getElementById('name').value)" placeholder="Postnummer" name="Postnummer" id="Postnummer" /><label></label>
+
+
+                    <div class="dropdown">
+                        <p>Våning?</p>@*<br />*@
+                        <button onclick="myFloorFunction()" onchange="javascript:handleSelect(this)" class="dropbtn">Välj</button>
+                        <div id="Våning" class="dropdown-content">
+                            <a href="">Bottenvåning</a>
+                            <a href="">1</a>
+                            <a href="">2</a>
+                            <a href="">3</a>
+                            <a href="">4</a>
+                            <a href="">5</a>
+                            <a href="">6</a>
+                            <a href="">7</a>
+                            <a href="">8</a>
+                            <a href="">9</a>
+                            <a href="">9+</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <p>Finns hiss?</p>
+                        <button onclick="myFloorFunction()" onchange="javascript:handleSelect(this)" class="dropbtn">Välj</button>
+                        <div id="Hiss" class="dropdown-content">
+                            <a href="">Nej</a>
+                            <a href="">Ja - liten hiss</a>
+                            <a href="">Ja - medelstor</a>
+                            <a href="">Ja - stor hiss</a>
+                        </div>
+                    </div>
+
+
+                    @* 26.10.2021. I add text on right top side of page and in case image doesn't load, text
+                        that shows up instead then is written in img element:alt="ZAVER logo should have shown here":
+                        <div>25
+                        m², från
+                        3650
+                        SEK, efter RUT-avdrag
+
+                        Välj mellan fasta eller rörligt pris
+
+                        Fullt försäkrad enligt BOHAG 2010
+
+                        Vi sköter RUT-avdraget åt er
+
+                        Säkra betalningar med
+                        <img src="https://uploads-ssl.webflow.com/5a71f6b2b54d35000195bbbd/612360216e31a3f9ad82f184_Zaver_Logotype_Circle_White_Plate_797x400.svg"
+                        loading="lazy" alt="ZAVER logo should have shown here" class="zaverImage">
+                        </div>
+                    *@
+                    <div>
+                        25
+                        m², från
+                        3650
+                        SEK, efter RUT-avdrag
+
+                        Välj mellan fasta eller rörligt pris
+
+                        Fullt försäkrad enligt BOHAG 2010
+
+                        Vi sköter RUT-avdraget åt er
+
+                        Säkra betalningar med
+                        <img width="50" height="50" src="https://uploads-ssl.webflow.com/5a71f6b2b54d35000195bbbd/612360216e31a3f9ad82f184_Zaver_Logotype_Circle_White_Plate_797x400.svg"
+                             loading="lazy" alt="ZAVER logo should have shown here" class="zaverImage">
+                        <br>
+                        Vanliga frågor
+                    </div>
+
+                    @* 26.10.2021. I make image smaller like this: <img width="30" height="30"
+                        because when I debug Index.csthml looks like this with big
+                            image almost as big as rest of the page(not showing here): pandy Våra tjänster Pandy för hemmet
+                        Phone: 08 332 118
+                        pandy
+                        Welcome
+                        Kostnadsfri flyttplanering
+
+                        Vi planerar din flytt med garanterat fasta priser
+
+
+                        Berätta kort om er flytt
+
+                        Hur stort bor ni?
+                        Ange storlek
+
+                        När flyttar ni?
+                        2021-10-22
+                         (Tips: På vardagar är våra flyttar billigare!)
+
+                        Mellan vilka adresser sker flytten?
+
+                        Från(Nuvarande adress)
+
+                        Gatuadress
+
+                        Postnummer
+
+                        Våning?
+
+                        Välj
+                        Finns hiss?
+
+                        Välj
+                        25 m², från 3650 SEK, efter RUT-avdrag Välj mellan fasta eller rörligt pris Fullt försäkrad enligt BOHAG 2010 Vi sköter RUT-avdraget åt er Säkra betalningar med ZAVER logo should have shown here
+                        © 2021 - httpswwwpandycocampaignflyttform - Privacy
+                        </br>
+                        Vanliga frågor*@
+
+
+                    @* 26.10.2021. I think the boxes on the right bottom are "accordions"
+                                                like explained on this website: https://getbootstrap.com/docs/5.0/components/accordion/
+                                                I add code from https://getbootstrap.com/docs/5.0/components/accordion/:
+                                                <div class="accordion" id="accordionExample">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Accordion Item #1
+                              </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                              <div class="accordion-body">
+                                <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                              </div>
+                            </div>
+                          </div>
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Accordion Item #2
+                              </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                              <div class="accordion-body">
+                                <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                              </div>
+                            </div>
+                          </div>
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Accordion Item #3
+                              </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                              <div class="accordion-body">
+                                <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    *@
+
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Accordion Item #1
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Accordion Item #2
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Accordion Item #3
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    @* 26.10.2021. I add a new .cshtml file httpswwwhemfridse.cshtml to
+                                                make a similar page as https://www.hemfrid.se/
+                                                an by the way Index.cshtml looks like this: pandy Våra tjänster Pandy för hemmet
+                        Phone: 08 332 118
+                        pandy
+                        Welcome
+                        Kostnadsfri flyttplanering
+
+                        Vi planerar din flytt med garanterat fasta priser
+
+
+                        Berätta kort om er flytt
+
+                        Hur stort bor ni?
+                        Ange storlek
+
+                        När flyttar ni?
+                        2021-10-22
+                         (Tips: På vardagar är våra flyttar billigare!)
+
+                        Mellan vilka adresser sker flytten?
+
+                        Från(Nuvarande adress)
+
+                        Gatuadress
+
+                        Postnummer
+
+                        Våning?
+
+                        Välj
+                        Finns hiss?
+
+                        Välj
+                        25 m², från 3650 SEK, efter RUT-avdrag Välj mellan fasta eller rörligt pris Fullt försäkrad enligt BOHAG 2010 Vi sköter RUT-avdraget åt er Säkra betalningar med ZAVER logo should have shown here
+                        Vanliga frågor
+                        Accordion Item #1
+                        This is the first item's accordion body. It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the .accordion-body, though the transition does limit overflow.
+                        Accordion Item #2
+                        Accordion Item #3
+                        © 2021 - httpswwwpandycocampaignflyttform - Privacy*@
+
+                    @*<input type="number" onchange="alert(document.getElementById('name').value)" placeholder="Ange storlek" name="name" id="name" /><label>m²</label>*@
+
+
+                    @* 22.10.2021. I add a text box "Ange storlek" and a datepicker "Välj datum:
+                          const input = document.createElement("input");
+                          input.setAttribute("type", "text");
+                          document.body.appendChild(input);
+                          <h1>Create Textbox element using JavaScript</h1>
+                        <input type="text">
+                          "*@
+
+
+                    @* 18.10.2021. I debug and website looks like this: httpswwwpandycocampaignflyttform
+                            Home
+                            Privacy
+                            Welcome
+                            Learn about building Web apps with ASP.NET Core.
+
+                            pandy
+                            Dropdown
+                            Flytthjälp Hemstäd Flyttstäd Fixare Fönsterputs
+                            © 2021 - httpswwwpandycocampaignflyttform - Privacy
+
+                            18.10.2021. because "Dropdown menu" is only a button whose clicking doesn't even lead
+                            to any page I use this site as help: https://www.w3schools.com/howto/howto_js_dropdown.asp
+
+                            I do like this:
+                            <style>
+                            /* Dropdown Button */
+                        .dropbtn {
+                          background-color: #3498DB;
+                          color: white;
+                          padding: 16px;
+                          font-size: 16px;
+                          border: none;
+                          cursor: pointer;
+                        }
+
+                        /* Dropdown button on hover & focus */
+                        .dropbtn:hover, .dropbtn:focus {
+                          background-color: #2980B9;
+                        }
+
+                        /* The container <div> - needed to position the dropdown content */
+                        .dropdown {
+                          position: relative;
+                          display: inline-block;
+                        }
+
+                        /* Dropdown Content (Hidden by Default) */
+                        .dropdown-content {
+                          display: none;
+                          position: absolute;
+                          background-color: #f1f1f1;
+                          min-width: 160px;
+                          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                          z-index: 1;
+                        }
+
+                        /* Links inside the dropdown */
+                        .dropdown-content a {
+                          color: black;
+                          padding: 12px 16px;
+                          text-decoration: none;
+                          display: block;
+                        }
+
+                        /* Change color of dropdown links on hover */
+                        .dropdown-content a:hover {background-color: #ddd}
+
+                        /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+                        .show {display:block;}
+                            </style>
+                    *@
+
+                    <style>
+
+                        /*22.10.2021. I try to add fixed styling to two buttons:
+                                                    .pandyButton{position: fixed;}
+                                                    .pandyförhemmetButton{position: fixed;}
+
+
+                                                */
+
+                        .pandyButton {
+                            position: relative;
+                        }
+
+                        .pandyförhemmetButton {
+                            position: relative;
+                        }
+
+                        /* Style the header */
+                        .header {
+                            padding: 10px 16px;
+                            background: #555;
+                            color: #f1f1f1;
+                            /*22.10.2021 header isn't fixed I try to add: position: fixed;
+                        */ position: fixed;
+                        }
+
+                        /* Page content */
+                        .content {
+                            padding: 16px;
+                        }
+
+                        /* The sticky class is added to the header with JS when it reaches its scroll position */
+                        .sticky {
+                            position: fixed;
+                            top: 0;
+                            width: 100%
+                        }
+
+                            /* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+                            .sticky + .content {
+                                padding-top: 102px;
+                            }
+
+                        /* Dropdown Button */
+                        .dropbtn {
+                            background-color: white;
+                            color: black;
+                            padding: 16px;
+                            font-size: 16px;
+                            border: none;
+                            cursor: pointer;
+                            /*                            position:absolute
+                        */ /*                            position: relative;
+                        */ /*                            position: fixed;
+                        */
+                        }
+
+                            /* Dropdown button on hover & focus */
+                            .dropbtn:hover, .dropbtn:focus {
+                                background-color: #2980B9;
+                            }
+
+                        /* The container <div> - needed to position the dropdown content */
+                        .dropdown {
+                            position: relative;
+                            display: inline-block;
+                        }
+
+                        /* Dropdown Content (Hidden by Default) */
+                        .dropdown-content {
+                            display: none;
+                            position: absolute;
+                            background-color: #f1f1f1;
+                            min-width: 160px;
+                            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                            z-index: 1;
+                        }
+
+                            /* Links inside the dropdown */
+                            .dropdown-content a {
+                                color: black;
+                                padding: 12px 16px;
+                                text-decoration: none;
+                                display: block;
+                            }
+
+                                .dropdown-content a:hover {
+                                    background-color: white
+                                }
+
+                        /* Show the dropdown menu on hover */
+                        .dropdown:hover .dropdown-content {
+                            display: block;
+                        }
+
+                        /* Change the background color of the dropdown button when the dropdown content is shown */
+                        /*.dropdown:hover .dropbtn {
+                                                    background-color: #3e8e41;
+                                                }*/
+
+                        /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+                        .show {
+                            display: block;
+                        }
+                    </style>
+
+                    @* 18.10.2021. Now the background of dropdown button is blue
+                        because of dropbtn {
+                            background-color: #3498DB;
+
+                        but it should be white so I change that to dropbtn {
+                            background-color: white;
+
+                        and text color is white I change that to black: dropbtn {
+                            background-color: white;
+                            color: black;
+                    *@
+
+                    @* 20.10.2021. When I debug it looks like this: httpswwwpandycocampaignflyttform
+                            Home
+                            Privacy
+                            Welcome
+                            Learn about building Web apps with ASP.NET Core.
+
+                            pandy Dropdown
+                            © 2021 - httpswwwpandycocampaignflyttform - Privacy
+
+
+                            Dropdownlist is still only a button so I fix that: /*
+                        <script>
+                        When the user clicks on the button,
+                        toggle between hiding and showing the dropdown content */
+                        function myFunction() {
+                          document.getElementById("myDropdown").classList.toggle("show");
+                        }
+
+                        // Close the dropdown menu if the user clicks outside of it
+                        window.onclick = function(event) {
+                          if (!event.target.matches('.dropbtn')) {
+                            var dropdowns = document.getElementsByClassName("dropdown-content");
+                            var i;
+                            for (i = 0; i < dropdowns.length; i++) {
+                              var openDropdown = dropdowns[i];
+                              if (openDropdown.classList.contains('show')) {
+                                openDropdown.classList.remove('show');
+                              }
+                            }
+                          }
+                        }
+                        </script>
+                    *@
+
+
+
+                    @*<script type="text/javascript">
+                            window.addEventListener("load", go, false);
+
+
+                            function go() {
+                                var e = document.getElementById("myDropdown");
+                                e.addEventListener("change", trigger, false);
+                            }
+                            function trigger() {
+                                var e = document.getElementById("myDropdown");
+                                var url = e.options[e.selectedIndex].value;
+                                window.open(url);
+                                window.confirm("url successfull open");
+                            }
+                        </script>*@
+
+                    @* 21.10.2021. länkarna leder fortfarande ingenstans:
+                        <script type="text/javascript">
+                        window.addEventListener("load", go, false);
+
+
+                        function go() {
+                            var e = document.getElementById("myDropdown");
+                            e.addEventListener("change", trigger, false);
+                        }
+                        function trigger() {
+                            var e = document.getElementById("myDropdown");
+                            var url = e.options[e.selectedIndex].value;
+                            window.open(url);
+                            window.confirm("url successfull open");
+                        }
+                        </script>
+                        so I test to change this:
+                        window.onclick = function (event) {
+                            if (!event.target.matches('.dropbtn')) {
+                                var dropdowns = document.getElementsByClassName("dropdown-content");
+                                var i;
+                                for (i = 0; i < dropdowns.length; i++) {
+                                    var openDropdown = dropdowns[i];
+                                    if (openDropdown.classList.contains('show')) {
+                                        openDropdown.classList.remove('show');
+                                    }
+                                }
+                            }
+                        }
+
+                        to this:
+                        window.onclick = function (event) {
+                            if (!event.target.matches('.dropbtn')) {
+                                var dropdowns = document.getElementsByClassName("dropdown-content");
+                                var i;
+                                for (i = 0; i < dropdowns.length; i++) {
+                                    var openDropdown = dropdowns[i];
+                                    if (openDropdown.classList.contains('show')) {
+                                        openDropdown.classList.remove('show');
+                                    }
+                                }
+                            }
+                        }
+
+                        (I use the website https://www.quora.com/How-do-I-create-a-hyperlink-in-a-drop-down-list-in-HTML
+                        as help)
+                    *@
