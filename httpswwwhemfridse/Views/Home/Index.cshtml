@@ -305,6 +305,43 @@
     @* 27.11.2021. I try to use response value of iframe:     parent.document.getElementById('xx').innerHTML = "hello world";
     *@
     <script>
+
+        //12.12.2021. I try to add javascript to button: scrollToTop
+        //function scrollToTop() {
+        //    document.getElementsByClassName('_38Ags _2giER _2qY9g').style.visibility = 'visible';
+        //}
+
+        //scrollToTop
+        //function scrollToTop() {
+        //    document.getElementsByClassName('_38Ags _2giER _2qY9g').style.visibility = 'visible';
+        //}
+
+        //16.12.2021. I try to adjust javascript to button to scroll to top of the page
+        //to fit the element name's in my project: scrollToTop
+        //function scrollToTop() {
+        //    document.getElementsByClassName('_38Ags _2giER _2qY9g').style.visibility = 'visible';
+        //}
+        //I use this website as help: https://stackoverflow.com/questions/1144805/scroll-to-the-top-of-the-page-using-javascript
+        //like this: window.scrollTo(0,0);
+        //I try to adjust: $("a[href='#top']").click(function() {
+        //$("html, body").animate({ scrollTop: 0 }, "slow");
+        //return false;
+        //like this: $("_38Ags _2giER _2qY9g").click(function () {
+        //$("html, body").animate({ scrollTop: 0 }, "slow");
+        //return false;
+        //});
+
+        $('._38Ags _2giER _2qY9g').click(function () {
+            $("html, body").animate({ scrollTop: 0 }, "slow");
+            return false;
+        });
+
+        //16.12.2021. This doesn't scroll up to top of page when I click on the button: $('._38Ags _2giER _2qY9g').click(function () {
+        //    $("html, body").animate({ scrollTop: 0 }, "slow");
+        //    return false;
+        //});
+        //16.12.2021. I try to commit all changes to save my changes to the local repository.
+
         alert(parent.document.getElementById('chatBoxIframe').innerHTML);
         //27.11.2021. This doesn't alert anything of Iframe:
         //    alert(parent.document.getElementById(chatBoxIframe).innerHTML);
@@ -653,7 +690,7 @@ Vi är nästan 2 300 engagerade medarbetare på Hemfrid. Det som förenar oss ä
             7.12.2021.The arrow image doesn't show on page so I add additional styling: .R2bqr {
     width: 16px;
 }
-            but still nothing shows up, I add more styling: 
+            but still nothing shows up, I add more styling:
 
         */
 
@@ -4186,38 +4223,38 @@ Vi är nästan 2 300 engagerade medarbetare på Hemfrid. Det som förenar oss ä
             </div>
             <form method="post">
                 @* 28.10.2021. The images have I gotten in svg format from website
-                            and I created two input text boxes for area code and square meters
-                            also I try to make form automatically submit
-                            when both text boxes are filled by user and use those
-                            values just like on the website: https://www.hemfrid.se/
-                                I try to use this website as help: https://stackoverflow.com/questions/50583211/how-to-auto-submit-a-form-with-an-textbox-onchange-value
-                                like this: <select id="periodname" class="drpdwn" value=" " onchange='this.form.submit()'>
-                    $("#textF").keyup(function() {
-                        console.log($("#textF").val());
-                        $('#form2').delay(200).submit();
-                    });
+                                       and I created two input text boxes for area code and square meters
+                                       also I try to make form automatically submit
+                                       when both text boxes are filled by user and use those
+                                       values just like on the website: https://www.hemfrid.se/
+                                           I try to use this website as help: https://stackoverflow.com/questions/50583211/how-to-auto-submit-a-form-with-an-textbox-onchange-value
+                                           like this: <select id="periodname" class="drpdwn" value=" " onchange='this.form.submit()'>
+                               $("#textF").keyup(function() {
+                                   console.log($("#textF").val());
+                                   $('#form2').delay(200).submit();
+                               });
 
-                    $("#textF2").change(function() {
-                        console.log($("#textF2").val());
-                        $('#form2').delay(200).submit();
-                    });
-                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-                    <form action="path1">
-                        <select id="periodname" class="drpdwn" value=" " onchange='this.form.submit()'>
-                            <option>test1 </option>
-                            <option>test2 </option>
-                            <option>test3 </option>
-                        </select>
-                    </form>
-
-
+                               $("#textF2").change(function() {
+                                   console.log($("#textF2").val());
+                                   $('#form2').delay(200).submit();
+                               });
+                               <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+                               <form action="path1">
+                                   <select id="periodname" class="drpdwn" value=" " onchange='this.form.submit()'>
+                                       <option>test1 </option>
+                                       <option>test2 </option>
+                                       <option>test3 </option>
+                                   </select>
+                               </form>
 
 
-                    <form action="path2" id="form2">
-                        <input type="text" id="textF" placeholder="onkeyup()">
-                        <input type="text" id="textF2" placeholder="onchange()">
-                    </form>
-                *@
+
+
+                               <form action="path2" id="form2">
+                                   <input type="text" id="textF" placeholder="onkeyup()">
+                                   <input type="text" id="textF2" placeholder="onchange()">
+                               </form>
+                    n I look at        *@
                 <script>
 
                     @* 7.12.2021.When I inspect page in mozilla firefox it seems some arrow element
@@ -4229,11 +4266,25 @@ Vi är nästan 2 300 engagerade medarbetare på Hemfrid. Det som förenar oss ä
 
                         *@
 
+                    //document.body.scrollTop = document.documentElement.scrollTop = 0;
+
+                    //10.12.2021.In menu Git - Create new git repository Create and publish
+                    //public repository httpswwwpandycocampaignflyttform and then I look at website https://github.com/AttilaStarkenius/httpswwwpandycocampaignflyttform
+                    //and project is pushed to that repository.
+
+                    //12.12.2021. I continue with fixing javascript of scroll to top of page button like
+                    // I commented earlier: "7.12.2021.When I inspect page in mozilla firefox it seems some arrow element
+                    //is behind iframe with id "chatBoxIframe" so I comment out chatBoxIframe: <iframe id="chatBoxIframe" name="f3546a1810acf3c" width="1000px" height="1000px" data-testid="dialog_iframe" title="" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="https://www.facebook.com/v9.0/plugins/customerchat.php?app_id=508307423170943&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df35a37eba8fd468%26domain%3Dwww.hemfrid.se%26is_canvas%3Dfalse%26origin%3Dhttps%253A%252F%252Fwww.hemfrid.se%252Ff288422b55e9084%26relation%3Dparent.parent&amp;container_width=0&amp;current_url=https%3A%2F%2Fwww.hemfrid.se%2F&amp;locale=sv_SE&amp;log_id=ab3aca7e-e818-41b5-a908-b588a24f2b98&amp;logged_in_greeting=Hej%2C%20hur%20kan%20vi%20hj%C3%A4lpa%20dig%3F&amp;logged_out_greeting=Hej%2C%20hur%20kan%20vi%20hj%C3%A4lpa%20dig%3F&amp;page_id=105393792942480&amp;request_time=1637878397100&amp;sdk=joey&amp;theme_color=%23003b5c" style="width: 399px; padding: 0px; position: fixed; z-index: 2147483646; border-radius: 16px; top: auto; background: none; bottom: 84px; max-height: calc(100% - 84px); right: 4px; margin-right: 12px; height: 321px; visibility: visible;" class="">
+                    //    it works: now I see the ""to the top of page arrow" and even facebook chat icon. When
+                    //    I click on the arrow nothing happens though, so I add javascript with help
+                    //    of this website: https://stackoverflow.com/questions/4210798/how-to-scroll-to-top-of-page-with-javascript-jquery
+                    //    like this: document.body.scrollTop = document.documentElement.scrollTop = 0;"
+
                     document.body.scrollTop = document.documentElement.scrollTop = 0;
 
-
-
-
+                    //12.12.2021. Nothing happens though when I click scroll to top button even
+                    //if there's this code:                     document.body.scrollTop = document.documentElement.scrollTop = 0;
+                    //So I adjust it to fit my elemenent names:
 
             /*28.10.2021. I try to use this website as help:
               //https://stackoverflow.com/questions/27829051/enable-submit-button-only-when-all-fields-are-filled
@@ -5931,7 +5982,18 @@ $("input[type='submit']").attr("disabled", "disabled");
         doesn't work.
         I try to create arrow to scroll to the top of the page: <div class="_38Ags _2giER _2qY9g"><svg height="16" viewBox="0 0 16 16" width="16" class="R2bqr"><path d="m30.6833333 14.5-1.898 1.9281818 4.1173334 4.2109091h-10.9026667v2.7218182h10.9026667l-4.1173334 4.2109091 1.898 1.9281818 7.3166667-7.5z" fill="#6c728a" transform="matrix(0 -1 -1 0 30 38)"></path></svg></div>
 *@
-<div class="_38Ags _2giER _2qY9g"><svg height="16" viewBox="0 0 16 16" width="16" class="R2bqr"><path d="m30.6833333 14.5-1.898 1.9281818 4.1173334 4.2109091h-10.9026667v2.7218182h10.9026667l-4.1173334 4.2109091 1.898 1.9281818 7.3166667-7.5z" fill="#6c728a" transform="matrix(0 -1 -1 0 30 38)"></path></svg></div>
+@*<div class="_38Ags _2giER _2qY9g"><svg height="16" viewBox="0 0 16 16" width="16" class="R2bqr"><path d="m30.6833333 14.5-1.898 1.9281818 4.1173334 4.2109091h-10.9026667v2.7218182h10.9026667l-4.1173334 4.2109091 1.898 1.9281818 7.3166667-7.5z" fill="#6c728a" transform="matrix(0 -1 -1 0 30 38)"></path></svg></div>*@
+
+@* 12.12.2021. I try to add onclick event to make scroll to top button work: <div class="_38Ags _2giER _2qY9g"><svg height="16" viewBox="0 0 16 16" width="16" class="R2bqr"><path d="m30.6833333 14.5-1.898 1.9281818 4.1173334 4.2109091h-10.9026667v2.7218182h10.9026667l-4.1173334 4.2109091 1.898 1.9281818 7.3166667-7.5z" fill="#6c728a" transform="matrix(0 -1 -1 0 30 38)"></path></svg></div>
+    like in this website: https://stackoverflow.com/questions/12945825/adding-an-onclick-event-to-a-div-element
+    doing like this: <div class="_38Ags _2giER _2qY9g" onclick="scrollToTop"><svg height="16" viewBox="0 0 16 16" width="16" class="R2bqr"><path d="m30.6833333 14.5-1.898 1.9281818 4.1173334 4.2109091h-10.9026667v2.7218182h10.9026667l-4.1173334 4.2109091 1.898 1.9281818 7.3166667-7.5z" fill="#6c728a" transform="matrix(0 -1 -1 0 30 38)"></path></svg></div>
+
+*@
+<div class="_38Ags _2giER _2qY9g" @*onclick="scrollToTop"*@><svg height="16" viewBox="0 0 16 16" width="16" class="R2bqr"><path d="m30.6833333 14.5-1.898 1.9281818 4.1173334 4.2109091h-10.9026667v2.7218182h10.9026667l-4.1173334 4.2109091 1.898 1.9281818 7.3166667-7.5z" fill="#6c728a" transform="matrix(0 -1 -1 0 30 38)"></path></svg></div>
+
+
+<div class="_38Ags _2giER _2qY9g" @*onclick=""*@><svg height="16" viewBox="0 0 16 16" width="16" class="R2bqr"><path d="m30.6833333 14.5-1.898 1.9281818 4.1173334 4.2109091h-10.9026667v2.7218182h10.9026667l-4.1173334 4.2109091 1.898 1.9281818 7.3166667-7.5z" fill="#6c728a" transform="matrix(0 -1 -1 0 30 38)"></path></svg></div>
+
 
 @* 5.12.2021. adding arrow <div class="_38Ags _2giER _2qY9g"><svg height="16" viewBox="0 0 16 16" width="16" class="R2bqr"><path d="m30.6833333 14.5-1.898 1.9281818 4.1173334 4.2109091h-10.9026667v2.7218182h10.9026667l-4.1173334 4.2109091 1.898 1.9281818 7.3166667-7.5z" fill="#6c728a" transform="matrix(0 -1 -1 0 30 38)"></path></svg></div>
     to bottom of page doesn't make it show up so I add styling:
