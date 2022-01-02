@@ -700,20 +700,181 @@ I succeeded and get message: Commit 862445aa created locally. Then I push and su
         }
     @*</style>*@
 
+        /*.contentleft {
+            float: left;
+        }*/
+
+/*30.12.2021. While trying to solve the issue with middle content floating under contentleft I notice
+    that .contentleft has styling float:left; I try to use float:left even for middle content
+    to force it to lay it self against the border of left content as the first solution,
+    then trying to make it float exactly in the middle of the page:
+*/
+
+        /*.contentright {
+            float: right;
+        }*/
+
+        /*30.12.2021.  So I decide to use class _2bbcB as a "contentmiddle" css class to have more control over middle content: ._2bbcB{
+            float: left; still doesn't make any difference, and neither does float: right.
+                }*/
+
+        /*._2bbcB {
+            float: right;*/
+            /*30.12.2021. I try to add css properties regarding both contentleft and contentright: width: 300px;
+            border: 3px solid #00CD00;
+            padding: 0;
+            font-family: Arial, Times, serif; that doesn't make any difference. I change widths
+                from 300px to 300px so that three boxes fit viewport.
+            */
+            /*width: 300px;
+            border: 3px solid #00CD00;
+            padding: 0;
+            font-family: Arial, Times, serif;
+        }
+
+        
+
+
+
+        .contentleft, .contentright {
+            width: 300px;
+            border: 3px solid #00CD00;
+            padding: 0;
+            font-family: Arial, Times, serif;
+        }*/
+
+
+/*31.12.2021. I make all threee boxeshigher from:         .contentleft {
+            float: left;
+        }
+
+/*30.12.2021. While trying to solve the issue with middle content floating under contentleft I notice
+    that .contentleft has styling float:left; I try to use float:left even for middle content
+    to force it to lay it self against the border of left content as the first solution,
+    then trying to make it float exactly in the middle of the page:
+*/
+
+        /*.contentright {
+            float: right;
+        }*/
+
+        /*30.12.2021.  So I decide to use class _2bbcB as a "contentmiddle" css class to have more control over middle content: ._2bbcB{
+            float: left; still doesn't make any difference, and neither does float: right.
+                }*/
+
+        /*._2bbcB {
+            float: right;*/
+            /*30.12.2021. I try to add css properties regarding both contentleft and contentright: width: 300px;
+            border: 3px solid #00CD00;
+            padding: 0;
+            font-family: Arial, Times, serif; that doesn't make any difference. I change widths
+                from 300px to 300px so that three boxes fit viewport.
+            */
+        /*width: 300px;
+            border: 3px solid #00CD00;
+            padding: 0;
+            font-family: Arial, Times, serif;
+        }
+
+        
+
+
+
+        .contentleft, .contentright {
+            width: 300px;
+            border: 3px solid #00CD00;
+            padding: 0;
+            font-family: Arial, Times, serif;
+        }
+        
+        to:  ._2bbcB {
+*/ /*            float: right;
+*/ /*30.12.2021. I try to add css properties regarding both contentleft and contentright: width: 300px;
+            border: 3px solid #00CD00;
+            padding: 0;
+            font-family: Arial, Times, serif; that doesn't make any difference. I change widths
+                from 300px to 300px so that three boxes fit viewport.
+            */
+        /* width: 300px;
+            border: 3px solid #00CD00;
+            padding: 0;
+            font-family: Arial, Times, serif;
+        }*/
+
+
+
+
+
+/*        ._2bbcB, .contentleft, .contentright {
+            width: 300px;
+            border: 3px solid #00CD00;
+            padding: 0;
+            font-family: Arial, Times, serif;
+        }
+
+    But it doesn't help; middle content still floats left.
+*/
+
+
+
         .contentleft {
             float: left;
         }
+
+        /*30.12.2021. While trying to solve the issue with middle content floating under contentleft I notice
+    that .contentleft has styling float:left; I try to use float:left even for middle content
+    to force it to lay it self against the border of left content as the first solution,
+    then trying to make it float exactly in the middle of the page:
+*/
 
         .contentright {
             float: right;
         }
 
-        .contentleft, .contentright {
-            width: 450px;
+        /*30.12.2021.  So I decide to use class _2bbcB as a "contentmiddle" css class to have more control over middle content: ._2bbcB{
+            float: left; still doesn't make any difference, and neither does float: right.
+                }*/
+
+/*        ._2bbcB {
+*//*            float: right;
+*/            /*30.12.2021. I try to add css properties regarding both contentleft and contentright: width: 300px;
+            border: 3px solid #00CD00;
+            padding: 0;
+            font-family: Arial, Times, serif; that doesn't make any difference. I change widths
+                from 300px to 300px so that three boxes fit viewport.
+            */
+           /* width: 300px;
+            border: 3px solid #00CD00;
+            padding: 0;
+            font-family: Arial, Times, serif;
+        }*/
+
+
+
+
+
+        . /*_2bbcB, .contentleft, .contentright {
+            width: 300px;
+            border: 3px solid #00CD00;
+            padding: 0;
+            font-family: Arial, Times, serif;
+        }*/
+        /*31.12.2021. I apply same styling to _1Pmlf which is subclass of "middle content" class .2bbcB:
+._1Pmlf, ._2bbcB, .contentleft, .contentright {
+            width: 300px;
+            border: 3px solid #00CD00;
+            padding: 0;
+            font-family: Arial, Times, serif;}
+        but middle content stil floats left.
+        */
+        /*2.1.2021. My internet connection was broke one week so now I git commit and push with message: 2.1.2022. middle content" class .2bbcB*/
+        ._1Pmlf, ._2bbcB, .contentleft, .contentright {
+            width: 300px;
             border: 3px solid #00CD00;
             padding: 0;
             font-family: Arial, Times, serif;
         }
+
 
         /*25.11.2021. I add styling to chatbox:
  .chatBox {
@@ -2448,7 +2609,7 @@ Vi är nästan 2 300 engagerade medarbetare på Hemfrid. Det som förenar oss ä
         }
 
         .contentleft, .contentright {
-            width: 450px;
+            width: 300px;
             border: 3px solid #00CD00;
             padding: 0;
             font-family: Arial, Times, serif;
@@ -4767,6 +4928,31 @@ $("input[type='submit']").attr("disabled", "disabled");
                 </div>
             </div>
 
+
+            @* 30.12.2021. I notice alignment works better here  than in similar boxes
+                further down on page so I add picture here:                 <picture style="float:left; width:300px;"><source type="image/webp" srcset="https://images.ctfassets.net/vhjvyfr5klfu/6jTxSBx9OEGw0YuAiy62wK/4a1200d2f6fa9633cefff1e5fc40bf6a/hemfrids_egna_reng_ringsmedel.jpg?q=40&amp;fm=webp&amp;w=640&amp;h=480" media=""><source srcset="https://images.ctfassets.net/vhjvyfr5klfu/6jTxSBx9OEGw0YuAiy62wK/4a1200d2f6fa9633cefff1e5fc40bf6a/hemfrids_egna_reng_ringsmedel.jpg?q=50&amp;fm=jpg&amp;w=640&amp;h=480" media=""><img style="width:300px;" alt="hemfrids egna rengöringsmedel" class="_15krI"></picture>
+                   it alignes between contentleft and middlecontent so I move it to rightcontent:
+                        <aside class="contentright">
+                    <picture style="float:left; width:300px;"><source type="image/webp" srcset="https://images.ctfassets.net/vhjvyfr5klfu/6jTxSBx9OEGw0YuAiy62wK/4a1200d2f6fa9633cefff1e5fc40bf6a/hemfrids_egna_reng_ringsmedel.jpg?q=40&amp;fm=webp&amp;w=640&amp;h=480" media=""><source srcset="https://images.ctfassets.net/vhjvyfr5klfu/6jTxSBx9OEGw0YuAiy62wK/4a1200d2f6fa9633cefff1e5fc40bf6a/hemfrids_egna_reng_ringsmedel.jpg?q=50&amp;fm=jpg&amp;w=640&amp;h=480" media=""><img style="width:300px;" alt="hemfrids egna rengöringsmedel" class="_15krI"></picture>
+
+                    <div class="_1JzZM">
+                        <h3 class="VG_Ul">Alltid hos oss</h3>
+
+                        it is above right content so I move it above middlecontent:     </ul>
+                        </div>
+                        <a href="https://www.hemfrid.se/veckostadning"><div class="lfsvn _2bSWk">Boka veckostädning</div></a>
+                    </aside>
+
+                    <picture style="float:left; width:300px;"><source type="image/webp" srcset="https://images.ctfassets.net/vhjvyfr5klfu/6jTxSBx9OEGw0YuAiy62wK/4a1200d2f6fa9633cefff1e5fc40bf6a/hemfrids_egna_reng_ringsmedel.jpg?q=40&amp;fm=webp&amp;w=640&amp;h=480" media=""><source srcset="https://images.ctfassets.net/vhjvyfr5klfu/6jTxSBx9OEGw0YuAiy62wK/4a1200d2f6fa9633cefff1e5fc40bf6a/hemfrids_egna_reng_ringsmedel.jpg?q=50&amp;fm=jpg&amp;w=640&amp;h=480" media=""><img style="width:300px;" alt="hemfrids egna rengöringsmedel" class="_15krI"></picture>
+
+        Now it's on the left side of middlecontent when it should be above middlecontent so I test
+                        different float options:
+
+            *@
+
+            @*<picture style="float:left; width:300px;"><source type="image/webp" srcset="https://images.ctfassets.net/vhjvyfr5klfu/6jTxSBx9OEGw0YuAiy62wK/4a1200d2f6fa9633cefff1e5fc40bf6a/hemfrids_egna_reng_ringsmedel.jpg?q=40&amp;fm=webp&amp;w=640&amp;h=480" media=""><source srcset="https://images.ctfassets.net/vhjvyfr5klfu/6jTxSBx9OEGw0YuAiy62wK/4a1200d2f6fa9633cefff1e5fc40bf6a/hemfrids_egna_reng_ringsmedel.jpg?q=50&amp;fm=jpg&amp;w=640&amp;h=480" media=""><img style="width:300px;" alt="hemfrids egna rengöringsmedel" class="_15krI"></picture>*@
+
+
             @* 28.10.2021. I add the right box of page: <aside class="EsDde"><div class="_1JzZM"><h3 class="VG_Ul">Alltid hos oss</h3>
             <ul class="_2Fl-i"><li class="w_1bh">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="_18IzI Wox2c"><polyline points="20 6 9 17 4 12"></polyline></svg>
@@ -4780,6 +4966,8 @@ $("input[type='submit']").attr("disabled", "disabled");
         like this:
             *@
             <aside class="contentright">
+                @*<picture style="float:left; width:300px;"><source type="image/webp" srcset="https://images.ctfassets.net/vhjvyfr5klfu/6jTxSBx9OEGw0YuAiy62wK/4a1200d2f6fa9633cefff1e5fc40bf6a/hemfrids_egna_reng_ringsmedel.jpg?q=40&amp;fm=webp&amp;w=640&amp;h=480" media=""><source srcset="https://images.ctfassets.net/vhjvyfr5klfu/6jTxSBx9OEGw0YuAiy62wK/4a1200d2f6fa9633cefff1e5fc40bf6a/hemfrids_egna_reng_ringsmedel.jpg?q=50&amp;fm=jpg&amp;w=640&amp;h=480" media=""><img style="width:300px;" alt="hemfrids egna rengöringsmedel" class="_15krI"></picture>*@
+
                 <div class="_1JzZM">
                     <h3 class="VG_Ul">Alltid hos oss</h3>
                     <ul class="_2Fl-i">
@@ -4799,6 +4987,21 @@ $("input[type='submit']").attr("disabled", "disabled");
                 </div>
                 <a href="https://www.hemfrid.se/veckostadning"><div class="lfsvn _2bSWk">Boka veckostädning</div></a>
             </aside>
+
+            <picture style=" margin-left:100px; float:none; width:300px;"><source type="image/webp" srcset="https://images.ctfassets.net/vhjvyfr5klfu/6jTxSBx9OEGw0YuAiy62wK/4a1200d2f6fa9633cefff1e5fc40bf6a/hemfrids_egna_reng_ringsmedel.jpg?q=40&amp;fm=webp&amp;w=640&amp;h=480" media=""><source srcset="https://images.ctfassets.net/vhjvyfr5klfu/6jTxSBx9OEGw0YuAiy62wK/4a1200d2f6fa9633cefff1e5fc40bf6a/hemfrids_egna_reng_ringsmedel.jpg?q=50&amp;fm=jpg&amp;w=640&amp;h=480" media=""><img style="width:300px;" alt="hemfrids egna rengöringsmedel" class="_15krI"></picture>
+
+            @* 30.12.2021.             <picture style="float:inline-start; width:300px;"><source type="image/webp" srcset="https://images.ctfassets.net/vhjvyfr5klfu/6jTxSBx9OEGw0YuAiy62wK/4a1200d2f6fa9633cefff1e5fc40bf6a/hemfrids_egna_reng_ringsmedel.jpg?q=40&amp;fm=webp&amp;w=640&amp;h=480" media=""><source srcset="https://images.ctfassets.net/vhjvyfr5klfu/6jTxSBx9OEGw0YuAiy62wK/4a1200d2f6fa9633cefff1e5fc40bf6a/hemfrids_egna_reng_ringsmedel.jpg?q=50&amp;fm=jpg&amp;w=640&amp;h=480" media=""><img style="width:300px;" alt="hemfrids egna rengöringsmedel" class="_15krI"></picture>
+            I test different picture style floats: goal is that picture is above middle content text,
+                middle content text being right under the picture. float:left makes image
+                be on the left side of text. float: inline-start makes text float completely outside
+                div under picture. inline-end is same  as inline start and float:none.
+                Margin-left:100px makes image to float in the middle of the middle content box
+                which I think is good; I just have to make all three boxes height bigger
+                to have space both for pictures and text.
+            *@
+
+            @* 31.12.2021. I make all three boxes higher from:  *@
+
             @* 28.10.2021. I add rest of the page: Välkommen till en enklare vardag!
         Man kan göra allt själv eller så ber man om hjälp. Därför finns Hemfrid.
         Vi är ingen vanlig städfirma, med oss får du extra allt. Vi har hjälpt våra kunder i närmare 25 år att skapa en mer hållbar vardag.
@@ -4950,7 +5153,7 @@ $("input[type='submit']").attr("disabled", "disabled");
                             <section>
                                 <h2 class="_1YAYs">Läs mer</h2><div class="_3P2hx">
                                     <ul class="_3sYzM">
-                                        <li class="_3KSkX"><a class="_1PJbx" href="/karriar/monica"><div class="_3o3Nd"><div class=""></div></div><div class="_26DYW"><h3 class="_1S11V">Vision och värderingar</h3><p class="kF6y1">Vår vision är enkel, vi vill skapa mer hemfrid. Med hushållsnära tjänster underlättar vi vardagen för våra kunder och gör livet hemma lite enklare. </p></div></a></li>
+                                        <li class="_3KSkX"><a class="_1PJbx" href="/karriar/monica"><div class="_3o3Nd"><div class=""></div></div><div class="_26DYW" style="width:300px;"><h3 class="_1S11V" style="width:300px;">Vision och värderingar</h3><p class="kF6y1">Vår vision är enkel, vi vill skapa mer hemfrid. Med hushållsnära tjänster underlättar vi vardagen för våra kunder och gör livet hemma lite enklare. </p></div></a></li>
                                         <li class="_3KSkX"><a class="_1PJbx" href="/karriar/moet-marcia-eunice"><div class="_3o3Nd"><div class=""></div></div><div class="_26DYW"><h3 class="_1S11V">Möt Marcia Eunice</h3><p class="kF6y1">”Jag började som Hemfridare, sedan blev jag handledare och fick introducera nya kollegor in i yrket – idag leder jag ett serviceteam.”</p></div></a></li>
                                         <li class="_3KSkX"><a class="_1PJbx" href="/hallbarhet/hemfrids-stadprodukter"><div class="_3o3Nd"><div class=""></div></div><div class="_26DYW"><h3 class="_1S11V">Hemfrids egna städprodukter</h3><p class="kF6y1">Vi vill att det ska vara enkelt att ta hand om hemmet på ett miljövänligt sätt. Därför har vi tagit fram egna städprodukter märkta med Bra Miljöval.</p></div></a></li>
                                         <li class="_3KSkX">
@@ -5988,7 +6191,7 @@ $("input[type='submit']").attr("disabled", "disabled");
                     <section>
                         <h2 class="_1YAYs">Läs mer</h2><div class="_3P2hx">
                             <ul class="_3sYzM">
-                                <li class="_3KSkX"><a class="_1PJbx" href="/karriar/monica"><div class="_3o3Nd"><div class="_37N3B"><picture><source type="image/webp" srcset="https://images.ctfassets.net/vhjvyfr5klfu/1p7npJSMQOI6F068PoeGhc/774286b18abaaf3f15b98402ea9dd2cd/Monica_3.jpg?q=40&amp;fm=webp&amp;w=640&amp;h=480" media=""><source srcset="https://images.ctfassets.net/vhjvyfr5klfu/1p7npJSMQOI6F068PoeGhc/774286b18abaaf3f15b98402ea9dd2cd/Monica_3.jpg?q=50&amp;fm=jpg&amp;w=640&amp;h=480" media=""><img alt="MonicaLindstedt" class="_15krI"></picture></div><div class="_1w_TW" style="display: none;"><div class=""><div class="_3Aktc" style="background: url(&quot;https://images.ctfassets.net/vhjvyfr5klfu/1p7npJSMQOI6F068PoeGhc/774286b18abaaf3f15b98402ea9dd2cd/Monica_3.jpg?q=50&amp;fm=jpg&amp;w=640&amp;h=480&quot;) center center / cover no-repeat;"></div></div></div></div><div class="_26DYW"><h3 class="_1S11V">Vision och värderingar</h3><p class="kF6y1">Vår vision är enkel, vi vill skapa mer hemfrid. Med hushållsnära tjänster underlättar vi vardagen för våra kunder och gör livet hemma lite enklare. </p></div></a></li>
+                                <li class="_3KSkX"><a class="_1PJbx" href="/karriar/monica"><div class="_3o3Nd"><div class="_37N3B"><picture><source type="image/webp" srcset="https://images.ctfassets.net/vhjvyfr5klfu/1p7npJSMQOI6F068PoeGhc/774286b18abaaf3f15b98402ea9dd2cd/Monica_3.jpg?q=40&amp;fm=webp&amp;w=640&amp;h=480" media=""><source srcset="https://images.ctfassets.net/vhjvyfr5klfu/1p7npJSMQOI6F068PoeGhc/774286b18abaaf3f15b98402ea9dd2cd/Monica_3.jpg?q=50&amp;fm=jpg&amp;w=640&amp;h=480" media=""><img style="width:300px;" alt="MonicaLindstedt" class="_15krI"></picture></div><div class="_1w_TW" style="display: none;"><div class=""><div class="_3Aktc" style="background: url(&quot;https://images.ctfassets.net/vhjvyfr5klfu/1p7npJSMQOI6F068PoeGhc/774286b18abaaf3f15b98402ea9dd2cd/Monica_3.jpg?q=50&amp;fm=jpg&amp;w=640&amp;h=480&quot;) center center / cover no-repeat;"></div></div></div></div><div class="_26DYW"><h3 class="_1S11V">Vision och värderingar</h3><p class="kF6y1">Vår vision är enkel, vi vill skapa mer hemfrid. Med hushållsnära tjänster underlättar vi vardagen för våra kunder och gör livet hemma lite enklare. </p></div></a></li>
                                 <li class="_3KSkX"><a class="_1PJbx" href="/karriar/moet-marcia-eunice"><div class="_3o3Nd"><div class="_37N3B"><picture><source type="image/webp" srcset="https://images.ctfassets.net/vhjvyfr5klfu/3W3oXBxXpUMobjwpLN6Rda/27d0e69308cd390886547d17191be9de/Marcia_Eunice.jpg?q=40&amp;fm=webp&amp;w=640&amp;h=480" media=""><source srcset="https://images.ctfassets.net/vhjvyfr5klfu/3W3oXBxXpUMobjwpLN6Rda/27d0e69308cd390886547d17191be9de/Marcia_Eunice.jpg?q=50&amp;fm=jpg&amp;w=640&amp;h=480" media=""><img alt="Marcia Eunice" class="_15krI"></picture></div><div class="_1w_TW" style="display: none;"><div class=""><div class="_3Aktc" style="background: url(&quot;https://images.ctfassets.net/vhjvyfr5klfu/3W3oXBxXpUMobjwpLN6Rda/27d0e69308cd390886547d17191be9de/Marcia_Eunice.jpg?q=50&amp;fm=jpg&amp;w=640&amp;h=480&quot;) center center / cover no-repeat;"></div></div></div></div><div class="_26DYW"><h3 class="_1S11V">Möt Marcia Eunice</h3><p class="kF6y1">”Jag började som Hemfridare, sedan blev jag handledare och fick introducera nya kollegor in i yrket – idag leder jag ett serviceteam.”</p></div></a></li>
                                 <li class="_3KSkX"><a class="_1PJbx" href="/hallbarhet/hemfrids-stadprodukter"><div class="_3o3Nd"><div class="_37N3B"><picture><source type="image/webp" srcset="https://images.ctfassets.net/vhjvyfr5klfu/6jTxSBx9OEGw0YuAiy62wK/4a1200d2f6fa9633cefff1e5fc40bf6a/hemfrids_egna_reng_ringsmedel.jpg?q=40&amp;fm=webp&amp;w=640&amp;h=480" media=""><source srcset="https://images.ctfassets.net/vhjvyfr5klfu/6jTxSBx9OEGw0YuAiy62wK/4a1200d2f6fa9633cefff1e5fc40bf6a/hemfrids_egna_reng_ringsmedel.jpg?q=50&amp;fm=jpg&amp;w=640&amp;h=480" media=""><img alt="hemfrids egna rengöringsmedel" class="_15krI"></picture></div><div class="_1w_TW" style="display: none;"><div class=""><div class="_3Aktc" style="background: url(&quot;https://images.ctfassets.net/vhjvyfr5klfu/6jTxSBx9OEGw0YuAiy62wK/4a1200d2f6fa9633cefff1e5fc40bf6a/hemfrids_egna_reng_ringsmedel.jpg?q=50&amp;fm=jpg&amp;w=640&amp;h=480&quot;) center center / cover no-repeat;"></div></div></div></div><div class="_26DYW"><h3 class="_1S11V">Hemfrids egna städprodukter</h3><p class="kF6y1">Vi vill att det ska vara enkelt att ta hand om hemmet på ett miljövänligt sätt. Därför har vi tagit fram egna städprodukter märkta med Bra Miljöval.</p></div></a></li>
                                 <li class="_3KSkX">
@@ -6008,7 +6211,7 @@ $("input[type='submit']").attr("disabled", "disabled");
                     </section>
                 </div>
                 <ul class="_3sYzM">
-                    <li class="_3KSkX"><a class="_1PJbx" href="/karriar/monica"><div class="_3o3Nd"><div class="_37N3B"><picture><source type="image/webp" srcset="https://images.ctfassets.net/vhjvyfr5klfu/1p7npJSMQOI6F068PoeGhc/774286b18abaaf3f15b98402ea9dd2cd/Monica_3.jpg?q=40&amp;fm=webp&amp;w=640&amp;h=480" media=""><source srcset="https://images.ctfassets.net/vhjvyfr5klfu/1p7npJSMQOI6F068PoeGhc/774286b18abaaf3f15b98402ea9dd2cd/Monica_3.jpg?q=50&amp;fm=jpg&amp;w=640&amp;h=480" media=""><img alt="MonicaLindstedt" class="_15krI"></picture></div><div class="_1w_TW" style="display: none;"><div class=""><div class="_3Aktc" style="background: url(&quot;https://images.ctfassets.net/vhjvyfr5klfu/1p7npJSMQOI6F068PoeGhc/774286b18abaaf3f15b98402ea9dd2cd/Monica_3.jpg?q=50&amp;fm=jpg&amp;w=640&amp;h=480&quot;) center center / cover no-repeat;"></div></div></div></div><div class="_26DYW"><h3 class="_1S11V">Vision och värderingar</h3><p class="kF6y1">Vår vision är enkel, vi vill skapa mer hemfrid. Med hushållsnära tjänster underlättar vi vardagen för våra kunder och gör livet hemma lite enklare. </p></div></a></li>
+                    <li class="_3KSkX"><a class="_1PJbx" href="/karriar/monica"><div style="width:300px;" class="_3o3Nd"><div style="width:300px;" class="_37N3B"><picture style="width:300px" ;><source style="width:300px;" type="image/webp" srcset="https://images.ctfassets.net/vhjvyfr5klfu/1p7npJSMQOI6F068PoeGhc/774286b18abaaf3f15b98402ea9dd2cd/Monica_3.jpg?q=40&amp;fm=webp&amp;w=640&amp;h=480" media=""><source srcset="https://images.ctfassets.net/vhjvyfr5klfu/1p7npJSMQOI6F068PoeGhc/774286b18abaaf3f15b98402ea9dd2cd/Monica_3.jpg?q=50&amp;fm=jpg&amp;w=640&amp;h=480" media=""><img style="width:300px;" alt="MonicaLindstedt" class="_15krI"></picture></div><div class="_1w_TW" style="display: none;"><div class=""><div class="_3Aktc" style="background: url(&quot;https://images.ctfassets.net/vhjvyfr5klfu/1p7npJSMQOI6F068PoeGhc/774286b18abaaf3f15b98402ea9dd2cd/Monica_3.jpg?q=50&amp;fm=jpg&amp;w=640&amp;h=480&quot;) center center / cover no-repeat;"></div></div></div></div><div class="_26DYW"><h3 class="_1S11V">Vision och värderingar</h3><p class="kF6y1">Vår vision är enkel, vi vill skapa mer hemfrid. Med hushållsnära tjänster underlättar vi vardagen för våra kunder och gör livet hemma lite enklare. </p></div></a></li>
                     <li class="_3KSkX"><a class="_1PJbx" href="/karriar/moet-marcia-eunice"><div class="_3o3Nd"><div class="_37N3B"><picture><source type="image/webp" srcset="https://images.ctfassets.net/vhjvyfr5klfu/3W3oXBxXpUMobjwpLN6Rda/27d0e69308cd390886547d17191be9de/Marcia_Eunice.jpg?q=40&amp;fm=webp&amp;w=640&amp;h=480" media=""><source srcset="https://images.ctfassets.net/vhjvyfr5klfu/3W3oXBxXpUMobjwpLN6Rda/27d0e69308cd390886547d17191be9de/Marcia_Eunice.jpg?q=50&amp;fm=jpg&amp;w=640&amp;h=480" media=""><img alt="Marcia Eunice" class="_15krI"></picture></div><div class="_1w_TW" style="display: none;"><div class=""><div class="_3Aktc" style="background: url(&quot;https://images.ctfassets.net/vhjvyfr5klfu/3W3oXBxXpUMobjwpLN6Rda/27d0e69308cd390886547d17191be9de/Marcia_Eunice.jpg?q=50&amp;fm=jpg&amp;w=640&amp;h=480&quot;) center center / cover no-repeat;"></div></div></div></div><div class="_26DYW"><h3 class="_1S11V">Möt Marcia Eunice</h3><p class="kF6y1">”Jag började som Hemfridare, sedan blev jag handledare och fick introducera nya kollegor in i yrket – idag leder jag ett serviceteam.”</p></div></a></li>
                     <li class="_3KSkX"><a class="_1PJbx" href="/hallbarhet/hemfrids-stadprodukter"><div class="_3o3Nd"><div class="_37N3B"><picture><source type="image/webp" srcset="https://images.ctfassets.net/vhjvyfr5klfu/6jTxSBx9OEGw0YuAiy62wK/4a1200d2f6fa9633cefff1e5fc40bf6a/hemfrids_egna_reng_ringsmedel.jpg?q=40&amp;fm=webp&amp;w=640&amp;h=480" media=""><source srcset="https://images.ctfassets.net/vhjvyfr5klfu/6jTxSBx9OEGw0YuAiy62wK/4a1200d2f6fa9633cefff1e5fc40bf6a/hemfrids_egna_reng_ringsmedel.jpg?q=50&amp;fm=jpg&amp;w=640&amp;h=480" media=""><img alt="hemfrids egna rengöringsmedel" class="_15krI"></picture></div><div class="_1w_TW" style="display: none;"><div class=""><div class="_3Aktc" style="background: url(&quot;https://images.ctfassets.net/vhjvyfr5klfu/6jTxSBx9OEGw0YuAiy62wK/4a1200d2f6fa9633cefff1e5fc40bf6a/hemfrids_egna_reng_ringsmedel.jpg?q=50&amp;fm=jpg&amp;w=640&amp;h=480&quot;) center center / cover no-repeat;"></div></div></div></div><div class="_26DYW"><h3 class="_1S11V">Hemfrids egna städprodukter</h3><p class="kF6y1">Vi vill att det ska vara enkelt att ta hand om hemmet på ett miljövänligt sätt. Därför har vi tagit fram egna städprodukter märkta med Bra Miljöval.</p></div></a></li>
                     <li class="_3KSkX">
@@ -6253,7 +6456,7 @@ $("input[type='submit']").attr("disabled", "disabled");
 
             *@
 
-            <div class="contentleft">
+            <div style="width:300px" ; class="contentleft">
 
                 @* 26.12.2021. There is so far only text "Vision och värderingar Vår vision är enkel..."
             but I try, like in hemfrid.se, add picture above text: <picture><source type="image/webp" srcset="https://images.ctfassets.net/vhjvyfr5klfu/1p7npJSMQOI6F068PoeGhc/774286b18abaaf3f15b98402ea9dd2cd/Monica_3.jpg?q=40&amp;fm=webp&amp;w=640&amp;h=480" media=""><source srcset="https://images.ctfassets.net/vhjvyfr5klfu/1p7npJSMQOI6F068PoeGhc/774286b18abaaf3f15b98402ea9dd2cd/Monica_3.jpg?q=50&amp;fm=jpg&amp;w=640&amp;h=480" media=""><img alt="MonicaLindstedt" class="_15krI"></picture>
@@ -6283,13 +6486,13 @@ $("input[type='submit']").attr("disabled", "disabled");
 
                 *@
 
-                <picture><source type="image/webp" srcset="https://images.ctfassets.net/vhjvyfr5klfu/1p7npJSMQOI6F068PoeGhc/774286b18abaaf3f15b98402ea9dd2cd/Monica_3.jpg?q=40&amp;fm=webp&amp;w=640&amp;h=480" media=""><source srcset="https://images.ctfassets.net/vhjvyfr5klfu/1p7npJSMQOI6F068PoeGhc/774286b18abaaf3f15b98402ea9dd2cd/Monica_3.jpg?q=50&amp;fm=jpg&amp;w=640&amp;h=480" media=""><img alt="MonicaLindstedt" class="_15krI"></picture>
+                <picture style="width:300px" ;><source style="width:300px" ; type="image/webp" srcset="https://images.ctfassets.net/vhjvyfr5klfu/1p7npJSMQOI6F068PoeGhc/774286b18abaaf3f15b98402ea9dd2cd/Monica_3.jpg?q=40&amp;fm=webp&amp;w=640&amp;h=480" media=""><source style="width:300px" ; srcset="https://images.ctfassets.net/vhjvyfr5klfu/1p7npJSMQOI6F068PoeGhc/774286b18abaaf3f15b98402ea9dd2cd/Monica_3.jpg?q=50&amp;fm=jpg&amp;w=640&amp;h=480" media=""><img style="width:300px" ; alt="MonicaLindstedt" class="_15krI"></picture>
 
-                <div>
+                <div style="width:300px" ;>
                     <h1>Vision och värderingar</h1>
                 </div>
                 <div>
-                    <p>
+                    <p style="width:300px" ;>
                         Vår vision är enkel, vi vill skapa mer hemfrid. Med hushållsnära tjänster underlättar vi vardagen för våra kunder och gör livet hemma lite enklare.
                         @*<a href="https://www.hemfrid.se/veckostadning">Veckostädning</a> |
                     <a href="https://www.hemfrid.se/storstadning">Storstädning</a> |
@@ -6302,10 +6505,79 @@ $("input[type='submit']").attr("disabled", "disabled");
                     <a href="https://www.hemfrid.se/atervinning">Återvinning</a>*@
                     </p>
                 </div>
+
+                @*30.12.2021. I try to add middle content here to make it float in between left and right content:             <div class="_2bbcB" style="width:300px;">
+                <picture style="width:300px;"><source type="image/webp" srcset="https://images.ctfassets.net/vhjvyfr5klfu/6jTxSBx9OEGw0YuAiy62wK/4a1200d2f6fa9633cefff1e5fc40bf6a/hemfrids_egna_reng_ringsmedel.jpg?q=40&amp;fm=webp&amp;w=640&amp;h=480" media=""><source srcset="https://images.ctfassets.net/vhjvyfr5klfu/6jTxSBx9OEGw0YuAiy62wK/4a1200d2f6fa9633cefff1e5fc40bf6a/hemfrids_egna_reng_ringsmedel.jpg?q=50&amp;fm=jpg&amp;w=640&amp;h=480" media=""><img style="width:300px;" alt="hemfrids egna rengöringsmedel" class="_15krI"></picture>
+                <div class="_1Pmlf">
+                    <section class="Yf6ZL">
+                        <h2 class="_1YAYs">En städfirma med extra allt</h2><div class="_2719B">
+                            <div class="_4kgpx">
+                                <div class="eq-1p FhF97">
+                                    <p>Låt ett proffs ta hand om städningen, så att du får tid till annat. Vår vision är att skapa mer hemfrid och få fler att trivas och må bra hemma. Då vet vi att vi har lyckats! Vi är din trygga, klimatsmarta städfirma. Alltid utbildad personal med kollektivavtal och schyssta villkor. Som kund är du dessutom delaktig i att göra en svart bransch mer vit. Oavsett om du letar proffsiga städtjänster för hemmet eller en hållbar leverantör av företagsstädning så finns vi här för dig. </p>
+                                </div><div class="_3AbHP"><div class="_14Ueq"><a class="_1eJW-" href="/stadning">Låt oss ta hand om din städning<svg height="15" viewBox="0 0 9 15" width="15" class="_18IzI _2XVEA"><path d="m.958.995 6.51 6.51-6 6" fill="none" stroke-width="2"></path></svg></a></div></div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
             </div>
 
-            <aside class="contentright">
-                <picture><source type="image/webp" srcset="https://images.ctfassets.net/vhjvyfr5klfu/3W3oXBxXpUMobjwpLN6Rda/27d0e69308cd390886547d17191be9de/Marcia_Eunice.jpg?q=40&amp;fm=webp&amp;w=640&amp;h=480" media=""><source srcset="https://images.ctfassets.net/vhjvyfr5klfu/3W3oXBxXpUMobjwpLN6Rda/27d0e69308cd390886547d17191be9de/Marcia_Eunice.jpg?q=50&amp;fm=jpg&amp;w=640&amp;h=480" media=""><img alt="Marcia Eunice" class="_15krI"></picture>
+                    the middle content still just floats under left content.*@
+
+                @* 30.12.2021.I try make middle content float left but it doesn't help: <div class="_2bbcB" style="float:left; width:300px;">
+                    <picture style="float:left; width:300px;"><source type="image/webp" srcset="https://images.ctfassets.net/vhjvyfr5klfu/6jTxSBx9OEGw0YuAiy62wK/4a1200d2f6fa9633cefff1e5fc40bf6a/hemfrids_egna_reng_ringsmedel.jpg?q=40&amp;fm=webp&amp;w=640&amp;h=480" media=""><source srcset="https://images.ctfassets.net/vhjvyfr5klfu/6jTxSBx9OEGw0YuAiy62wK/4a1200d2f6fa9633cefff1e5fc40bf6a/hemfrids_egna_reng_ringsmedel.jpg?q=50&amp;fm=jpg&amp;w=640&amp;h=480" media=""><img style="width:300px;" alt="hemfrids egna rengöringsmedel" class="_15krI"></picture>
+                    <div class="_1Pmlf">
+                        <section class="Yf6ZL">
+                            <h2 class="_1YAYs">En städfirma med extra allt</h2><div class="_2719B">
+                                <div class="_4kgpx">
+                                    <div class="eq-1p FhF97">
+                                        <p>Låt ett proffs ta hand om städningen, så att du får tid till annat. Vår vision är att skapa mer hemfrid och få fler att trivas och må bra hemma. Då vet vi att vi har lyckats! Vi är din trygga, klimatsmarta städfirma. Alltid utbildad personal med kollektivavtal och schyssta villkor. Som kund är du dessutom delaktig i att göra en svart bransch mer vit. Oavsett om du letar proffsiga städtjänster för hemmet eller en hållbar leverantör av företagsstädning så finns vi här för dig. </p>
+                                    </div><div class="_3AbHP"><div class="_14Ueq"><a class="_1eJW-" href="/stadning">Låt oss ta hand om din städning<svg height="15" viewBox="0 0 9 15" width="15" class="_18IzI _2XVEA"><path d="m.958.995 6.51 6.51-6 6" fill="none" stroke-width="2"></path></svg></a></div></div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
+            </div>
+
+                  30.12.2021.  So I decide to use class _2bbcB as a "contentmiddle" css class to have more control over middle content: ._2bbcB{
+
+                    }
+                *@
+                <div class="_2bbcB" style="float:left; width:300px;">
+                    <picture style="float:left; width:300px;"><source type="image/webp" srcset="https://images.ctfassets.net/vhjvyfr5klfu/6jTxSBx9OEGw0YuAiy62wK/4a1200d2f6fa9633cefff1e5fc40bf6a/hemfrids_egna_reng_ringsmedel.jpg?q=40&amp;fm=webp&amp;w=640&amp;h=480" media=""><source srcset="https://images.ctfassets.net/vhjvyfr5klfu/6jTxSBx9OEGw0YuAiy62wK/4a1200d2f6fa9633cefff1e5fc40bf6a/hemfrids_egna_reng_ringsmedel.jpg?q=50&amp;fm=jpg&amp;w=640&amp;h=480" media=""><img style="width:300px;" alt="hemfrids egna rengöringsmedel" class="_15krI"></picture>
+                    <div class="_1Pmlf">
+                        <section class="Yf6ZL">
+                            <h2 class="_1YAYs">En städfirma med extra allt</h2><div class="_2719B">
+                                <div class="_4kgpx">
+                                    <div class="eq-1p FhF97">
+                                        <p>Låt ett proffs ta hand om städningen, så att du får tid till annat. Vår vision är att skapa mer hemfrid och få fler att trivas och må bra hemma. Då vet vi att vi har lyckats! Vi är din trygga, klimatsmarta städfirma. Alltid utbildad personal med kollektivavtal och schyssta villkor. Som kund är du dessutom delaktig i att göra en svart bransch mer vit. Oavsett om du letar proffsiga städtjänster för hemmet eller en hållbar leverantör av företagsstädning så finns vi här för dig. </p>
+                                    </div><div class="_3AbHP"><div class="_14Ueq"><a class="_1eJW-" href="/stadning">Låt oss ta hand om din städning<svg height="15" viewBox="0 0 9 15" width="15" class="_18IzI _2XVEA"><path d="m.958.995 6.51 6.51-6 6" fill="none" stroke-width="2"></path></svg></a></div></div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
+            </div>
+
+            @*<div class="_2bbcB" style="width:300px;">
+            <picture style="width:300px;"><source type="image/webp" srcset="https://images.ctfassets.net/vhjvyfr5klfu/6jTxSBx9OEGw0YuAiy62wK/4a1200d2f6fa9633cefff1e5fc40bf6a/hemfrids_egna_reng_ringsmedel.jpg?q=40&amp;fm=webp&amp;w=640&amp;h=480" media=""><source srcset="https://images.ctfassets.net/vhjvyfr5klfu/6jTxSBx9OEGw0YuAiy62wK/4a1200d2f6fa9633cefff1e5fc40bf6a/hemfrids_egna_reng_ringsmedel.jpg?q=50&amp;fm=jpg&amp;w=640&amp;h=480" media=""><img style="width:300px;" alt="hemfrids egna rengöringsmedel" class="_15krI"></picture>
+            <div class="_1Pmlf">
+                <section class="Yf6ZL">
+                    <h2 class="_1YAYs">En städfirma med extra allt</h2><div class="_2719B">
+                        <div class="_4kgpx">
+                            <div class="eq-1p FhF97">
+                                <p>Låt ett proffs ta hand om städningen, så att du får tid till annat. Vår vision är att skapa mer hemfrid och få fler att trivas och må bra hemma. Då vet vi att vi har lyckats! Vi är din trygga, klimatsmarta städfirma. Alltid utbildad personal med kollektivavtal och schyssta villkor. Som kund är du dessutom delaktig i att göra en svart bransch mer vit. Oavsett om du letar proffsiga städtjänster för hemmet eller en hållbar leverantör av företagsstädning så finns vi här för dig. </p>
+                            </div><div class="_3AbHP"><div class="_14Ueq"><a class="_1eJW-" href="/stadning">Låt oss ta hand om din städning<svg height="15" viewBox="0 0 9 15" width="15" class="_18IzI _2XVEA"><path d="m.958.995 6.51 6.51-6 6" fill="none" stroke-width="2"></path></svg></a></div></div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>*@
+
+            <aside style="width:300px" ; class="contentright">
+                <picture style="width:300px" ;><source style="width:300px" ; type="image/webp" srcset="https://images.ctfassets.net/vhjvyfr5klfu/3W3oXBxXpUMobjwpLN6Rda/27d0e69308cd390886547d17191be9de/Marcia_Eunice.jpg?q=40&amp;fm=webp&amp;w=640&amp;h=480" media=""><source style="width:300px" ; srcset="https://images.ctfassets.net/vhjvyfr5klfu/3W3oXBxXpUMobjwpLN6Rda/27d0e69308cd390886547d17191be9de/Marcia_Eunice.jpg?q=50&amp;fm=jpg&amp;w=640&amp;h=480" media=""><img style="width:300px" ; alt="Marcia Eunice" class="_15krI"></picture>
                 @* 26.12.2021. At least the picture is showing up: <picture><source type="image/webp" srcset="https://images.ctfassets.net/vhjvyfr5klfu/3W3oXBxXpUMobjwpLN6Rda/27d0e69308cd390886547d17191be9de/Marcia_Eunice.jpg?q=40&amp;fm=webp&amp;w=640&amp;h=480" media=""><source srcset="https://images.ctfassets.net/vhjvyfr5klfu/3W3oXBxXpUMobjwpLN6Rda/27d0e69308cd390886547d17191be9de/Marcia_Eunice.jpg?q=50&amp;fm=jpg&amp;w=640&amp;h=480" media=""><img alt="Marcia Eunice" class="_15krI"></picture>
             The third part is middle content between contentleft and contentright: <div class="_2bbcB">
                         <div class="_1Pmlf">
@@ -6341,8 +6613,8 @@ $("input[type='submit']").attr("disabled", "disabled");
                 <a href="https://www.hemfrid.se/veckostadning"><div class="lfsvn _2bSWk">Boka veckostädning</div></a>
             </aside>
 
-            <div class="_2bbcB">
-                <picture><source type="image/webp" srcset="https://images.ctfassets.net/vhjvyfr5klfu/6jTxSBx9OEGw0YuAiy62wK/4a1200d2f6fa9633cefff1e5fc40bf6a/hemfrids_egna_reng_ringsmedel.jpg?q=40&amp;fm=webp&amp;w=640&amp;h=480" media=""><source srcset="https://images.ctfassets.net/vhjvyfr5klfu/6jTxSBx9OEGw0YuAiy62wK/4a1200d2f6fa9633cefff1e5fc40bf6a/hemfrids_egna_reng_ringsmedel.jpg?q=50&amp;fm=jpg&amp;w=640&amp;h=480" media=""><img alt="hemfrids egna rengöringsmedel" class="_15krI"></picture>
+            <div class="_2bbcB" style="width:300px;">
+                <picture style="width:300px;"><source type="image/webp" srcset="https://images.ctfassets.net/vhjvyfr5klfu/6jTxSBx9OEGw0YuAiy62wK/4a1200d2f6fa9633cefff1e5fc40bf6a/hemfrids_egna_reng_ringsmedel.jpg?q=40&amp;fm=webp&amp;w=640&amp;h=480" media=""><source srcset="https://images.ctfassets.net/vhjvyfr5klfu/6jTxSBx9OEGw0YuAiy62wK/4a1200d2f6fa9633cefff1e5fc40bf6a/hemfrids_egna_reng_ringsmedel.jpg?q=50&amp;fm=jpg&amp;w=640&amp;h=480" media=""><img style="width:300px;" alt="hemfrids egna rengöringsmedel" class="_15krI"></picture>
                 <div class="_1Pmlf">
                     <section class="Yf6ZL">
                         <h2 class="_1YAYs">En städfirma med extra allt</h2><div class="_2719B">
@@ -6385,9 +6657,32 @@ $("input[type='submit']").attr("disabled", "disabled");
 
 
             @* 26.12.2021. This code makes the middle image and content to align
-            under contenleft and contentright which is not intention; it should
-            be in middle: <div class="_2bbcB">
-            <picture><source type="image/webp" srcset="https://images.ctfassets.net/vhjvyfr5klfu/6jTxSBx9OEGw0YuAiy62wK/4a1200d2f6fa9633cefff1e5fc40bf6a/hemfrids_egna_reng_ringsmedel.jpg?q=40&amp;fm=webp&amp;w=640&amp;h=480" media=""><source srcset="https://images.ctfassets.net/vhjvyfr5klfu/6jTxSBx9OEGw0YuAiy62wK/4a1200d2f6fa9633cefff1e5fc40bf6a/hemfrids_egna_reng_ringsmedel.jpg?q=50&amp;fm=jpg&amp;w=640&amp;h=480" media=""><img alt="hemfrids egna rengöringsmedel" class="_15krI"></picture>
+                under contenleft and contentright which is not intention; it should
+                be in middle: <div class="_2bbcB">
+                <picture><source type="image/webp" srcset="https://images.ctfassets.net/vhjvyfr5klfu/6jTxSBx9OEGw0YuAiy62wK/4a1200d2f6fa9633cefff1e5fc40bf6a/hemfrids_egna_reng_ringsmedel.jpg?q=40&amp;fm=webp&amp;w=640&amp;h=480" media=""><source srcset="https://images.ctfassets.net/vhjvyfr5klfu/6jTxSBx9OEGw0YuAiy62wK/4a1200d2f6fa9633cefff1e5fc40bf6a/hemfrids_egna_reng_ringsmedel.jpg?q=50&amp;fm=jpg&amp;w=640&amp;h=480" media=""><img alt="hemfrids egna rengöringsmedel" class="_15krI"></picture>
+                <div class="_1Pmlf">
+                    <section class="Yf6ZL">
+                        <h2 class="_1YAYs">En städfirma med extra allt</h2><div class="_2719B">
+                            <div class="_4kgpx">
+                                <div class="eq-1p FhF97">
+                                    <p>Låt ett proffs ta hand om städningen, så att du får tid till annat. Vår vision är att skapa mer hemfrid och få fler att trivas och må bra hemma. Då vet vi att vi har lyckats! Vi är din trygga, klimatsmarta städfirma. Alltid utbildad personal med kollektivavtal och schyssta villkor. Som kund är du dessutom delaktig i att göra en svart bransch mer vit. Oavsett om du letar proffsiga städtjänster för hemmet eller en hållbar leverantör av företagsstädning så finns vi här för dig. </p>
+                                </div><div class="_3AbHP"><div class="_14Ueq"><a class="_1eJW-" href="/stadning">Låt oss ta hand om din städning<svg height="15" viewBox="0 0 9 15" width="15" class="_18IzI _2XVEA"><path d="m.958.995 6.51 6.51-6 6" fill="none" stroke-width="2"></path></svg></a></div></div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+
+        26.12.2021. I commit all and push to git repository "Align 'läs mer' section"
+
+            *@
+
+
+
+            @* 29.12.2021. try to adjust image sizes to 200 pixels to be able to fit three boxes in a row:
+             <div class="_2bbcB" style="width:300px;">
+            <picture style="width:300px;"><source type="image/webp" srcset="https://images.ctfassets.net/vhjvyfr5klfu/6jTxSBx9OEGw0YuAiy62wK/4a1200d2f6fa9633cefff1e5fc40bf6a/hemfrids_egna_reng_ringsmedel.jpg?q=40&amp;fm=webp&amp;w=640&amp;h=480" media=""><source srcset="https://images.ctfassets.net/vhjvyfr5klfu/6jTxSBx9OEGw0YuAiy62wK/4a1200d2f6fa9633cefff1e5fc40bf6a/hemfrids_egna_reng_ringsmedel.jpg?q=50&amp;fm=jpg&amp;w=640&amp;h=480" media=""><img style="width:300px;" alt="hemfrids egna rengöringsmedel" class="_15krI"></picture>
             <div class="_1Pmlf">
                 <section class="Yf6ZL">
                     <h2 class="_1YAYs">En städfirma med extra allt</h2><div class="_2719B">
@@ -6400,11 +6695,103 @@ $("input[type='submit']").attr("disabled", "disabled");
                 </section>
             </div>
         </div>
-                
 
-    26.12.2021. I commit all and push to git repository "Align 'läs mer' section"
-                
-                *@
+            and it succeeded in making the middle part small enough, now I make even other boxes 300px wide: <div style="width:300px"; class="contentleft">
+
+                @* 26.12.2021. There is so far only text "Vision och värderingar Vår vision är enkel..."
+            but I try, like in hemfrid.se, add picture above text: <picture><source type="image/webp" srcset="https://images.ctfassets.net/vhjvyfr5klfu/1p7npJSMQOI6F068PoeGhc/774286b18abaaf3f15b98402ea9dd2cd/Monica_3.jpg?q=40&amp;fm=webp&amp;w=640&amp;h=480" media=""><source srcset="https://images.ctfassets.net/vhjvyfr5klfu/1p7npJSMQOI6F068PoeGhc/774286b18abaaf3f15b98402ea9dd2cd/Monica_3.jpg?q=50&amp;fm=jpg&amp;w=640&amp;h=480" media=""><img alt="MonicaLindstedt" class="_15krI"></picture>
+                    and finally the picture is above text. I try to do same with other images next to it: <aside class="contentright">
+                <div class="_1JzZM">
+                    <picture><source type="image/webp" srcset="https://images.ctfassets.net/vhjvyfr5klfu/3W3oXBxXpUMobjwpLN6Rda/27d0e69308cd390886547d17191be9de/Marcia_Eunice.jpg?q=40&amp;fm=webp&amp;w=640&amp;h=480" media=""><source srcset="https://images.ctfassets.net/vhjvyfr5klfu/3W3oXBxXpUMobjwpLN6Rda/27d0e69308cd390886547d17191be9de/Marcia_Eunice.jpg?q=50&amp;fm=jpg&amp;w=640&amp;h=480" media=""><img alt="Marcia Eunice" class="_15krI"></picture>
+                    <h3 class="VG_Ul">Alltid hos oss</h3>
+                    <ul class="_2Fl-i">
+                        <li class="w_1bh">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="_18IzI Wox2c"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Utbildad personal med kollektivavtal
+                        </li>
+                        <li class="w_1bh">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="_18IzI Wox2c"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Med försäkring, utan bindningstid
+                        </li>
+                        <li class="w_1bh">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="_18IzI Wox2c"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Personlig service
+                        </li>
+                    </ul>
+                </div>
+                <a href="https://www.hemfrid.se/veckostadning"><div class="lfsvn _2bSWk">Boka veckostädning</div></a>
+            </aside>
+
+
+
+            *@
+
+            <!--<picture style="width:300px" ;><source style="width:300px" ; type="image/webp" srcset="https://images.ctfassets.net/vhjvyfr5klfu/1p7npJSMQOI6F068PoeGhc/774286b18abaaf3f15b98402ea9dd2cd/Monica_3.jpg?q=40&amp;fm=webp&amp;w=640&amp;h=480" media=""><source style="width:300px" ; srcset="https://images.ctfassets.net/vhjvyfr5klfu/1p7npJSMQOI6F068PoeGhc/774286b18abaaf3f15b98402ea9dd2cd/Monica_3.jpg?q=50&amp;fm=jpg&amp;w=640&amp;h=480" media=""><img style="width:300px" ; alt="MonicaLindstedt" class="_15krI"></picture>
+
+    <div style="width:300px" ;>
+        <h1>Vision och värderingar</h1>
+    </div>
+    <div>
+        <p style="width:300px" ;>
+            Vår vision är enkel, vi vill skapa mer hemfrid. Med hushållsnära tjänster underlättar vi vardagen för våra kunder och gör livet hemma lite enklare.-->
+            @*<a href="https://www.hemfrid.se/veckostadning">Veckostädning</a> |
+        <a href="https://www.hemfrid.se/storstadning">Storstädning</a> |
+        <a href="https://www.hemfrid.se/tradgard">Trädgårdshjälp</a> |
+        <a href="https://www.hemfrid.se/fonsterputs">Fönsterputs</a> |
+        <a href="https://www.hemfrid.se/flytthjalp">Flytthjälp</a> |
+        <a href="https://www.hemfrid.se/flyttstadning">Flyttstädning</a> |
+        <a href="https://www.hemfrid.se/hantverk">Enklare Hantverk</a> |
+        <a href="https://www.hemfrid.se/omsorg">Vardagsomsorg</a> |
+        <a href="https://www.hemfrid.se/atervinning">Återvinning</a>*@
+            <!--</p>
+        </div>
+    </div>
+
+    <aside style="width:300px" ; class="contentright">
+        <picture style="width:300px" ;><source style="width:300px" ; type="image/webp" srcset="https://images.ctfassets.net/vhjvyfr5klfu/3W3oXBxXpUMobjwpLN6Rda/27d0e69308cd390886547d17191be9de/Marcia_Eunice.jpg?q=40&amp;fm=webp&amp;w=640&amp;h=480" media=""><source style="width:300px" ; srcset="https://images.ctfassets.net/vhjvyfr5klfu/3W3oXBxXpUMobjwpLN6Rda/27d0e69308cd390886547d17191be9de/Marcia_Eunice.jpg?q=50&amp;fm=jpg&amp;w=640&amp;h=480" media=""><img style="width:300px" ; alt="Marcia Eunice" class="_15krI"></picture>-->
+            @*29.12.2021. So I finally succeeded in at least left content and right content at right place*@
+            @* But 300px is too wide for three boxes to fit in same row in viewport, it seems,
+        because middle box floats under left and right box; I try 300px instead of 400px
+        in every three boxes from visual studio menu Edit-Find and Replace-Quick Replace but it
+        doesn't help the middle content still floats under left and right content. I try
+        to add "En städfirma med allt box" after "Vision och värderingar box" to force it to float
+        in middle: <picture style="width:300px" ;><source style="width:300px" ; type="image/webp" srcset="https://images.ctfassets.net/vhjvyfr5klfu/1p7npJSMQOI6F068PoeGhc/774286b18abaaf3f15b98402ea9dd2cd/Monica_3.jpg?q=40&amp;fm=webp&amp;w=640&amp;h=480" media=""><source style="width:300px" ; srcset="https://images.ctfassets.net/vhjvyfr5klfu/1p7npJSMQOI6F068PoeGhc/774286b18abaaf3f15b98402ea9dd2cd/Monica_3.jpg?q=50&amp;fm=jpg&amp;w=640&amp;h=480" media=""><img style="width:300px" ; alt="MonicaLindstedt" class="_15krI"></picture>
+
+            <div style="width:300px" ;>
+                <h1>Vision och värderingar</h1>
+            </div>
+            <div>
+                <p style="width:300px" ;>
+                    Vår vision är enkel, vi vill skapa mer hemfrid. Med hushållsnära tjänster underlättar vi vardagen för våra kunder och gör livet hemma lite enklare.
+                    @*<a href="https://www.hemfrid.se/veckostadning">Veckostädning</a> |
+                    <a href="https://www.hemfrid.se/storstadning">Storstädning</a> |
+                    <a href="https://www.hemfrid.se/tradgard">Trädgårdshjälp</a> |
+                    <a href="https://www.hemfrid.se/fonsterputs">Fönsterputs</a> |
+                    <a href="https://www.hemfrid.se/flytthjalp">Flytthjälp</a> |
+                    <a href="https://www.hemfrid.se/flyttstadning">Flyttstädning</a> |
+                    <a href="https://www.hemfrid.se/hantverk">Enklare Hantverk</a> |
+                    <a href="https://www.hemfrid.se/omsorg">Vardagsomsorg</a> |
+                    <a href="https://www.hemfrid.se/atervinning">Återvinning</a>*@
+            @*</p>
+            </div>
+        </div>
+
+        <div class="_2bbcB" style="width:300px;">
+            <picture style="width:300px;"><source type="image/webp" srcset="https://images.ctfassets.net/vhjvyfr5klfu/6jTxSBx9OEGw0YuAiy62wK/4a1200d2f6fa9633cefff1e5fc40bf6a/hemfrids_egna_reng_ringsmedel.jpg?q=40&amp;fm=webp&amp;w=640&amp;h=480" media=""><source srcset="https://images.ctfassets.net/vhjvyfr5klfu/6jTxSBx9OEGw0YuAiy62wK/4a1200d2f6fa9633cefff1e5fc40bf6a/hemfrids_egna_reng_ringsmedel.jpg?q=50&amp;fm=jpg&amp;w=640&amp;h=480" media=""><img style="width:300px;" alt="hemfrids egna rengöringsmedel" class="_15krI"></picture>
+            <div class="_1Pmlf">
+                <section class="Yf6ZL">
+                    <h2 class="_1YAYs">En städfirma med extra allt</h2><div class="_2719B">
+                        <div class="_4kgpx">
+                            <div class="eq-1p FhF97">
+                                <p>Låt ett proffs ta hand om städningen, så att du får tid till annat. Vår vision är att skapa mer hemfrid och få fler att trivas och må bra hemma. Då vet vi att vi har lyckats! Vi är din trygga, klimatsmarta städfirma. Alltid utbildad personal med kollektivavtal och schyssta villkor. Som kund är du dessutom delaktig i att göra en svart bransch mer vit. Oavsett om du letar proffsiga städtjänster för hemmet eller en hållbar leverantör av företagsstädning så finns vi här för dig. </p>
+                            </div><div class="_3AbHP"><div class="_14Ueq"><a class="_1eJW-" href="/stadning">Låt oss ta hand om din städning<svg height="15" viewBox="0 0 9 15" width="15" class="_18IzI _2XVEA"><path d="m.958.995 6.51 6.51-6 6" fill="none" stroke-width="2"></path></svg></a></div></div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+                    it doesn't help middle box just lays itself under left box*@
 
             <div class="_2bbcB _1PZS4">
                 <div class="_1Pmlf">
