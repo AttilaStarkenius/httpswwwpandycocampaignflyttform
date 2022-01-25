@@ -3054,7 +3054,35 @@ Boka veckostädning
             my sandbox Essential Real Estate web site is here: http://sandbox.g5plus.net/beyot/demo61f0010b5be6e/
             it is though just two hours i commit and push with message "Essential Real Estate sandbox 25.1.2022."
 
-*/ ._1Pmlf, ._2bbcB, .contentleft, .contentright {
+*/
+        /*25.1.2022. now some hours later the page http://sandbox.g5plus.net/beyot/demo61f0010b5be6e/ just
+            shows text: Page Not Found
+The page you were looking for could not be found. It might have been removed, renamed, or did not exist in the first place.
+        so I just create from https://wordpress.com/page/attilastarkenius.com/2
+            Block - List and then click "Show More Settings" and
+            when I click "Edit as HTML" I see block just as I wanted: ul with three li elements:
+            Utbildad personal med kollektivavtal
+Med försäkring, utan bindningstid
+Personlig service
+            then I save the changes in https://wordpress.com/page/attilastarkenius.com/2 
+            by pressing "Update" button and commit and push changes
+            and choose "insert before" the previous block I made the title
+        itself: Alltid hos oss and after updating it looks like this:
+            <!-- wp:heading {"level":3} -->
+<h3 id="alltid-hos-oss">Alltid hos oss</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Utbildad personal med kollektivavtal</li><li>Med försäkring, utan bindningstid</li><li>Personlig service</li></ul>
+<!-- /wp:list -->
+
+            then I "Insert After" the HTML <a> href Attribute "Boka veckostädning"
+            like a block of type "buttons" and I also center all the three block elements
+            that I created and update and add link-rel property to button as https://www.hemfrid.se/veckostadning: 
+            I commit all and push to git with message: "Adding a wordpress block similar to Alltid Hos Oss part of Hemrid.se 26.1.2022."
+
+        */
+        ._1Pmlf, ._2bbcB, .contentleft, .contentright {
             width: 300px;
             border: 3px solid #00CD00;
             padding: 0;
