@@ -28,6 +28,18 @@ namespace httpswwwhemfridse.Controllers
             return View();
         }
 
+        //Also Homecontroller.cs just returns views which is not a lot for a controller in a MVC application.
+        //    I create IActionResult Veckostadning, just like there is similar Index and
+        //    Privacy methods: public IActionResult Veckostadning()
+    //    {
+    //        return View();
+    //}
+
+    public IActionResult Veckostadning()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
