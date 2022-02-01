@@ -5,3 +5,27 @@
 
 <h1>Veckostadning</h1>
 
+@*2.1.2022. Issue now is https://attilastarkenius.com/veckostadning/ really doesn't
+            have the input fields that are required so I add
+        those to Veckostadning.csthml (I use https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/tel
+        as a help): <input type="tel" id="phone" name="phone" placeholder="Postnummer"
+           pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+           required>
+
+        so now https://localhost:44379/Home/Veckostadning looks like this: httpswwwhemfridse
+    Home
+    Privacy
+    Veckostadning
+    Postnummer
+    © 2021 - httpswwwhemfridse - Privacy
+
+    where "Postnummer" is the placeholder that is there until you write a number in the
+    input field with id "phone"; almost like in the website https://www.hemfrid.se/veckostadning.
+    I commit all and push with a message: "Publish https://attilastarkenius.com/ and
+    add input field to https://localhost:44379/Home/Veckostadning 1.2.2022."
+*@
+
+<input type="tel" id="phone" name="phone" placeholder="Postnummer"
+       pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+       required>
+
