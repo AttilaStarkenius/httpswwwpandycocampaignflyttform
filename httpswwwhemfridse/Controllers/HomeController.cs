@@ -31,11 +31,40 @@ namespace httpswwwhemfridse.Controllers
         //Also Homecontroller.cs just returns views which is not a lot for a controller in a MVC application.
         //    I create IActionResult Veckostadning, just like there is similar Index and
         //    Privacy methods: public IActionResult Veckostadning()
-    //    {
-    //        return View();
-    //}
+        //    {
+        //        return View();
+        //}
 
-    public IActionResult Veckostadning()
+        //public IActionResult Veckostadning()
+        //    {
+        //        return View();
+        //    }
+        //2.2.2022. I think the issue is
+        //this I change in HomeController from: public IActionResult Veckostadning()
+
+        //            {
+        //        return View();
+        //}
+        //to:  public IActionResult WeeklyCleaning()
+        //{
+        //    return View();
+        //}
+        //It works, even though this site doesn't work:https://localhost:44379/WeeklyCleaning/WeeklyCleaning
+        //this site works: https://localhost:44379/Home/WeeklyCleaning
+        //I also try to pass values from WeeklyCleaning.cshtml
+        //that user inputs by changing from:  public IActionResult WeeklyCleaning()
+        //    {
+        //        return View();
+        //}
+        //to: [HttpPost]
+        //public IActionResult WeeklyCleaning(WeeklyCleaningModel model)
+        //{
+        //    return View();
+        //}
+        //2.2.2022. I commit all and push with message "Fixing Models, Views and Controllers
+        //for https://localhost:44379/Home/WeeklyCleaning 2.2.2022."
+        [HttpPost]
+        public IActionResult WeeklyCleaning(WeeklyCleaningModel model)
         {
             return View();
         }

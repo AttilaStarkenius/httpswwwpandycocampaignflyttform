@@ -1,9 +1,36 @@
-﻿
+﻿@model httpswwwhemfridse.Models.WeeklyCleaningModel
+@*2.2.2022.@model httpswwwhemfridse.Models.WeeklyCleaningModel didn't work so I used this website as a help:
+        https://stackoverflow.com/questions/19696963/razor-view-throwing-the-name-model-does-not-exist-in-the-current-context
+        like this: 52
+
+        Here is what I did:
+
+        Close Visual Studio
+        Delete the SUO file
+        Restart Visual Studio
+        The .suo file is a hidden file in the same folder as the .svn solution file and contains the Visual Studio User Options.
+
+        now it works but when I go to https://localhost:44379/WeeklyCleaning/WeeklyCleaning
+        I get error HTTP ERROR 405 so I use this website as a help: https://stackoverflow.com/questions/23293782/mvc-web-api-405-method-not-allowed
+        and install Microsoft.AspNet.WebApi.Cors nuget package
+        but this error comes: Severity	Code	Description	Project	File	Line	Suppression State
+    Warning	NU1701	Package 'Microsoft.AspNet.Cors 5.2.7' was restored using
+    '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7,
+    .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8'
+    instead of the project target framework '.NETCoreApp,Version=v3.1'.
+    This package may not be fully compatible with your project.
+    httpswwwpandycocampaignflyttform	C:\Users\symph\source\repos\httpswwwpandycocampaignflyttform\httpswwwpandycocampaignflyttform\httpswwwpandycocampaignflyttform.csproj	1
+    I use this website as help: https://code-maze.com/enabling-cors-in-asp-net-core/
+    and change in Startup.cs: 
+*@
+
 @{
-    ViewData["Title"] = "Veckostadning";
+    ViewData["Title"] = "WeeklyCleaning";
 }
 
-<h1>Veckostadning</h1>
+
+
+<h1>WeeklyCleaning</h1>
 
 @*2.1.2022. Issue now is https://attilastarkenius.com/veckostadning/ really doesn't
             have the input fields that are required so I add
@@ -28,6 +55,8 @@
 @*<input type="tel" id="phone" name="phone" placeholder="Postnummer"
     pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
     required>*@
+
+
 
 <input id="zip" name="zip" type="text" pattern="[0-9]*" maxlength="6" placeholder="Postnummer" required>
 

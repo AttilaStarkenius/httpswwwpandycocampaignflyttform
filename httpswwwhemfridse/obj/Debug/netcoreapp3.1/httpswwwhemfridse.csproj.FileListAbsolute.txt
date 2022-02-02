@@ -395,4 +395,5 @@ C:\Users\symph\source\repos\httpswwwpandycocampaignflyttform\httpswwwhemfridse\b
 C:\Users\symph\source\repos\httpswwwpandycocampaignflyttform\httpswwwhemfridse\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\symph\source\repos\httpswwwpandycocampaignflyttform\httpswwwhemfridse\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\symph\source\repos\httpswwwpandycocampaignflyttform\httpswwwhemfridse\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\symph\source\repos\httpswwwpandycocampaignflyttform\httpswwwhemfridse\obj\Debug\netcoreapp3.1\Razor\Views\Home\Veckostadning.cshtml.g.cs
+C:\Users\symph\source\repos\httpswwwpandycocampaignflyttform\httpswwwhemfridse\obj\Debug\netcoreapp3.1\Razor\Views\WeeklyCleaning\WeeklyCleaning.cshtml.g.cs
+C:\Users\symph\source\repos\httpswwwpandycocampaignflyttform\httpswwwhemfridse\obj\Debug\netcoreapp3.1\Razor\Views\Home\WeeklyCleaning.cshtml.g.cs
