@@ -53,6 +53,10 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[3.1.5, )"
+            },
+            "PeachPied.WordPress.AspNetCore": {
+              "target": "Package",
+              "version": "[5.5.1-preview1, )"
             }
           },
           "imports": [
