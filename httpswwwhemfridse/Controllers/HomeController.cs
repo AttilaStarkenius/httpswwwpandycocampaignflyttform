@@ -102,6 +102,27 @@ like: Check "Add automatically new pages with the menu"
 and check also all existing pages and "Save Menu". I commit and push with
 message "Add Wordpress menu to attilastarkenius.com 5.2.2022.*/
 
+/*7.2.2022. Now there is the menu
+I made and https://attilastarkenius.com/ looks like this: 
+WEBBPLATSRUBRIK Hem Veckostädning and https://attilastarkenius.com/veckostadning/
+has the same menu. I am about to add things like "Så hanterar vi covid-19"-menu
+which I do by going to: https://attilastarkenius.wordpress.com/wp-admin/nav-menus.php
+and "Create a menu" and give it a name "covid-19" and check 
+"automatically add pages to this menu" and click "Create the menu".
+Then, now that the menu is created, I add "custom link" https://www.hemfrid.se/covid-19
+with the link text: Så hanterar vi covid-19 
+Because that menu doesn't show up I go to https://attilastarkenius.wordpress.com/wp-admin/nav-menus.php?menu=1372326
+"add to every page" and save menu. Because still nothing shows up
+I go to https://attilastarkenius.wordpress.com/wp-admin/nav-menus.php?action=locations
+There is text "Your theme supports only 2 menus. Please choose: Primary navigation or Social navigation
+so I save "covid-19" as Social navigation. Now
+https://attilastarkenius.com/ looks like this: WEBBPLATSRUBRIK
+Hem
+Veckostädning
+with an image xmlns="http://www.w3.org/2000/svg" with links leading 
+to https://attilastarkenius.com/, https://attilastarkenius.com/veckostadning/ and
+https://www.hemfrid.se/covid-19. I commit and push with message
+"Add covid-19 menu to https://attilastarkenius.com/ 7.2.2022."
 
 
 [HttpPost]
