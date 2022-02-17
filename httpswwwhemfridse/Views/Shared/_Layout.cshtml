@@ -1,4 +1,46 @@
-﻿<!DOCTYPE html>
+﻿@*/*18.2.2022. When I run the project I come
+             to page https://localhost:44379/ which has a menu
+            that looks like this: httpswwwhemfridse Home Privacy
+            I try to change it to similar to Hemfrid.se like this:
+    Städning
+    Veckostädning Storstädning Flyttstädning Fönsterputs Kontorsstädning
+
+    Flytt
+    Flytthjälp Flyttstädning Enklare hantverk Återvinning Kontorsflytt
+
+    Trädgård
+    Trädgårdshjälp Trädbeskärning
+
+    Omsorg
+    Vardagsomsorg
+
+    För företag
+    För bostadsrättsföreningar Kontorsstädning Kontorsflytt Löneförmån
+
+    Här finns vi
+    Stockholm Göteborg Malmö Uppsala Västerås Linköping & Norrköping
+    Om Hemfrid
+    Vanliga frågor Kontakt Jobba hos oss Hållbarhet Rutavdrag Hemfrids app
+    Beställ städning so I
+    go to Views\Shared\_Layout.cshtml file and edit
+    here from: <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">httpswwwhemfridse</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                        <ul class="navbar-nav flex-grow-1">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    to:                 <a class="navbar-brand" style="background-image: url(https://www.hemfrid.se/_next/static/media/logo-header-desktop.777963e5118b7a4c54d1b479cfba3aca.svg);" asp-area="" asp-controller="Home" asp-action="Index">httpswwwhemfridse</a>
+What shows up is only a bit of unproportional Hemfrid logo and text
+    I commit and push with
+    message: "Trying to add similar to Hemfrid.se menu in _Layout.cshtml file 18.2.2022."*@
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -11,7 +53,7 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">httpswwwhemfridse</a>
+                <a class="navbar-brand" style="background-image: url(https://www.hemfrid.se/_next/static/media/logo-header-desktop.777963e5118b7a4c54d1b479cfba3aca.svg);" asp-area="" asp-controller="Home" asp-action="Index">httpswwwhemfridse</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
