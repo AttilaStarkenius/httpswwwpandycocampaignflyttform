@@ -1,44 +1,64 @@
 ﻿@*/*18.2.2022. When I run the project I come
-             to page https://localhost:44379/ which has a menu
-            that looks like this: httpswwwhemfridse Home Privacy
-            I try to change it to similar to Hemfrid.se like this:
-    Städning
-    Veckostädning Storstädning Flyttstädning Fönsterputs Kontorsstädning
+                 to page https://localhost:44379/ which has a menu
+                that looks like this: httpswwwhemfridse Home Privacy
+                I try to change it to similar to Hemfrid.se like this:
+        Städning
+        Veckostädning Storstädning Flyttstädning Fönsterputs Kontorsstädning
 
-    Flytt
-    Flytthjälp Flyttstädning Enklare hantverk Återvinning Kontorsflytt
+        Flytt
+        Flytthjälp Flyttstädning Enklare hantverk Återvinning Kontorsflytt
 
-    Trädgård
-    Trädgårdshjälp Trädbeskärning
+        Trädgård
+        Trädgårdshjälp Trädbeskärning
 
-    Omsorg
-    Vardagsomsorg
+        Omsorg
+        Vardagsomsorg
 
-    För företag
-    För bostadsrättsföreningar Kontorsstädning Kontorsflytt Löneförmån
+        För företag
+        För bostadsrättsföreningar Kontorsstädning Kontorsflytt Löneförmån
 
-    Här finns vi
-    Stockholm Göteborg Malmö Uppsala Västerås Linköping & Norrköping
-    Om Hemfrid
-    Vanliga frågor Kontakt Jobba hos oss Hållbarhet Rutavdrag Hemfrids app
-    Beställ städning so I
-    go to Views\Shared\_Layout.cshtml file and edit
-    here from: <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">httpswwwhemfridse</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                        <ul class="navbar-nav flex-grow-1">
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-    to:                 <a class="navbar-brand" style="background-image: url(https://www.hemfrid.se/_next/static/media/logo-header-desktop.777963e5118b7a4c54d1b479cfba3aca.svg);" asp-area="" asp-controller="Home" asp-action="Index">httpswwwhemfridse</a>
-What shows up is only a bit of unproportional Hemfrid logo and text
-    I commit and push with
-    message: "Trying to add similar to Hemfrid.se menu in _Layout.cshtml file 18.2.2022."*@
+        Här finns vi
+        Stockholm Göteborg Malmö Uppsala Västerås Linköping & Norrköping
+        Om Hemfrid
+        Vanliga frågor Kontakt Jobba hos oss Hållbarhet Rutavdrag Hemfrids app
+        Beställ städning so I
+        go to Views\Shared\_Layout.cshtml file and edit
+        here from: <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">httpswwwhemfridse</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                            <ul class="navbar-nav flex-grow-1">
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        to:                 <a class="navbar-brand" style="background-image: url(https://www.hemfrid.se/_next/static/media/logo-header-desktop.777963e5118b7a4c54d1b479cfba3aca.svg);" asp-area="" asp-controller="Home" asp-action="Index">httpswwwhemfridse</a>
+    What shows up is only a bit of unproportional Hemfrid logo and text
+        I commit and push with
+        message: "Trying to add similar to Hemfrid.se menu in _Layout.cshtml file 18.2.2022."*@
+
+@* 19.2.2022. The unproportional Hemfrid logo: <a class="navbar-brand"
+    style="background-image:
+    url(https://www.hemfrid.se/_next/static/media/logo-header-desktop.777963e5118b7a4c54d1b479cfba3aca.svg);" asp-area="" asp-controller="Home" asp-action="Index">httpswwwhemfridse</a>
+    has to be adjusted to more suitable size so I add this: height: 32px;    width: 120px;
+
+    so the Hemfrid logo element becomes:
+    <a class="navbar-brand" style="height: 32px;""    width: 120px;""
+    background-image: url(https://www.hemfrid.se/_next/static/media/logo-header-desktop.777963e5118b7a4c54d1b479cfba3aca.svg);" asp-area="" asp-controller="Home" asp-action="Index">httpswwwhemfridse</a>
+    It only becomes worse; zoomed in left top corner of hemfrid logo.
+    I log in to wordpress site attilastarkenius.com.
+    There in https://attilastarkenius.com/veckostadning/
+    I notice "Boyta i Kvadratmeter(måste anges)" validation excepts
+    email with warning message "@ sign is required" so I use
+    this site as help: https://developer.wordpress.org/reference/functions/is_email/
+    it seems email validation: is_email( string $email, bool $deprecated = false )
+    Should be changed to number validation for example 1-1000 square meters has to be filled in.
+    I commit and push with message "Try to change email validation to square meters validation
+    in https://attilastarkenius.com/veckostadning/ 19.2.2022."
+*@
 
 <!DOCTYPE html>
 <html lang="en">
@@ -53,7 +73,8 @@ What shows up is only a bit of unproportional Hemfrid logo and text
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" style="background-image: url(https://www.hemfrid.se/_next/static/media/logo-header-desktop.777963e5118b7a4c54d1b479cfba3aca.svg);" asp-area="" asp-controller="Home" asp-action="Index">httpswwwhemfridse</a>
+                <a class="navbar-brand" style="height: 32px; width: 120px;
+    background-image: url(https://www.hemfrid.se/_next/static/media/logo-header-desktop.777963e5118b7a4c54d1b479cfba3aca.svg);" asp-area="" asp-controller="Home" asp-action="Index">httpswwwhemfridse</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
