@@ -60,6 +60,23 @@
     in https://attilastarkenius.com/veckostadning/ 19.2.2022."
 *@
 
+@* 19.2.2022. Again, it all comes down
+           for me to try to edit HTML and possibly javascript of attilastarkenius.com
+           as freely as possible so I use this website as tutorial: https://kinsta.com/knowledgebase/edit-wordpress-code/
+           to continue trying to make validation of https://attilastarkenius.com/veckostadning/
+           correctly set up so in https://wordpress.com/page/attilastarkenius.com/30
+           block types don't include 1-1000 validation so I just
+           add custom html block element and use this site as help: https://shibulijack.wordpress.com/2012/03/18/create-custom-forms-in-wordpress/
+           so I add in that block element: <form action="../process.php" method="post" name="myForm">
+       Name <input id="name" type="text" name="name" />
+       Email <input id="email" type="text" name="email" />
+       <input type="submit" value="Submit" /></form>
+       so when I preview it looks like this: Name:    Email:     Submit
+    I update the site.
+    Only the text ""Name, Email"" shows up. I commit and push with
+    message "Trying to add custom html to https://attilastarkenius.com/veckostadning/ 19.2.2022."
+*@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
