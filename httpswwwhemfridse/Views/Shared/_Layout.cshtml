@@ -89,6 +89,26 @@
     in code editor of wordpress to for square meter suitable validation I
         commit and push with message "Searching wp:jetpack/field- for square meter 23.2.2022."
 *@
+
+
+@* 24.2.2022. In https://wordpress.com/page/attilastarkenius.com/30 code
+            editor I change from: <!-- wp:jetpack/field-email {"label":"Boyta i Kvadratmeter","required":true} /-->
+        to: <!-- wp:jetpack/field-textarea {"label":"Boyta i Kvadratmeter","required":true} /-->
+        Now at least Boyta i Kvadratmeter(måste anges) doesn't give validation error that belongs
+        to email validation. When I wwith values 16869 and 44 click "Contact us" it
+        just shows Postnummer: 16869
+    Boyta i Kvadratmeter: 44
+    Fyll i postnummer och boyta så får du en prisuppskattning direkt:
+
+    I want instead "Fyll i postnummer och boyta så får du en prisuppskattning direkt:"
+    show: ""från 255 kr/hmed RUT-avdrag"".
+    I get the value from https://www.hemfrid.se/veckostadning with those input values
+    so to make a rough function: från kr/hmed RUT-avdrag = Boyta i Kvadratmeter * 6
+    so I notice it's impossible to use wp:jetpack/field-textarea values to do that
+    function because I can't access php code. I commit and
+    push with message: "Trying to use wp:jetpack/field-textarea input values 24.2.2022."
+
+*@
 <!DOCTYPE html>
 <html lang="en">
 <head>
