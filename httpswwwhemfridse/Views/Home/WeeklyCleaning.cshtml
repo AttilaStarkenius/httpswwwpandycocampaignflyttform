@@ -21,7 +21,7 @@
     This package may not be fully compatible with your project.
     httpswwwpandycocampaignflyttform	C:\Users\symph\source\repos\httpswwwpandycocampaignflyttform\httpswwwpandycocampaignflyttform\httpswwwpandycocampaignflyttform.csproj	1
     I use this website as help: https://code-maze.com/enabling-cors-in-asp-net-core/
-    and change in Startup.cs: 
+    and change in Startup.cs:
 *@
 
 @{
@@ -56,7 +56,28 @@
     pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
     required>*@
 
+@* 26.2.2022. Because I can't edit Wordpress form fields enough(I have
+        no access to php files) I instead do it
+    with Visual Studio in Views/Home/WeeklyCleaning.cshtml file,
+        and I think I will use html for form with help of this website: https://www.w3schools.com/html/html_forms.asp
+        like this copied code but obviously adjusted to my project: <form action="/action_page.php">
+      <label for="fname">First name:</label><br>
+      <input type="text" id="fname" name="fname" value="John"><br>
+      <label for="lname">Last name:</label><br>
+      <input type="text" id="lname" name="lname" value="Doe"><br><br>
+      <input type="submit" value="Submit">
+    </form>
+*@
 
+<form action="/action_page.php">
+      <label for="fname">First name:</label><br>
+      <input type="text" id="fname" name="fname" value="John"><br>
+      <label for="lname">Last name:</label><br>
+      <input type="text" id="lname" name="lname" value="Doe"><br><br>
+      <input type="submit" value="Submit">
+    </form>
+@* 26.2.2022. I commit and push 
+    with message "Adding form for Zip code and Living space in square meters 26.2.2022." *@
 
 <input id="zip" name="zip" type="text" pattern="[0-9]*" maxlength="6" placeholder="Postnummer" required>
 
