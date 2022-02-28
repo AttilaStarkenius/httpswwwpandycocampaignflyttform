@@ -151,8 +151,8 @@ Beställ städning so I
 go to Views\Shared\_Layout.cshtml file and edit there*/
 
 
-        [HttpPost]
-public IActionResult WeeklyCleaning(WeeklyCleaningModel model)
+        //[HttpPost]
+        public IActionResult WeeklyCleaning(WeeklyCleaningModel model)
 {
 return View();
 }

@@ -69,19 +69,120 @@
     </form>
 *@
 
-<form action="/action_page.php">
-      <label for="fname">First name:</label><br>
-      <input type="text" id="fname" name="fname" value="John"><br>
-      <label for="lname">Last name:</label><br>
-      <input type="text" id="lname" name="lname" value="Doe"><br><br>
-      <input type="submit" value="Submit">
-    </form>
-@* 26.2.2022. I commit and push 
+@*<form action="/action_page.php">
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname" value="John"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname" value="Doe"><br><br>
+        <input type="submit" value="Submit">
+    </form>*@
+@* 26.2.2022. I commit and push
     with message "Adding form for Zip code and Living space in square meters 26.2.2022." *@
 
-<input id="zip" name="zip" type="text" pattern="[0-9]*" maxlength="6" placeholder="Postnummer" required>
+@*28.2.2022. With help of this website: https://formvalidation.io/guide/examples/can-not-submit-form-after-validation/
+                  I try to submit form "action="/action_page.php">" automatically
+                  when all fields are valid - like in https://www.hemfrid.se/veckostadning
+                  like this: FormValidation.formValidation(
+                      document.getElementById('demoForm'),
+                      {
+                          fields: {
+                              ...
+                          },
+                          plugins: {
+                              // Validate fields when clicking the Submit button
+                              submitButton: new FormValidation.plugins.SubmitButton(),
 
-<input id="sqm" name="sqm" type="text" pattern="[0-9]*" maxlength="3" placeholder="Boyta i kvm" required>
+                              // Submit the form when all fields are valid
+                              defaultSubmit: new FormValidation.plugins.DefaultSubmit(),
+                              ...
+                          },
+                      }
+                  );
+                  so I change: <form action="/action_page.php">
+                      to: <form id="demoForm" action="/action_page.php">
+                Regarding to https://medium.com/geekculture/where-to-put-a-script-tag-into-head-or-body-end-b5b063058e0b
+                I should have sripts in the end of <body> element so I do that change
+                in every cshtml file.
+                When I run the project "Boka veckostädning" doesn't work because
+                  it's pointing at https://localhost:44379/WeeklyCleaning/WeeklyCleaning
+                instead of https://localhost:44379/Home/WeeklyCleaning
+                so i change in Index.cshtml from: <a href="/WeeklyCleaning/WeeklyCleaning"><div class="lfsvn _2bSWk">Boka veckostädning</div></a>
+                to:     <a href="/Home/WeeklyCleaning"><div class="lfsvn _2bSWk">Boka veckostädning</div></a>
+                It doesn't work either and leads to https://localhost:44379/Home/WeeklyCleaning
+                with message: 405 Method Not Allowed.
+                When I in Homecontroller change from: [HttpPost]
+            public IActionResult WeeklyCleaning(WeeklyCleaningModel model)
+            {
+            return View();
+            }
+            to:
+             //[HttpPost]
+        public IActionResult WeeklyCleaning(WeeklyCleaningModel model)
+        {
+        return View();
+        }
+        it works and leads to page https://localhost:44379/Home/WeeklyCleaning
+        looking like this: httpswwwhemfridse
+    Home
+    Privacy
+    WeeklyCleaning
+    First name:
+    John
+
+    Last name:
+    Doe
+
+
+    Postnummer
+
+    Boyta i kvm
+    © 2021 - httpswwwhemfridse - Privacy
+    I commit and push with message "Fixing https://localhost:44379/Home/WeeklyCleaning 28.2.2022."
+*@
+
+
+<head>
+
+</head>
+
+<body>
+
+    <form id="demoForm" action="/action_page.php">
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname" value="John"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname" value="Doe"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+
+
+    <input id="zip" name="zip" type="text" pattern="[0-9]*" maxlength="6" placeholder="Postnummer" required>
+
+    <input id="sqm" name="sqm" type="text" pattern="[0-9]*" maxlength="3" placeholder="Boyta i kvm" required>
+
+
+    <script>
+        FormValidation.formValidation(
+            document.getElementById('demoForm'),
+            {
+                fields: {
+                    ...
+                                                                    },
+                plugins: {
+                    // Validate fields when clicking the Submit button
+                    submitButton: new FormValidation.plugins.SubmitButton(),
+
+                    // Submit the form when all fields are valid
+                    defaultSubmit: new FormValidation.plugins.DefaultSubmit(),
+                    ...
+                                                                    },
+            }
+        );
+    </script>
+
+
+</body>
 
 @* 1.2.2022. I want there to be a submit event:
             only when both <input id="zip" name="zip" type="text" pattern="[0-9]*" maxlength="6" required> and
