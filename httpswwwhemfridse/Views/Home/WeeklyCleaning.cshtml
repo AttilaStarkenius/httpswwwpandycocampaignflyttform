@@ -214,38 +214,197 @@
 
 <body>
 
-    <form id="demoForm" action="/action_page.php">
-        <label for="fname">First name:</label><br>
-        <input type="text" id="fname" name="fname" value="John"><br>
-        <label for="lname">Last name:</label><br>
-        <input type="text" id="lname" name="lname" value="Doe"><br><br>
-        <input type="submit" value="Submit">
+    @*<form id="demoForm" action="/action_page.php">
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname" value="John"><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname" value="Doe"><br><br>
+            <input type="submit" value="Submit">
+        </form>*@
+
+    @* 2.3.2022. Because I don't have any action_page.php and, for that matter,
+                                                                    I don't want to go to new page, just refresh the current page uodated
+                                                                    with cleaning price decided from user input values  like in https://www.hemfrid.se/veckostadning
+                                                                so I change: <form id="demoForm" action="/action_page.php">
+                                                                    <label for="fname">First name:</label><br>
+                                                                    <input type="text" id="fname" name="fname" value="John"><br>
+                                                                    <label for="lname">Last name:</label><br>
+                                                                    <input type="text" id="lname" name="lname" value="Doe"><br><br>
+                                                                    <input type="submit" value="Submit">
+                                                                </form>
+                                                                to:
+                                                                <form id="demoForm">
+                                                                <label for="fname">First name:</label><br>
+                                                                <input type="text" id="fname" name="fname" value="John"><br>
+                                                                <label for="lname">Last name:</label><br>
+                                                                <input type="text" id="lname" name="lname" value="Doe"><br><br>
+                                                                <input type="submit" value="Submit">
+                                                            </form>
+                                                            because https://developer.mozilla.org/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data
+                                                            i citate"If this attribute isn't provided,
+                                                            the data will be sent to the URL of the page containing the form — the current page."
+                                                            also I change to suitable values:
+                                                            <form id="demoForm">
+                                                        <label for="zip">First name:</label><br>
+                                                        <input type="text" id="zip" name="zip" placeholder="Postnummer" required><br>
+                                                        <label for="sqm">Last name:</label><br>
+                                                        <input type="text" id="sqm" name="lnamsqme" placeholder="Boyta i kvm" required><br><br>
+                                                        <input type="submit" value="Submit">
+                                                    </form>
+                                                        </form>
+
+                                                    Now when I click submit button with values 16869 and 44
+                                                    it only shows https://localhost:44379/Home/WeeklyCleaning?zip=16869&lnamsqme=44
+                                                    but I want to display the counting of "Swedish kronas per hour" instead so I change
+                                                    from:     <form id="demoForm">
+                                                    <label for="zip">First name:</label><br>
+                                                    <input type="text" id="zip" name="zip" placeholder="Postnummer" required><br>
+                                                    <label for="sqm">Last name:</label><br>
+                                                    <input type="text" id="sqm" name="lnamsqme" placeholder="Boyta i kvm" required><br><br>
+                                                    <input type="submit" value="Submit">
+                                                </form>
+                                                to:
+                                                <form id="demoForm">
+                                                <label for="zip">First name:</label><br>
+                                                <input type="text" id="zip" name="zip" placeholder="Postnummer" required><br>
+                                                <label for="sqm">Last name:</label><br>
+                                                <input type="text" id="sqm" name="lnamsqme" placeholder="Boyta i kvm" required><br><br>
+                                                <input type="submit" value="Submit">
+                                            </form>
+                                            I use this website as help:https://stackoverflow.com/questions/2503923/html-button-calling-an-mvc-controller-and-action-method
+                                            so I change to:         <input onclick="location.href='@Url.Action("WeeklyCleaningPrice", "Home")'" type="submit" value="Submit">
+                                               but it just leads to issue:
+                                       but it just leads to issue:
+                                    An unhandled exception occurred while processing the request.
+                                    InvalidOperationException: The view 'WeeklyCleaningPrice' was not found. The following locations were searched:
+                                    /Views/Home/WeeklyCleaningPrice.cshtml
+                                    /Views/Shared/WeeklyCleaningPrice.cshtml
+                                    Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable<string> originalLocations)
+                                    so I change to:         <input onclick="WeeklyCleaningPrice()" type="submit" value="Submit">
+                            and add javascript: function WeeklyCleaningPrice() {
+                                        var squareMeters = document.getElementById("sqm").elements;
+                                        squareMeters * 6 =  swedishKronasPerHour;
+
+                                        document.getElementById('displayswedishKronasPerHour').innerHTML = position + player_id
+                                    }
+                            and add html element displayswedishKronasPerHour:
+                        <label id="displayswedishKronasPerHour"></label>
+                        it doesn't work - it just displays the text displayswedishKronasPerHour
+                        so I use this website as help: https://stackoverflow.com/questions/30282714/add-javascript-onclick-to-html-form-submit
+                        and change from: <form id="demoForm">
+                        <label for="zip">First name:</label><br>
+                        <input type="text" id="zip" name="zip" placeholder="Postnummer" required><br>
+                        <label for="sqm">Last name:</label><br>
+                        <input type="text" id="sqm" name="sqm" placeholder="Boyta i kvm" required><br><br>
+                        <input onclick="WeeklyCleaningPrice()" type="submit" value="Submit">
+                    </form>
+                    to:  <form id="demoForm" onsubmit="WeeklyCleaningPrice()">
+                    <label for="zip">First name:</label><br>
+                    <input type="text" id="zip" name="zip" placeholder="Postnummer" required><br>
+                    <label for="sqm">Last name:</label><br>
+                    <input type="text" id="sqm" name="sqm" placeholder="Boyta i kvm" required><br><br>
+                    <input type="submit" value="Submit">
+                </form>
+                it still doesn't work so I change with help
+                of this website: https://www.w3schools.com/js/tryit.asp?filename=tryjs_form_elements
+                from: function WeeklyCleaningPrice() {
+                    var squareMeters = document.getElementById("sqm").elements;
+                    //squareMeters * 6 == swedishKronasPerHour;
+
+                    document.getElementById('displayswedishKronasPerHour').innerHTML = squareMeters * 6;
+                }
+                to with help of this website https://www.tutorialrepublic.com/faq/how-to-get-the-value-of-text-input-field-using-javascript.php:
+                function WeeklyCleaningPrice() {
+                    //var squareMeters = document.getElementById("sqm");
+
+                    var squareMeters = document.getElementById("sqm").value;
+
+
+                    //squareMeters * 6 == swedishKronasPerHour;
+
+                    document.getElementById('displayswedishKronasPerHour').innerHTML = squareMeters * 6;
+                }
+                it doesn't help so I change from:     <form id="demoForm"> to:
+                    <form method="post" id="demoForm">
+        but it doesn't help so I change from:         <input type="text" id="sqm" name="sqm" placeholder="Boyta i kvm" required><br><br>
+        to:         <input type="number" id="sqm" name="sqm" placeholder="Boyta i kvm" required><br><br>
+        still nothing happens. I commit and push
+        with message "Fixing form method="post" id="demoForm" 2.3.2022."
+    *@
+    <form method="post" id="demoForm">
+        <label for="zip">First name:</label><br>
+        <input type="text" id="zip" name="zip" placeholder="Postnummer" required><br>
+        <label for="sqm">Last name:</label><br>
+        <input type="number" id="sqm" name="sqm" placeholder="Boyta i kvm" required><br><br>
+        <input onclick="WeeklyCleaningPrice()" type="submit" value="Submit">
     </form>
 
+    <label id="displayswedishKronasPerHour">displayswedishKronasPerHour</label>
 
 
-    <input id="zip" name="zip" type="text" pattern="[0-9]*" maxlength="6" placeholder="Postnummer" required>
+    @*<input id="zip" name="zip" type="text" pattern="[0-9]*" maxlength="6" placeholder="Postnummer" required>
 
-    <input id="sqm" name="sqm" type="text" pattern="[0-9]*" maxlength="3" placeholder="Boyta i kvm" required>
+        <input id="sqm" name="sqm" type="text" pattern="[0-9]*" maxlength="3" placeholder="Boyta i kvm" required>*@
 
 
     <script>
-        FormValidation.formValidation(
-            document.getElementById('demoForm'),
-            {
-                fields: {
-                    ...
-                                                                                                                                                                                        },
-                plugins: {
-                    // Validate fields when clicking the Submit button
-                    submitButton: new FormValidation.plugins.SubmitButton(),
+        function WeeklyCleaningPrice() {
+            //var squareMeters = document.getElementById("sqm");
 
-                    // Submit the form when all fields are valid
-                    defaultSubmit: new FormValidation.plugins.DefaultSubmit(),
-                    ...
-                                                                                                                                                                                        },
-            }
-        );
+            var squareMeters = document.getElementById("sqm").value;
+
+
+
+            alert(squareMeters);
+
+            //squareMeters * 6 == swedishKronasPerHour;
+
+            document.getElementById('displayswedishKronasPerHour').innerHTML = squareMeters * 6;
+
+            alert(squareMeters);
+
+        }
+
+
+        //2.3.2022. With help of this website: https://formvalidation.io/guide/examples/can-not-submit-form-after-validation/
+        //I try to submit form "action=" / action_page.php">" automatically
+        //when all fields are valid - like in https://www.hemfrid.se/veckostadning
+        //like this: FormValidation.formValidation(
+        //    document.getElementById('demoForm'),
+        //    {
+        //        fields: {
+        //            ...
+        //                  },
+        //        plugins: {
+        //            // Validate fields when clicking the Submit button
+        //            submitButton: new FormValidation.plugins.SubmitButton(),
+
+        //            // Submit the form when all fields are valid
+        //            defaultSubmit: new FormValidation.plugins.DefaultSubmit(),
+        //            ...
+        //                  },
+        //    }
+        //);
+        But when I on https://localhost:44379/Home/WeeklyCleaning
+        click submit button nothing happens.
+
+
+            FormValidation.formValidation(
+                document.getElementById('demoForm'),
+                {
+                    fields: {
+                        ...
+                                                                                                                                                                                                                                                                                                                                            },
+                    plugins: {
+                        // Validate fields when clicking the Submit button
+                        submitButton: new FormValidation.plugins.SubmitButton(),
+
+                        // Submit the form when all fields are valid
+                        defaultSubmit: new FormValidation.plugins.DefaultSubmit(),
+                        ...
+                                                                                                                                                                                                                                                                                                                                            },
+                }
+            );
     </script>
 
 

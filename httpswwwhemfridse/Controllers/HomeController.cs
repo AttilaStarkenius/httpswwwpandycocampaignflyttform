@@ -18,6 +18,11 @@ namespace httpswwwhemfridse.Controllers
             _logger = logger;
         }
 
+        //2.3.2022. I add "Swedish kronas per hour with RUT-deduction" like this:
+        //public IActionResult WeeklyCleaningPrice()
+        //{
+        //    return View();
+        //}
         public IActionResult Index()
         {
             return View();
