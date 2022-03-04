@@ -339,6 +339,26 @@
         <input onclick="WeeklyCleaningPrice()" type="submit" value="Submit">
     </form>
 
+    @* 4.3.2022. I edit wordpress page https://attilastarkenius.com/stadning/
+                        in https://wordpress.com/page/attilastarkenius.com/69 like this:
+                        I add in right 30% column first header:
+                        Alltid hos oss
+                        then I try to add checkmarks list with help of this website:
+                        https://wpexplorer-themes.com/total/docs/adding-a-checkmarks-list/
+                        I notice there is no checklist option so I use just point list:
+                        . Alltid fast pris
+                . Ansvarsförsäkring
+                . Utbildad personal med kollektivavtal
+                Then I add a button "Boka städning" with link "https://www.hemfrid.se/veckostadning"
+                like this: (Header)Alltid hos oss
+        (Paragraph)Alltid fast pris
+        Ansvarsförsäkring
+        Utbildad personal med kollektivavtal
+        (Button)Boka städning
+        I commit and push with message "Fixing https://attilastarkenius.com/stadning/
+        right column with header "Alltid hos oss" 5.3.2022."
+    *@
+
     <label id="displayswedishKronasPerHour">displayswedishKronasPerHour</label>
 
 
@@ -394,7 +414,7 @@
                 {
                     fields: {
                         ...
-                                                                                                                                                                                                                                                                                                                                            },
+                                                                                                                                                                                                                                                                                                                                                                            },
                     plugins: {
                         // Validate fields when clicking the Submit button
                         submitButton: new FormValidation.plugins.SubmitButton(),
@@ -402,7 +422,7 @@
                         // Submit the form when all fields are valid
                         defaultSubmit: new FormValidation.plugins.DefaultSubmit(),
                         ...
-                                                                                                                                                                                                                                                                                                                                            },
+                                                                                                                                                                                                                                                                                                                                                                            },
                 }
             );
     </script>
