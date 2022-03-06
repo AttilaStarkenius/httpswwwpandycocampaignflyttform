@@ -359,12 +359,30 @@
         right column with header "Alltid hos oss" 5.3.2022."
     *@
 
-    <label id="displayswedishKronasPerHour">displayswedishKronasPerHour</label>
+    @* 6.3.2022. I try to create a cshtml page "Stadning.csthml"
+                similar to https://www.hemfrid.se/stadning which
+                I place in map Views/Home/ but before that I create
+                a model called "CleaningModel" to be able to use
+                that as a model in Models map for view "Cleaning" which looks like this:
+                using System;
+        using System.Collections.Generic;
+        using System.Linq;
+        using System.Threading.Tasks;
+
+        namespace httpswwwhemfridse.Models
+        {
+            public class CleaningModel
+            {
+            }
+        }
+which I edit to: 
+
+            <label id="displayswedishKronasPerHour">displayswedishKronasPerHour</label>
 
 
-    @*<input id="zip" name="zip" type="text" pattern="[0-9]*" maxlength="6" placeholder="Postnummer" required>
+            @*<input id="zip" name="zip" type="text" pattern="[0-9]*" maxlength="6" placeholder="Postnummer" required>
 
-        <input id="sqm" name="sqm" type="text" pattern="[0-9]*" maxlength="3" placeholder="Boyta i kvm" required>*@
+                <input id="sqm" name="sqm" type="text" pattern="[0-9]*" maxlength="3" placeholder="Boyta i kvm" required>*@
 
 
     <script>
@@ -414,7 +432,7 @@
                 {
                     fields: {
                         ...
-                                                                                                                                                                                                                                                                                                                                                                            },
+                                                                                                                                                                                                                                                                                                                                                                                    },
                     plugins: {
                         // Validate fields when clicking the Submit button
                         submitButton: new FormValidation.plugins.SubmitButton(),
@@ -422,7 +440,7 @@
                         // Submit the form when all fields are valid
                         defaultSubmit: new FormValidation.plugins.DefaultSubmit(),
                         ...
-                                                                                                                                                                                                                                                                                                                                                                            },
+                                                                                                                                                                                                                                                                                                                                                                                    },
                 }
             );
     </script>

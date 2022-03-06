@@ -57,6 +57,10 @@
             "PeachPied.WordPress.AspNetCore": {
               "target": "Package",
               "version": "[5.5.1-preview1, )"
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[6.0.0, )"
             }
           },
           "imports": [

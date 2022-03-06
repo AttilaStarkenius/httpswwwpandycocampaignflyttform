@@ -1518,3 +1518,4 @@ C:\Users\symph\source\repos\httpswwwpandycocampaignflyttform\httpswwwhemfridse\b
 C:\Users\symph\source\repos\httpswwwpandycocampaignflyttform\httpswwwhemfridse\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\symph\source\repos\httpswwwpandycocampaignflyttform\httpswwwhemfridse\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netstandard1.3\System.Security.Cryptography.ProtectedData.dll
 C:\Users\symph\source\repos\httpswwwpandycocampaignflyttform\httpswwwhemfridse\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard1.3\System.Security.Cryptography.ProtectedData.dll
+C:\Users\symph\source\repos\httpswwwpandycocampaignflyttform\httpswwwhemfridse\obj\Debug\netcoreapp3.1\httpswwwhemfridse.csproj.ResolveComReference.cache
