@@ -6,13 +6,13 @@ using httpswwwhemfridse.Controllers;
 using System.Collections;
 using System.Drawing;
 using System.Drawing.Design;
-using System.Drawing.Bitmap;
-using System.Drawing.BitmapData;
-using System.Drawing.Brush;
-using System.Drawing.Font;
-using System.Drawing.Graphics;
-using System.Drawing.Icon;
-using System.Drawing.Design;
+//using System.Drawing.Bitmap;
+//using System.Drawing.BitmapData;
+//using System.Drawing.Brush;
+//using System.Drawing.Font;
+//using System.Drawing.Graphics;
+//using System.Drawing.Icon;
+//using System.Drawing.Design;
 
 namespace httpswwwhemfridse.Models
 {
@@ -47,5 +47,15 @@ namespace httpswwwhemfridse.Models
         //Almost none of these On https://www.nuget.org/packages/System.Drawing.Common/
         //stated common usings are correct; I commit
         //and push with message "Creating CleaningModel.cs 7.3.2022."
+
+        //7.3.2022. I continue working with https://attilastarkenius.com/stadning/
+        //in the edit page https://wordpress.com/page/attilastarkenius.com/69
+        //by adding two columns for Städning och fönsterputs
+        //but this time both should take 50% space and also
+        //delete the custom text "Använd det här utrymmet för att berätta vad som gör dina tjänster speciella."
+        //because it only takes space. Now I have two 50% columns for Stadning och fönsterputs
+        //part of page. I adjust text of header to center
+        //and size to 40 pixels. I commit and push with message "Fix additional columns
+        //in https://attilastarkenius.com/stadning/ 7.3.2022."
     }
 }

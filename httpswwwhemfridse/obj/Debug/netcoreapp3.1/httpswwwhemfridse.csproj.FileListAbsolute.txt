@@ -1519,3 +1519,8 @@ C:\Users\symph\source\repos\httpswwwpandycocampaignflyttform\httpswwwhemfridse\b
 C:\Users\symph\source\repos\httpswwwpandycocampaignflyttform\httpswwwhemfridse\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netstandard1.3\System.Security.Cryptography.ProtectedData.dll
 C:\Users\symph\source\repos\httpswwwpandycocampaignflyttform\httpswwwhemfridse\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard1.3\System.Security.Cryptography.ProtectedData.dll
 C:\Users\symph\source\repos\httpswwwpandycocampaignflyttform\httpswwwhemfridse\obj\Debug\netcoreapp3.1\httpswwwhemfridse.csproj.ResolveComReference.cache
+C:\Users\symph\source\repos\httpswwwpandycocampaignflyttform\httpswwwhemfridse\bin\Debug\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
+C:\Users\symph\source\repos\httpswwwpandycocampaignflyttform\httpswwwhemfridse\bin\Debug\netcoreapp3.1\System.Drawing.Common.dll
+C:\Users\symph\source\repos\httpswwwpandycocampaignflyttform\httpswwwhemfridse\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
+C:\Users\symph\source\repos\httpswwwpandycocampaignflyttform\httpswwwhemfridse\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.1\System.Drawing.Common.dll
+C:\Users\symph\source\repos\httpswwwpandycocampaignflyttform\httpswwwhemfridse\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Drawing.Common.dll
