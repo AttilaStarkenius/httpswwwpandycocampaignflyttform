@@ -9738,6 +9738,15 @@
           }
         }
       },
+      "System.Windows.Forms/4.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/System.Windows.Forms.dll": {}
+        },
+        "runtime": {
+          "lib/System.Windows.Forms.dll": {}
+        }
+      },
       "System.Xml.ReaderWriter/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -17636,6 +17645,18 @@
         "version.txt"
       ]
     },
+    "System.Windows.Forms/4.0.0": {
+      "sha512": "WL3QPG1q88aIWO0JPOlkCeyNE+FK4ufSKY5j6J6qAFQyfCFiiOYxi8RAhev9H0CS/wmKbIK8qr8xZBod85oWKw==",
+      "type": "package",
+      "path": "system.windows.forms/4.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/System.Windows.Forms.dll",
+        "system.windows.forms.4.0.0.nupkg.sha512",
+        "system.windows.forms.nuspec"
+      ]
+    },
     "System.Xml.ReaderWriter/4.3.0": {
       "sha512": "GrprA+Z0RUXaR4N7/eW71j1rgMnEnEVlgii49GZyAjTH7uliMnrOU3HNFBr6fEDBCJCIdlVNq9hHbaDR621XBA==",
       "type": "package",
@@ -17939,7 +17960,8 @@
       "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation >= 3.1.17",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.5",
       "PeachPied.WordPress.AspNetCore >= 5.5.1-preview1",
-      "System.Drawing.Common >= 6.0.0"
+      "System.Drawing.Common >= 6.0.0",
+      "System.Windows.Forms >= 4.0.0"
     ]
   },
   "packageFolders": {
@@ -18004,6 +18026,10 @@
           "System.Drawing.Common": {
             "target": "Package",
             "version": "[6.0.0, )"
+          },
+          "System.Windows.Forms": {
+            "target": "Package",
+            "version": "[4.0.0, )"
           }
         },
         "imports": [
@@ -18027,5 +18053,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'System.Windows.Forms 4.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "System.Windows.Forms",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
 }
