@@ -37,6 +37,77 @@ namespace httpswwwhemfridse.Controllers
             return View();
         }
 
+        //     10.3.2022. I create to https://www.hemfrid.se/flyttstadning corresponding
+        //    FinalCleaning.cshtml and add with help of this website https://www.formget.com/javascript-auto-submit-form/:
+        //    // Form submit function.
+        //function submitform()
+        //    {
+        //        if (validate()) // Calling validate function.
+        //        {
+        //            alert('Form is submitting.....');
+        //            document.getElementById("form").submit();
+        //        }
+        //    }
+        //    I also add FinalCleaning action method in Homecontroller
+        /*and in that FinalCleaning method I add code for counting of
+        FinalCleaning price with help of this website: https://www.infoworld.com/article/3568209/how-to-pass-parameters-to-action-methods-in-asp-net-core-mvc.html public IActionResult FinalCleaning()
+so I create a mapp "Repositories" and add CleaningModelRepository.cs to it: List<Author> authors = new List<Author>()
+        {
+            new Author
+            {
+                Id = 1,
+                FirstName = "Joydip",
+                LastName = "Kanjilal"
+            },
+            new Author
+            {
+                Id = 2,
+                FirstName = "Steve",
+                LastName = "Smith"
+            }
+        };
+        public Author GetAuthor(int id)
+        {
+            return authors.FirstOrDefault(a => a.Id == id);
+        }
+        public List<Author> GetAuthors(int pageNumber = 1)
+        {
+            int pageSize = 10;
+            int skip = pageSize * (pageNumber - 1);
+            if (authors.Count < pageSize)
+                pageSize = authors.Count;
+            return authors
+              .Skip(skip)
+              .Take(pageSize).ToList();
+        }
+        public bool Save(Author author)
+        {
+            var result = authors.Where(a => a.Id == author.Id);
+            if (result != null)
+            {
+                if (result.Count() == 0)
+                {
+                    authors.Add(author);
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        and add this to FinalCleaning action method in Homecontroller:
+[HttpGet]
+[Route("Default/GetAuthor/{authorId:int}")]
+public IActionResult GetAuthor(int authorId)
+{
+   var data = authorRepository.GetAuthor(authorId);
+   return View(data);
+}*/
+
+        public IActionResult FinalCleaning()
+        {
+            return View();
+        }
+
         public IActionResult Cleaning()
         {
             using (WebClient webClient = new WebClient())

@@ -1,0 +1,48 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@* 10.3.2022. I create to https://www.hemfrid.se/flyttstadning corresponding
+        FinalCleaning.cshtml and add with help of this website https://www.formget.com/javascript-auto-submit-form/:
+        // Form submit function.
+    function submitform(){
+    if( validate() ) // Calling validate function.
+    { alert('Form is submitting.....');
+    document.getElementById("form").submit();
+    }
+    }
+    I also add FinalCleaning action method in Homecontroller
+*@
+
+<html>
+<head>
+    <title>Javascript AutoSubmit Form Example</title>
+    <!-- Include CSS File Here-->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Include JS File Here-->
+    <script src="js/auto_submit.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+            <form action="success.html" method="post" id="form">
+                <h2>Javascript AutoSubmit Form Example</h2>
+                <span>Form will automatically submit in <b id="timer">20</b> <b>seconds</b>.</span>
+                <label>Name :</label>
+                <input type="text" name="name" id="name" placeholder="Name" />
+                <label>Email :</label>
+                <input type="text" name="email" id="email" placeholder="Valid Email" />
+                <label>Gender :</label>
+                <input type="radio" name="gender" value="Male" id="male" />
+                <label>Male</label>
+                <input type="radio" name="gender" value="Female" id="female" />
+                <label>Female</label>
+                <label>Contact No. :</label>
+                <input type="text" name="contact" id="contact" placeholder="Contact No." />
+            </form>
+        </div>
+    </div>
+</body>
+</html>

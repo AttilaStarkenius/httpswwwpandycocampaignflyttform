@@ -22,6 +22,7 @@ using System.Net;
 using System;
 using System.Net;
 using System.IO;
+using System.ComponentModel.DataAnnotations;
 
 namespace httpswwwhemfridse.Models
 {
@@ -30,6 +31,15 @@ namespace httpswwwhemfridse.Models
 
         public Image facebookProfilePicture { get; set; }
         public string firstName { get; set; }
+        /*11.3.2022.I add WeeklyCleaningModel's properties to Cleaningmodel:
+        [Required]
+        public string zip { get; set; }
+        [Required]
+        public string sqm { get; set; }*/
+        [Required]
+        public string zip { get; set; }
+        [Required]
+        public string sqm { get; set; }
 
 
 
