@@ -39,7 +39,7 @@ namespace httpswwwhemfridse.Models
         [Required]
         public string zip { get; set; }
         [Required]
-        public string sqm { get; set; }
+        public int sqm { get; set; }
 
 
 
