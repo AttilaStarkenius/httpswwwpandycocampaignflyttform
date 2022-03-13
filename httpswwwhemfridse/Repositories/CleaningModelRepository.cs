@@ -199,3 +199,12 @@ public bool Save(CleaningModel customer)
 
 I commit and push with message: "Fixing CleaningModelRepository.cs 12.3.2022."
 */
+
+/*13.3.2022. I continue working with https://attilastarkenius.com/flyttstadning/
+by adding paragraph block: "Vi på Hemfrid hjälper dig med flyttstädningen! Fönsterputs ingår och vi tar med all utrustning och städmaterial. Självklart med kvalitetsgaranti. Din köpare kommer att mötas av ett skinande hem och du kan ägna tid åt annat.
+
+Vi på Hemfrid erbjuder alltid fem arbetsdagars garanti på vår flyttstädning."
+After that I add a custom form without a mall: Postnummer(måste anges)
+kvm(måste anges)
+Fyll i fälten för att se pris
+I commit and push to git with message: "Fix https://attilastarkenius.com/flyttstadning/ 13.3.2022."*/
