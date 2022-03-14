@@ -208,3 +208,20 @@ After that I add a custom form without a mall: Postnummer(måste anges)
 kvm(måste anges)
 Fyll i fälten för att se pris
 I commit and push to git with message: "Fix https://attilastarkenius.com/flyttstadning/ 13.3.2022."*/
+
+
+/*14.3.2022. I continue working with https://attilastarkenius.com/flyttstadning/ like this:
+I add aligned to center and bold fonted "Läs mer" paragraph with line break and under that
+"V" letter as a closest equivalent to down arrow that I 
+can find in wordpress, and under that two columns with the left one being 70%, right one 30% wide
+including header with header style H2 Så fungerar vår Flyttstädning:
+Postnummer(måste anges)
+kvm(måste anges)
+Fyll i fälten för att se pris
+Kontakta oss
+Läs mer
+V
+
+Så fungerar vår Flyttstädning
+I commit and push to git 
+with message: "Add columns to https://attilastarkenius.com/flyttstadning/ 14.3.2022."*/
