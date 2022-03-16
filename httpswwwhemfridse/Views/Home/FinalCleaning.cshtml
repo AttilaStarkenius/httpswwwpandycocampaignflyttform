@@ -20,29 +20,192 @@
 <head>
     <title>Javascript AutoSubmit Form Example</title>
     <!-- Include CSS File Here-->
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="~/css/style.css" />
     <!-- Include JS File Here-->
-    <script src="js/auto_submit.js"></script>
+    <script src="~/js/auto_submit.js"></script>
 </head>
 <body>
     <div class="container">
         <div class="main">
-            <form action="success.html" method="post" id="form">
+            @*<form action="success.html" method="post" id="form">*@
+            @* Form doesn't display anything so I change from:             <form action="success.html" method="post" id="form">
+        to:             <form method="post" id="form">
+            *@
+            <form method="post" id="form">
                 <h2>Javascript AutoSubmit Form Example</h2>
                 <span>Form will automatically submit in <b id="timer">20</b> <b>seconds</b>.</span>
-                <label>Name :</label>
+                <label>Postnummer :</label>
                 <input type="text" name="zipCode" id="zipCode" placeholder="Postnummer" />
-                <label>Email :</label>
+                <label>kvm :</label>
                 <input type="text" name="squareMeters" id="squareMeters" placeholder="kvm" />
+                <label id="swedishCronasEstimation"></label>
                 @*<label>Gender :</label>
-                <input type="radio" name="gender" value="Male" id="male" />
-                <label>Male</label>
-                <input type="radio" name="gender" value="Female" id="female" />
-                <label>Female</label>
-                <label>Contact No. :</label>
-                <input type="text" name="contact" id="contact" placeholder="Contact No." />*@
+            <input type="radio" name="gender" value="Male" id="male" />
+            <label>Male</label>
+            <input type="radio" name="gender" value="Female" id="female" />
+            <label>Female</label>
+            <label>Contact No. :</label>
+            <input type="text" name="contact" id="contact" placeholder="Contact No." />*@
             </form>
         </div>
     </div>
+    <script>
+        /*16.3.2022. window.onload never fires so I change with
+        help of this website: https://carstenbehrens.com/never-use-window-onload/
+        from: window.onload = function () { 
+        to: window.addEventListener("load", function() {
+        but it doesn't help, no javascript work Not even
+        outside window.onload does javascript alert work:        
+        alert("Test if event listener load works");
+        I commit and push with message "Adding counting of swedishCronasEstimation of final cleaning 16.3.2022."
+*/
+        alert("Test if event listener load works");
+
+    //    window.onload = function () {
+        window.addEventListener("load", function () {
+    // Onload event of Javascript
+    // Initializing timer variable
+    alert("Test if event listener load works");
+    /* 16.3.2022. alert("Test if window.onload works"); doesn't appear
+ so I think window never gets loaded. */
+
+    var x = 3;
+    var y = document.getElementById("timer");
+    // Display count down for 30s
+    setInterval(function () {
+        if (x <= 4 && x >= 1) {
+            x--;
+            y.innerHTML = '' + x + '';
+            if (x == 1) {
+                x = 4;
+            }
+        }
+    }, 1000);
+    // Form Submitting after 30s
+    var auto_refresh = setInterval(function () {
+        submitform();
+    }, 3000);
+    // Form submit function
+    function submitform() {
+        if (validate()) // Calling validate function
+        {
+            alert('Form is submitting.....');
+            document.getElementById("form").submit();
+        }
+    }
+    // To validate form fields before submission
+    function validate() {
+        // Storing Field Values in variables
+        var zipCode = document.getElementById("zipCode").value;
+        var squareMeters = document.getElementById("squareMeters").value;
+        //var contact = document.getElementById("contact").value;
+        // Regular Expression For Email
+        //var emailReg = /^([w-.]+([w-]+.)+[w-]{2,4})?$/;
+        //14.3.2022. I use this website as a help: https://www.etl-tools.com/regular-expressions/is-swedish-post-code.html
+        //to validate Swedish Post Code like
+        //this: var swedishZipCodeReg = /^(s-|S-){0,1}[0-9]{3}\s?[0-9]{2}$/;
+        var swedishZipCodeReg = /^(s-|S-){0,1}[0-9]{3}\s?[0-9]{2}$/;
+        // Conditions
+        if (zipCode != '' && squareMeters != ''/* && contact != ''*/) {
+            if (zipCode.match(swedishZipCodeReg)) {
+                /*
+@* 16.3.2022. I continue working with help of https://www.formget.com/javascript-auto-submit-form/
+           by changing in FinalCleaning.cshtml from: <label>Gender :</label>
+                            <input type="radio" name="gender" value="Male" id="male" />
+                            <label>Male</label>
+                            <input type="radio" name="gender" value="Female" id="female" />
+                            <label>Female</label>
+                            <label>Contact No. :</label>
+                            <input type="text" name="contact" id="contact" placeholder="Contact No." />
+
+        to: <label>Postnummer :</label>
+                    <input type="text" name="zipCode" id="zipCode" placeholder="Postnummer" />
+                    <label>kvm :</label>
+                    <input type="text" name="squareMeters" id="squareMeters" placeholder="kvm" />
+                    @*<label>Gender :</label>
+                    and then continue working with auto_submit.js by adding code
+                    to count price estimation. In https://www.hemfrid.se/flyttstadning
+                    zip code: 16869 and square meters: 44 gives
+                    result "från 2 400 krmed RUT-avdrag", "From 2400 Swedish kronas and upwards".
+                    so I notice 2400(estimation)/44square meter is about 55 so
+                    I make a simple counting where = "from sqm*55 upwards"
+                    like this: var swedishCronas = squareMeters * 55; I get error TS6133
+                    "var swedishCronas is declared but never used" and I want to, indeed,
+                    use that on a label that should be under the zip code and square meter fields
+                    so I create the label in FinalCleaning.cshtml:
+                    <label id="swedishCronasEstimation"></label> and add this code to auto_submit.js:
+                                    document.getElementById("swedishCronasEstimation").value = squareMeters * 55;
+                    still nothing shows up. I
+                    try with help of this
+                    website: https://stackoverflow.com/questions/24685451/populate-html-label-with-javascript-variable
+                    change from: document.getElementById("swedishCronasEstimation").value = squareMeters * 55;
+                    to: document.getElementById("swedishCronasEstimation").innerHTML = squareMeters * 55;
+                    still nothing shows up so I try to alert the value instead:
+                    alert(squareMeters * 55);
+
+                    */
+                //document.getElementById("swedishCronasEstimation").innerHTML = squareMeters * 55;
+                alert(squareMeters * 55);
+
+                return true;
+                //if (document.getElementById("male").checked || document.getElementById("female").checked) {
+                //    if (contact.length == 10) {
+                //        return true;
+                //    } else {
+                //        alert("The Contact No. must be at least 10 digit long!");
+                //        return false;
+                //    }
+                //} else {
+                //    alert("You must select gender.....!");
+                //    return false;
+                //}
+            } else {
+                alert("Ingen tjänst tillgänglig i området");
+                return false;
+            }
+        } else {
+            alert("Du måste fylla i alla fälten");
+            return false;
+        }
+    }
+};*@
+    </script>
 </body>
 </html>
+
+@* 16.3.2022. I continue working with help of https://www.formget.com/javascript-auto-submit-form/
+           by changing in FinalCleaning.cshtml from: <html>
+        <head>
+            <title>Javascript AutoSubmit Form Example</title>
+            <!-- Include CSS File Here-->
+            <link rel="stylesheet" href="css/style.css" />
+            <!-- Include JS File Here-->
+            <script src="js/auto_submit.js"></script>
+        </head>
+        <body>
+            <div class="container">
+                <div class="main">
+                    <form action="success.html" method="post" id="form">
+                        <h2>Javascript AutoSubmit Form Example</h2>
+                        <span>Form will automatically submit in <b id="timer">20</b> <b>seconds</b>.</span>
+                        <label>Name :</label>
+                        <input type="text" name="zipCode" id="zipCode" placeholder="Postnummer" />
+                        <label>Email :</label>
+                        <input type="text" name="squareMeters" id="squareMeters" placeholder="kvm" />
+                        @*<label>Gender :</label>
+                            <input type="radio" name="gender" value="Male" id="male" />
+                            <label>Male</label>
+                            <input type="radio" name="gender" value="Female" id="female" />
+                            <label>Female</label>
+                            <label>Contact No. :</label>
+                            <input type="text" name="contact" id="contact" placeholder="Contact No." />
+                </form>
+            </div>
+        </div>
+    </body>
+    </html>
+        to: <label>Postnummer :</label>
+                    <input type="text" name="zipCode" id="zipCode" placeholder="Postnummer" />
+                    <label>kvm :</label>
+                    <input type="text" name="squareMeters" id="squareMeters" placeholder="kvm" />
+                    @*<label>Gender :</label>*@

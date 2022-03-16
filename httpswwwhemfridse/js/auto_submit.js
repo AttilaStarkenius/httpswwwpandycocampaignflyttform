@@ -127,9 +127,13 @@ to: window.onload = function () {
 window.onload = function () {
     // Onload event of Javascript
     // Initializing timer variable
+    alert("Test if window.onload works");
+    /* 16.3.2022. alert("Test if window.onload works"); doesn't appear
+ so I think window never gets loaded. */
+
     var x = 3;
     var y = document.getElementById("timer");
-    // Display count down for 20s
+    // Display count down for 30s
     setInterval(function () {
         if (x <= 4 && x >= 1) {
             x--;
@@ -139,7 +143,7 @@ window.onload = function () {
             }
         }
     }, 1000);
-    // Form Submitting after 20s
+    // Form Submitting after 30s
     var auto_refresh = setInterval(function () {
         submitform();
     }, 3000);
@@ -166,6 +170,45 @@ window.onload = function () {
         // Conditions
         if (zipCode != '' && squareMeters != ''/* && contact != ''*/) {
             if (zipCode.match(swedishZipCodeReg)) {
+                /*
+@* 16.3.2022. I continue working with help of https://www.formget.com/javascript-auto-submit-form/
+           by changing in FinalCleaning.cshtml from: <label>Gender :</label>
+                            <input type="radio" name="gender" value="Male" id="male" />
+                            <label>Male</label>
+                            <input type="radio" name="gender" value="Female" id="female" />
+                            <label>Female</label>
+                            <label>Contact No. :</label>
+                            <input type="text" name="contact" id="contact" placeholder="Contact No." />
+
+        to: <label>Postnummer :</label>
+                    <input type="text" name="zipCode" id="zipCode" placeholder="Postnummer" />
+                    <label>kvm :</label>
+                    <input type="text" name="squareMeters" id="squareMeters" placeholder="kvm" />
+                    @*<label>Gender :</label>
+                    and then continue working with auto_submit.js by adding code 
+                    to count price estimation. In https://www.hemfrid.se/flyttstadning
+                    zip code: 16869 and square meters: 44 gives
+                    result "från 2 400 krmed RUT-avdrag", "From 2400 Swedish kronas and upwards".
+                    so I notice 2400(estimation)/44square meter is about 55 so
+                    I make a simple counting where = "from sqm*55 upwards"
+                    like this: var swedishCronas = squareMeters * 55; I get error TS6133
+                    "var swedishCronas is declared but never used" and I want to, indeed,
+                    use that on a label that should be under the zip code and square meter fields 
+                    so I create the label in FinalCleaning.cshtml:   
+                    <label id="swedishCronasEstimation"></label> and add this code to auto_submit.js:
+                                    document.getElementById("swedishCronasEstimation").value = squareMeters * 55;
+                    still nothing shows up. I
+                    try with help of this 
+                    website: https://stackoverflow.com/questions/24685451/populate-html-label-with-javascript-variable
+                    change from: document.getElementById("swedishCronasEstimation").value = squareMeters * 55;
+                    to: document.getElementById("swedishCronasEstimation").innerHTML = squareMeters * 55;
+                    still nothing shows up so I try to alert the value instead:
+                    alert(squareMeters * 55);
+
+                    */
+                //document.getElementById("swedishCronasEstimation").innerHTML = squareMeters * 55;
+                alert(squareMeters * 55);
+
                 return true;
                 //if (document.getElementById("male").checked || document.getElementById("female").checked) {
                 //    if (contact.length == 10) {
