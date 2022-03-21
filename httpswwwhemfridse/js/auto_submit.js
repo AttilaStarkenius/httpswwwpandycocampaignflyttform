@@ -124,6 +124,10 @@ to: window.onload = function () {
     }
 };*/
 
+/*21.3.2022. I add before window.onload function:     alert("Test if window.onload works");*/
+alert("Test if window.onload works");
+
+
 window.onload = function () {
     // Onload event of Javascript
     // Initializing timer variable

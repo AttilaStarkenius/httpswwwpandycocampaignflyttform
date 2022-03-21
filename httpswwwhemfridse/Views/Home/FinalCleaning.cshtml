@@ -31,7 +31,17 @@
             @* Form doesn't display anything so I change from:             <form action="success.html" method="post" id="form">
         to:             <form method="post" id="form">
             *@
-            <form method="post" id="form">
+            @* 21.3.2022. I try to change with help of this website:https://stackoverflow.com/questions/15190929/how-to-link-html5-form-action-to-controller-actionresult-method-in-asp-net-mvc-4
+
+                from <form method="post" id="form">:
+        to:  <form action="@Url.Action("FinalCleaning", "Home")" method="post" id="form">
+                <form "@Url.Action("MyAction", "MyController")" method="post" id="form">
+                I commit and push to git with message "Adding description
+                to concept in https://conesult.com/home?menu=concept&s=attila-starkenius&tab3=concept&tab2=plan
+                and fixing so that FinalCleaning.cshtml
+                form points to right action method" 21.3.2022.*@
+            <form action="@Url.Action("FinalCleaning", "Home")" method="post" id="form">
+                @*<form method="post" id="form">*@
                 <h2>Javascript AutoSubmit Form Example</h2>
                 <span>Form will automatically submit in <b id="timer">20</b> <b>seconds</b>.</span>
                 <label>Postnummer :</label>
@@ -234,7 +244,9 @@ Blogg på WordPress.com.
 
 I commit and push to git with message "Creating concept idea about cloth combination website
 in https://conesult.com/home?menu=concept&s=attila-starkenius&tab3=concept&tab2= and
-fixing some columns in https://attilastarkenius.com/flyttstadning/ 21.3.2022."
+fixing some columns in https://attilastarkenius.com/flyttstadning/ 21.3.2022."*/
+
+/*21.3.2022. I continue working with FinalCleaning.cshtml*/ 
 
         alert("Test if event listener load works");
 
