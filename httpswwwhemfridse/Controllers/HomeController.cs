@@ -103,6 +103,11 @@ public IActionResult GetAuthor(int authorId)
    return View(data);
 }*/
 
+        public IActionResult ClothCombinationPriceEstimation()
+        {
+            return View();
+        }
+
         public IActionResult FinalCleaning()
         {
             return View();

@@ -74,13 +74,29 @@
     <title>@ViewBag.Title - My ASP.NET MVC Application</title>
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <meta name="viewport" content="width=device-width" />
-    @Styles.Render("~/Content/css")
+    @*@using System.Web.Optimization*@
+    @*@Styles.Render("~/Content/css")*@
     @* 4.4.2022. When I debug I get error Severity	Code	Description	Project	File	Line	Suppression State
         Error	CS0103	The name 'Styles' does not exist in the current context	httpswwwhemfridse	C:\Users\symph\source\repos\httpswwwpandycocampaignflyttform\httpswwwhemfridse\Views\Home\ClothCombinationPriceEstimation.cshtml	77	Active
-        I commit and push 
+        I commit and push
         with message "Fixing missing referenced files in ClothCombinationPriceEstimation.cshtml 4.4.2022."
     *@
-    @Scripts.Render("~/bundles/modernizr")
+    @* 4.4.2022. What causes according to this site: https://stackoverflow.com/questions/23534516/the-name-scripts-does-not-exists-in-the-current-context-in-mvc
+                        is that I am missing Microsoft.AspNet.Web.Optimization so I
+                        install it: https://www.nuget.org/packages/Microsoft.AspNet.Web.Optimization/
+                        it doesn't help and this doesn't help:     @using System.Web.Optimization
+
+                so I comment out     @Styles.Render("~/Content/css")
+        and       @Scripts.Render("~/bundles/modernizr")
+        When I debug there is http 404 error page could not be found, so I add in Homecontroller.cs file
+        ClothCombinationPriceEstimation action method: public IActionResult ClothCombinationPriceEstimation()
+        {
+            return View();
+        }
+        Now when I debug I get error InvalidOperationException: The partial view '_Header' was not found. The following locations were searched: /Views/Home/_Header.cshtml /Views/Shared/_Header.cshtml
+        I commit and push with message "Fixing partial views of ClothCombinationPriceEstimation.cshtml 4.4.2022."
+    *@
+    @*@Scripts.Render("~/bundles/modernizr")*@
 </head>
 <body>
     <header>
@@ -100,7 +116,7 @@
             </div>
         </div>
     </footer>
-    @Scripts.Render("~/bundles/jquery")
+    @*@Scripts.Render("~/bundles/jquery")*@
     @RenderSection("scripts", required: false)
 </body>
 </html>

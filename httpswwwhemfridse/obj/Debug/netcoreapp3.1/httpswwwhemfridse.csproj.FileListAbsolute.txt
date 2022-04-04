@@ -1528,3 +1528,7 @@ C:\Users\symph\source\repos\httpswwwpandycocampaignflyttform\httpswwwhemfridse\b
 C:\Users\symph\source\repos\httpswwwpandycocampaignflyttform\httpswwwhemfridse\obj\Debug\netcoreapp3.1\Razor\Views\Home\Cleaning.cshtml.g.cs
 C:\Users\symph\source\repos\httpswwwpandycocampaignflyttform\httpswwwhemfridse\obj\Debug\netcoreapp3.1\Razor\Views\Home\FinalCleaning.cshtml.g.cs
 C:\Users\symph\source\repos\httpswwwpandycocampaignflyttform\httpswwwhemfridse\obj\Debug\netcoreapp3.1\Razor\Views\Home\ClothCombinationPriceEstimation.cshtml.g.cs
+C:\Users\symph\source\repos\httpswwwpandycocampaignflyttform\httpswwwhemfridse\bin\Debug\netcoreapp3.1\Antlr3.Runtime.dll
+C:\Users\symph\source\repos\httpswwwpandycocampaignflyttform\httpswwwhemfridse\bin\Debug\netcoreapp3.1\System.Web.Optimization.dll
+C:\Users\symph\source\repos\httpswwwpandycocampaignflyttform\httpswwwhemfridse\bin\Debug\netcoreapp3.1\Microsoft.Web.Infrastructure.dll
+C:\Users\symph\source\repos\httpswwwpandycocampaignflyttform\httpswwwhemfridse\bin\Debug\netcoreapp3.1\WebGrease.dll
