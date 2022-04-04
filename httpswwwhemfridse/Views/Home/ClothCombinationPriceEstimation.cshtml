@@ -29,3 +29,73 @@
     so I change the file ending to: ClothCombinationPriceEstimation.cshtml
         and commit and push to git changes with
         message: "Decision to use my personalized website and correct file ending .cshtml 4.4.2022. "*@
+
+
+@*4.4.2022. I get ManagedProjectSystemPackage error when I start visual studio and
+        choose "Don't continue showing this error". I continue working with ClothCombinationPriceEstimation.cshtml
+        and use this website as help: https://www.c-sharpcorner.com/UploadFile/rahul4_saxena/design-a-master-page-with-header-footer-and-body-in-mvc-app/
+        so I add: <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title - My ASP.NET MVC Application</title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width" />
+        @Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")
+    </head>
+    <body>
+        <header>
+            <div class="content-wrapper">
+                @Html.Partial("_Header")
+            </div>
+        </header>
+        <div id="body">
+            <section class="content-wrapper main-content clear-fix">
+                @RenderBody()
+            </section>
+        </div>
+        <footer>
+            <div class="content-wrapper">
+                <div class="float-left">
+                    @Html.Partial("_Footer")
+                </div>
+            </div>
+        </footer>
+        @Scripts.Render("~/bundles/jquery")
+        @RenderSection("scripts", required: false)
+    </body>
+    </html> I commit and push to git changes
+    with message: "Working with ClothCombinationPriceEstimation.cshtml header, body and footer 4.4.2022."*@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title - My ASP.NET MVC Application</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <header>
+        <div class="content-wrapper">
+            @Html.Partial("_Header")
+        </div>
+    </header>
+    <div id="body">
+        <section class="content-wrapper main-content clear-fix">
+            @RenderBody()
+        </section>
+    </div>
+    <footer>
+        <div class="content-wrapper">
+            <div class="float-left">
+                @Html.Partial("_Footer")
+            </div>
+        </div>
+    </footer>
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
