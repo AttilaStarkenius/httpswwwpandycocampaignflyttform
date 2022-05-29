@@ -635,3 +635,7 @@ Open GIF Keyboard
 Open Emoji Keyboard
 Send
 
+TODAY
+View Attila’s profileAttila Starkenius
+Attila Starkenius  1:14 AM
+What about java development of the backend of Conesult? Can I effectivize it in some way?
