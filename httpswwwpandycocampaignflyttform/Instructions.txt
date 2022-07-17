@@ -1628,3 +1628,95 @@ Attila Starkenius  4:08 PM
 Sorry late reply about Tawk, I try to find a way to avoid the advertisements. My business idea is in Idea/Concept and Scenario/Model Deliberation and Assessment
 I continue working with Tawk
 My tawk page: https://dashboard.tawk.to/#/dashboard/62b0f184b0d10b6f3e785998
+
+
+Emna Riahi
+17:37, Sunday, 17/07/22
+
+I can Python and succeeded in Python skill quiz in linkedin: https://www.linkedin.com/feed/update/urn:li:activity:6954458814704168960/
+Attila Starkenius
+
+00:00, Wednesday, 13/07/22
+Hey, 
+
+That would be appreciated! 
+
+I am planning to start Python courses. I asked around and did some research, and ended up that Python is the best fit as a programing language starter. Plus, it is relevant to InfoSec. Though, you did not mention it on your profile. 
+
+Looking at my profile, what would you advise me? 
+Best,
+Emna. 
+
+Emna Riahi
+21:27, Monday, 11/07/22
+
+Can I help you with programming? Best Regards, Attila
+Attila Starkenius
+
+Back
+Reply
+MENU
+
+15
+SEARCH
+
+CHAT
+SUPPORT
+Attila Starkenius  4:08 PM
+Sorry late reply about Tawk, I try to find a way to avoid the advertisements. My business idea is in Idea/Concept and Scenario/Model Deliberation and Assessment
+View Attila’s profileAttila Starkenius
+Attila Starkenius  4:48 PM
+Hey Toni, I get no annoying advertisements when I just use this code snippet in some .cshtml page: <body><script type="text/javascript">
+var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+(function () {
+var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+s1.async = true;
+s1.src = 'https://embed.tawk.to/62b0f184b0d10b6f3e785998/1g61iurkr';
+s1.charset = 'UTF-8';
+s1.setAttribute('crossorigin', '*');
+s0.parentNode.insertBefore(s1, s0);
+})();
+</script>
+</body>
+Toni Babic sent the following message at 6:17 PM
+View Toni’s profileToni Babic
+Toni Babic  6:17 PM
+We have new chat, it goes via email..
+
+Can you try it?
+Attila Starkenius sent the following message at 6:30 PM
+View Attila’s profileAttila Starkenius
+Attila Starkenius  6:30 PM
+Okay
+SATURDAY
+Toni Babic sent the following message at 6:28 PM
+View Toni’s profileToni Babic
+Toni Babic  6:28 PM
+Can we test it, it's still in a testing phase...
+TODAY
+Attila Starkenius sent the following message at 5:31 PM
+View Attila’s profileAttila Starkenius
+Attila Starkenius  5:31 PM
+What I write to support I get response mail: We’ve received your message!
+
+Our normal response time is within 24 hours. Please give us some time to get back to you. You can now relax and expect our email soon!
+
+Name: Attila Starkenius
+
+Subject: Support
+
+Message: new chat test
+
+Channel: https://conesult.com/channel/attila-starkenius
+
+Email: symphtom@hotmail.com
+
+-
+Conesult - Digital (business) incubator & accelerator
+
+LinkedIn Facebook Instagram Youtube
+
+You don't want to receive account-related emails?
+
+Attila Starkenius | Channel - Conesult
+conesult.com • 1 min read
