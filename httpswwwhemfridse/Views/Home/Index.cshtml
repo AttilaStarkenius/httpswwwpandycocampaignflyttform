@@ -228,114 +228,114 @@
     Reply to conversation with "What do you mean?"What do you mean?
 
     Reply to conversation with "Interesting"Interesting
-    I commit and push with message: "18.8.2022. adding SearchController.cs"<!-- Load icon library -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    I commit and push with message: "18.8.2022. adding SearchController.cs"*@<!-- Load icon library --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+@*I do the final step of https://www.aspsnippets.com/Articles/ASPNet-MVC-Form-Submit-Post-example.aspx
+which is to add view "Search.cshtml" with razor template "List" and commit and push with message 
+"19.8.2022. Create Search.csthml"<!-- The form -->
+<form class="example" action="https://attilastarkenius.com/clothcombinationpriceestimation-search/">
+    <input type="text" placeholder="Search.." name="search">
+    <button type="submit"><i class="fa fa-search"></i></button>
+</form>
 
-    <!-- The form -->
-    <form class="example" action="https://attilastarkenius.com/clothcombinationpriceestimation-search/">
-        <input type="text" placeholder="Search.." name="search">
-        <button type="submit"><i class="fa fa-search"></i></button>
-    </form>
-
-    <!-- Load icon library -->
-    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
-    <!-- The form -->
-    <!--<form class="example" action="action_page.php">
-        <input type="text" placeholder="Search.." name="search">
-        <button type="submit"><i class="fa fa-search"></i></button>
-    </form>-->
-
-
+<!-- Load icon library -->
+<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+<!-- The form -->
+<!--<form class="example" action="action_page.php">
+    <input type="text" placeholder="Search.." name="search">
+    <button type="submit"><i class="fa fa-search"></i></button>
+</form>-->
 
 
 
 
 
-    <aside class="contentright">
-        @*<picture style="float:left; width:300px;"><source type="image/webp" srcset="https://images.ctfassets.net/vhjvyfr5klfu/6jTxSBx9OEGw0YuAiy62wK/4a1200d2f6fa9633cefff1e5fc40bf6a/hemfrids_egna_reng_ringsmedel.jpg?q=40&amp;fm=webp&amp;w=640&amp;h=480" media=""><source srcset="https://images.ctfassets.net/vhjvyfr5klfu/6jTxSBx9OEGw0YuAiy62wK/4a1200d2f6fa9633cefff1e5fc40bf6a/hemfrids_egna_reng_ringsmedel.jpg?q=50&amp;fm=jpg&amp;w=640&amp;h=480" media=""><img style="width:300px;" alt="hemfrids egna rengöringsmedel" class="_15krI"></picture>*@
-
-<div class="_1JzZM">
-    <h3 class="VG_Ul">Alltid hos oss</h3>
-    <ul class="_2Fl-i">
-        <li class="w_1bh">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="_18IzI Wox2c"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Utbildad personal med kollektivavtal
-        </li>
-        <li class="w_1bh">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="_18IzI Wox2c"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Med försäkring, utan bindningstid
-        </li>
-        <li class="w_1bh">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="_18IzI Wox2c"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Personlig service
-        </li>
-    </ul>
-</div>
-@*<a href="https://www.hemfrid.se/veckostadning">*@
-@*<a href="/WeeklyCleaning/WeeklyCleaning"><div class="lfsvn _2bSWk">Boka veckostädning</div></a>*@
-@*
-    28.2.2022. When I run the project "Boka veckostädning" doesn't work because
-    it's pointing at https://localhost:44379/WeeklyCleaning/WeeklyCleaning
-    instead of https://localhost:44379/Home/WeeklyCleaning
-    so i change in Index.cshtml from: <a href="/WeeklyCleaning/WeeklyCleaning"><div class="lfsvn _2bSWk">Boka veckostädning</div></a>
-    to:     <a href="/Home/WeeklyCleaning"><div class="lfsvn _2bSWk">Boka veckostädning</div></a>
-*@
-<a href="/Home/WeeklyCleaning"><div class="lfsvn _2bSWk">Boka veckostädning</div></a>
-
-@* 2.2.2022. I change from: <a href="https://www.hemfrid.se/veckostadning">*@<!--<a href="/Home/Veckostadning"><div class="lfsvn _2bSWk">Boka veckostädning</div></a>-->
-@*to:*@     @*<a href="https://www.hemfrid.se/veckostadning"><a href="/WeeklyCleaning/WeeklyCleaning"><div class="lfsvn _2bSWk">Boka veckostädning</div></a>
-
-    still get this error: Sidan fungerar inte för tillfälletKontakta webbplatsägaren om problemet kvarstår.
-    HTTP ERROR 405*@
-
-@*When I look at Startup.cs files method: app.UseEndpoints(endpoints =>
-        {
-            endpoints.MapControllerRoute(
-                name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
-        });
-
-    I realise my mistake; I should write only first part of controller name like "WeeklyCleaning",
-    not the whole name like "WeeklyCleaningController" but it doesn't help either so I
-    copy WeeklyCleaning.cshtml to Views-Home-Map
-
-*@
-
-@* 30.1.2022. To be able to come to "Veckostadning.cshtml" I have to
-            change <a href="https://www.hemfrid.se/veckostadning"> to
-            <a href="/Home/Veckostadning" and now the link
-            works and leads to page https://localhost:44379/Home/Veckostadning which
-            looks like this: httpswwwhemfridse
-    Home
-    Privacy
-    Veckostadning
-    © 2021 - httpswwwhemfridse - Privacy
-    I commit all and push with message
-    "Fix a link to https://localhost:44379/Home/Veckostadning page 30.1.2022."*@
-
-@* 1.2.2022. I notice on wordpress site https://attilastarkenius.com/ "Boka veckostädning"
-    button still leads to https://www.hemfrid.se/veckostadning and not
-    http://attilastarkenius.com/veckostadning/ so I fix that by going
-    to website https://wordpress.com/pages/attilastarkenius.com, clicking "Edit Hem"
-    and on the page https://wordpress.com/page/attilastarkenius.com/2
-    changing in "Edit link" the Link-relation from: to: http://attilastarkenius.com/veckostadning/
-    and now it works like it should, clicking "Boka veckostädning" button leads to
-    web page: https://attilastarkenius.com/veckostadning/ I commit
-    and push with message "Fixing link from https://attilastarkenius.com/
-    to https://attilastarkenius.com/veckostadning/ 1.2.2022."*@
 
 
-@* 1.2.2022. I am not sure if I have published my worpress site https://attilastarkenius.com/
-    so I use this website as a help to do it: https://wordpress.com/learn/get-published/
-    like this: in https://attilastarkenius.com/ there
-    is this button "Publish the Website" which I push it,
-    then I come to https://wordpress.com/home/attilastarkenius.com where there is a
-    text "You published your web site!". https://attilastarkenius.com/veckostadning on the
-    other hand, being just a page that I added to my website https://attilastarkenius.com/,
-    was published immediately when I clicked "publish" button then at 27.1.2022..
-    Issue now is https://attilastarkenius.com/veckostadning/ really doesn't
-    have the input fields that are required so I add those to Veckostadning.csthml:
-*@
+<aside class="contentright">
+    @*<picture style="float:left; width:300px;"><source type="image/webp" srcset="https://images.ctfassets.net/vhjvyfr5klfu/6jTxSBx9OEGw0YuAiy62wK/4a1200d2f6fa9633cefff1e5fc40bf6a/hemfrids_egna_reng_ringsmedel.jpg?q=40&amp;fm=webp&amp;w=640&amp;h=480" media=""><source srcset="https://images.ctfassets.net/vhjvyfr5klfu/6jTxSBx9OEGw0YuAiy62wK/4a1200d2f6fa9633cefff1e5fc40bf6a/hemfrids_egna_reng_ringsmedel.jpg?q=50&amp;fm=jpg&amp;w=640&amp;h=480" media=""><img style="width:300px;" alt="hemfrids egna rengöringsmedel" class="_15krI"></picture>*@
+
+    <div class="_1JzZM">
+        <h3 class="VG_Ul">Alltid hos oss</h3>
+        <ul class="_2Fl-i">
+            <li class="w_1bh">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="_18IzI Wox2c"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Utbildad personal med kollektivavtal
+            </li>
+            <li class="w_1bh">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="_18IzI Wox2c"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Med försäkring, utan bindningstid
+            </li>
+            <li class="w_1bh">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="_18IzI Wox2c"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Personlig service
+            </li>
+        </ul>
+    </div>
+    @*<a href="https://www.hemfrid.se/veckostadning">*@
+    @*<a href="/WeeklyCleaning/WeeklyCleaning"><div class="lfsvn _2bSWk">Boka veckostädning</div></a>*@
+    @*
+        28.2.2022. When I run the project "Boka veckostädning" doesn't work because
+        it's pointing at https://localhost:44379/WeeklyCleaning/WeeklyCleaning
+        instead of https://localhost:44379/Home/WeeklyCleaning
+        so i change in Index.cshtml from: <a href="/WeeklyCleaning/WeeklyCleaning"><div class="lfsvn _2bSWk">Boka veckostädning</div></a>
+        to:     <a href="/Home/WeeklyCleaning"><div class="lfsvn _2bSWk">Boka veckostädning</div></a>
+    *@
+    <a href="/Home/WeeklyCleaning"><div class="lfsvn _2bSWk">Boka veckostädning</div></a>
+
+    @* 2.2.2022. I change from: <a href="https://www.hemfrid.se/veckostadning">*@<!--<a href="/Home/Veckostadning"><div class="lfsvn _2bSWk">Boka veckostädning</div></a>-->
+    @*to:*@     @*<a href="https://www.hemfrid.se/veckostadning"><a href="/WeeklyCleaning/WeeklyCleaning"><div class="lfsvn _2bSWk">Boka veckostädning</div></a>
+
+        still get this error: Sidan fungerar inte för tillfälletKontakta webbplatsägaren om problemet kvarstår.
+        HTTP ERROR 405*@
+
+    @*When I look at Startup.cs files method: app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
+            });
+
+        I realise my mistake; I should write only first part of controller name like "WeeklyCleaning",
+        not the whole name like "WeeklyCleaningController" but it doesn't help either so I
+        copy WeeklyCleaning.cshtml to Views-Home-Map
+
+    *@
+
+    @* 30.1.2022. To be able to come to "Veckostadning.cshtml" I have to
+                change <a href="https://www.hemfrid.se/veckostadning"> to
+                <a href="/Home/Veckostadning" and now the link
+                works and leads to page https://localhost:44379/Home/Veckostadning which
+                looks like this: httpswwwhemfridse
+        Home
+        Privacy
+        Veckostadning
+        © 2021 - httpswwwhemfridse - Privacy
+        I commit all and push with message
+        "Fix a link to https://localhost:44379/Home/Veckostadning page 30.1.2022."*@
+
+    @* 1.2.2022. I notice on wordpress site https://attilastarkenius.com/ "Boka veckostädning"
+        button still leads to https://www.hemfrid.se/veckostadning and not
+        http://attilastarkenius.com/veckostadning/ so I fix that by going
+        to website https://wordpress.com/pages/attilastarkenius.com, clicking "Edit Hem"
+        and on the page https://wordpress.com/page/attilastarkenius.com/2
+        changing in "Edit link" the Link-relation from: to: http://attilastarkenius.com/veckostadning/
+        and now it works like it should, clicking "Boka veckostädning" button leads to
+        web page: https://attilastarkenius.com/veckostadning/ I commit
+        and push with message "Fixing link from https://attilastarkenius.com/
+        to https://attilastarkenius.com/veckostadning/ 1.2.2022."*@
+
+
+    @* 1.2.2022. I am not sure if I have published my worpress site https://attilastarkenius.com/
+        so I use this website as a help to do it: https://wordpress.com/learn/get-published/
+        like this: in https://attilastarkenius.com/ there
+        is this button "Publish the Website" which I push it,
+        then I come to https://wordpress.com/home/attilastarkenius.com where there is a
+        text "You published your web site!". https://attilastarkenius.com/veckostadning on the
+        other hand, being just a page that I added to my website https://attilastarkenius.com/,
+        was published immediately when I clicked "publish" button then at 27.1.2022..
+        Issue now is https://attilastarkenius.com/veckostadning/ really doesn't
+        have the input fields that are required so I add those to Veckostadning.csthml:
+    *@
 
 </aside>
 
