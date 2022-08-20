@@ -228,11 +228,93 @@
     Reply to conversation with "What do you mean?"What do you mean?
 
     Reply to conversation with "Interesting"Interesting
-    I commit and push with message: "18.8.2022. adding SearchController.cs"*@<!-- Load icon library --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    I commit and push with message: "18.8.2022. adding SearchController.cs"*@<!-- Load icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 @*I do the final step of https://www.aspsnippets.com/Articles/ASPNet-MVC-Form-Submit-Post-example.aspx
-which is to add view "Search.cshtml" with razor template "List" and commit and push with message 
-"19.8.2022. Create Search.csthml"<!-- The form -->
-<form class="example" action="https://attilastarkenius.com/clothcombinationpriceestimation-search/">
+    which is to add view "Search.cshtml" with razor template "List" and commit and push with message
+    "19.8.2022. Create Search.csthml"*@<!-- The form -->
+@*20.8.2022. Search.cshtml looks like this: @model httpswwwhemfridse.Models.SearchModel
+
+            @{
+                Layout = null;
+            }
+
+            <!DOCTYPE html>
+
+            <html>
+            <head>
+                <meta name="viewport" content="width=device-width" />
+                <title>Index</title>
+            </head>
+            <body>
+                @using (Html.BeginForm("Index", "Search", FormMethod.Post))
+                {
+                    <table cellpadding="0" cellspacing="0">
+                        <tr>
+                            <th colspan="2" align="center">Person Details</th>
+                        </tr>
+                        <tr>
+                            <td>PersonId: </td>
+                            <td>
+                                @Html.TextBoxFor(m => m.searchWord)
+                            </td>
+                        </tr>
+                        @*<tr>
+                            <td>Name: </td>
+                            <td>
+                                @Html.TextBoxFor(m => m.Name)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Gender: </td>
+                            <td>
+                                @Html.DropDownListFor(m => m.Gender, new List<SelectListItem>
+                               { new SelectListItem{Text="Male", Value="M"},
+                                 new SelectListItem{Text="Female", Value="F"}}, "Please select")
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>City: </td>
+                            <td>
+                                @Html.TextBoxFor(m => m.City)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input type="submit" value="Submit" /></td>
+                        </tr>
+                </table>
+            }
+        </body>
+        </html> I also give consultation in https://conesult.com/?menu=chat like this:"
+
+
+    Ayoolaoluwa Adedoyin
+    23:39, Saturday, 20/08/22
+
+    I would like to add, to the cheapest "Colleague" price plan a "limited number of incubations" that hopefully makes people want to upgrade to the more expensive "COLLEAGUESHIP 1" price plan where the incubations are unlimited, wanting to have more incubations after they have seen how effective it is Best Regards, Attila Starkenius
+    Attila Starkenius
+
+    13:29, Friday, 29/07/22
+    Hi Attila,
+
+    Here at Conesult, I'm carrying out a research to get multiple opinions on our pricing page. We would like to know if there are any key values you feel should be included in the member and colleague plans, and what does not fit in as well. A quick note, the price of the plans is just a placeholder and not the actual cost.  I will very much appreciate your feedback. Thank you and have a nice weekend.
+
+    https://conesult.com/pricing
+
+    Ayoolaoluwa Adedoyin
+    Back
+    Reply
+    SUPPORT
+    MENU
+
+    3
+    SEARCH
+
+    CHAT
+
+    BACK
+    "I commit and push with message "20.8.2022. giving consultation advice in https://conesult.com/?menu=chat and Modifying Search.cshtml"*@<form class="example" action="https://attilastarkenius.com/clothcombinationpriceestimation-search/">
     <input type="text" placeholder="Search.." name="search">
     <button type="submit"><i class="fa fa-search"></i></button>
 </form>
