@@ -1,4 +1,4 @@
-﻿using httpswwwhemfridse.Models;
+﻿using httpswwwhemfridse.Models; 
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -13,14 +13,14 @@ namespace httpswwwhemfridse.Controllers
         // GET: SearchController
         public ActionResult Index()
         {
-            return View();
+            return View("Views/Search.cshtml");
         }
 
         [HttpPost]
         public ActionResult Index(SearchModel search)
         {
             string searchWord = search.searchWord;
-            return View();
+            return View("Views/Search.cshtml");
         }
 
         // GET: SearchController/Details/5
