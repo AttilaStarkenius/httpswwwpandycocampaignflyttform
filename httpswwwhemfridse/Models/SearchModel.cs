@@ -10,6 +10,6 @@ namespace httpswwwhemfridse.Models
         ///<summary>
         /// Gets or sets search word.
         ///</summary>
-        public string searchWord { get; set; }
+        public string searchWord { get; set; } public string åhlensCloth = "åhlens";
     }
 }
