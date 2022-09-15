@@ -1,0 +1,85 @@
+﻿
+@{
+    ViewData["Title"] = "Veckostadning";
+}
+
+<h1>Veckostadning</h1>
+
+@*2.1.2022. Issue now is https://attilastarkenius.com/veckostadning/ really doesn't
+            have the input fields that are required so I add
+        those to Veckostadning.csthml (I use https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/tel
+        as a help): <input type="tel" id="phone" name="phone" placeholder="Postnummer"
+           pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+           required>
+
+        so now https://localhost:44379/Home/Veckostadning looks like this: httpswwwhemfridse
+    Home
+    Privacy
+    Veckostadning
+    Postnummer
+    © 2021 - httpswwwhemfridse - Privacy
+
+    where "Postnummer" is the placeholder that is there until you write a number in the
+    input field with id "phone"; almost like in the website https://www.hemfrid.se/veckostadning.
+    I commit all and push with a message: "Publish https://attilastarkenius.com/ and
+    add input field to https://localhost:44379/Home/Veckostadning 1.2.2022."
+*@
+
+@*<input type="tel" id="phone" name="phone" placeholder="Postnummer"
+    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+    required>*@
+
+<input id="zip" name="zip" type="text" pattern="[0-9]*" maxlength="6" placeholder="Postnummer" required>
+
+<input id="sqm" name="sqm" type="text" pattern="[0-9]*" maxlength="3" placeholder="Boyta i kvm" required>
+
+@* 1.2.2022. I want there to be a submit event:
+            only when both <input id="zip" name="zip" type="text" pattern="[0-9]*" maxlength="6" required> and
+            <input name="sqm" type="text" pattern="[0-9]*" maxlength="3" placeholder="Boyta i kvm" required>
+            are correctly filled in. I use this website as a help: https://stackoverflow.com/questions/35756352/how-to-validate-textboxes-in-asp-net-mvc
+            so I add in models map "Veckostadning.cs" model: using System;
+        using System.Collections.Generic;
+        using System.Linq;
+        using System.Threading.Tasks;
+
+        namespace httpswwwhemfridse.Models
+        {
+            public class Veckostadning
+            {
+                public string zip { get; set; }
+                public string sqm { get; set; }
+            }
+        }
+    I commit all and push with message "Adding Veckostadning.cs" model 1.2.2022."
+*@
+
+
+@* 1.2.2022. Issue that I have is that I can't really find a wordpress equivalent
+                    of <input type="tel"<input type="tel"> (and I notice that of course
+                    Postnummer has to have at least maxlength="6" so I use this website as help: https://css-tricks.com/html-for-zip-codes/
+                    and change from: <input type="tel" id="phone" name="phone" placeholder="Postnummer"
+                       pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                       required> to:  <input id="zip" name="zip" type="text" pattern="[0-9]*" maxlength="6" required>
+                    and in https://wordpress.com/page/attilastarkenius.com/30
+                    I click "Code Editor" and change from this: <!-- wp:group {"align":"full","backgroundColor":"background"} -->
+            <div class="wp-block-group alignfull has-background-background-color has-background">
+            <!-- wp:jetpack/layout-grid
+                to this: <p><input id="zip" maxlength="6" name="zip" pattern="[0-9]*" required="" type="text" /></p>
+
+        <!-- wp:group {"align":"full","backgroundColor":"background"} -->
+        <div class="wp-block-group alignfull has-background-background-color has-background"><!--
+        https://attilastarkenius.com/veckostadning/ looks exaktly same as before. I add textbox
+        with help of this website instead: https://maschituts.com/how-to-create-a-text-box-in-wordpress/
+        so I add a paragraph block as close to top as possible,
+        and click "Edit with HTML" and write:
+    <form>    <input id="zip" name="zip" type="text" pattern="[0-9]*" maxlength="6" required> </form>
+        and "Convert to HTML" it still doesn't show on page https://attilastarkenius.com/veckostadning/
+    and I can't save customized html. I try to find my wordpress.php file and
+    edit it with help of website: https://www.beliefmedia.com.au/wordpress-text-box
+    I export the content to my computer with help of this site: https://wordpress.com/export/attilastarkenius.com
+    it doesn't help it's just file:///C:/Users/symph/Documents/attilastarkenius.wordpress.com-2022-02-01-20_05_31/webbplatsrubrik.wordpress.2022-02-01.000.xml
+    a xml file, not a php file.
+
+
+*@
+
