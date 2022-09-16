@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Attila\\Desktop\\httpswwwpandycocampaignflyttform\\httpswwwhemfridse\\httpswwwhemfridse.csproj": {}
+    "C:\\Users\\Attila\\source\\repos\\httpswwwpandycocampaignflyttform\\httpswwwhemfridse\\httpswwwhemfridse.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Attila\\Desktop\\httpswwwpandycocampaignflyttform\\httpswwwhemfridse\\httpswwwhemfridse.csproj": {
+    "C:\\Users\\Attila\\source\\repos\\httpswwwpandycocampaignflyttform\\httpswwwhemfridse\\httpswwwhemfridse.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Attila\\Desktop\\httpswwwpandycocampaignflyttform\\httpswwwhemfridse\\httpswwwhemfridse.csproj",
+        "projectUniqueName": "C:\\Users\\Attila\\source\\repos\\httpswwwpandycocampaignflyttform\\httpswwwhemfridse\\httpswwwhemfridse.csproj",
         "projectName": "httpswwwhemfridse",
-        "projectPath": "C:\\Users\\Attila\\Desktop\\httpswwwpandycocampaignflyttform\\httpswwwhemfridse\\httpswwwhemfridse.csproj",
+        "projectPath": "C:\\Users\\Attila\\source\\repos\\httpswwwpandycocampaignflyttform\\httpswwwhemfridse\\httpswwwhemfridse.csproj",
         "packagesPath": "C:\\Users\\Attila\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Attila\\Desktop\\httpswwwpandycocampaignflyttform\\httpswwwhemfridse\\obj\\",
+        "outputPath": "C:\\Users\\Attila\\source\\repos\\httpswwwpandycocampaignflyttform\\httpswwwhemfridse\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

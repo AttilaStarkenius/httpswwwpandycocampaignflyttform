@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OetqGVqsxRomENMG9/U+RebVcbDiOVQI5QCXLbWA1A5jHA7uuW4FbddsFxXyJsXNwWIMqxUCMfaa5trHCPjSpA==",
+  "dgSpecHash": "s9raUkgr/nUcVSDv3W8P5KPnujnmdsKQyWPXvVdqnl0lLqG1BNECYEfZDtPP+/VEBnL8jCbiu9OhNhzlIO6nkw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Attila\\Desktop\\httpswwwpandycocampaignflyttform\\httpswwwhemfridse\\httpswwwhemfridse.csproj",
+  "projectFilePath": "C:\\Users\\Attila\\source\\repos\\httpswwwpandycocampaignflyttform\\httpswwwhemfridse\\httpswwwhemfridse.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Attila\\.nuget\\packages\\antlr\\3.4.1.9004\\antlr.3.4.1.9004.nupkg.sha512",
     "C:\\Users\\Attila\\.nuget\\packages\\bcrypt.net-next\\3.3.3\\bcrypt.net-next.3.3.3.nupkg.sha512",
