@@ -57,5 +57,36 @@
 *@
 
 <script>
-console.log({ ProductID, pItemID, pStyleID, pPrice, pDescription })
+    console.log({ ProductID, pItemID, pStyleID, pPrice, pDescription })
 </script>
+
+
+@* 18.9.2022. I get this error when I try to run Microsoft SQL Server Management Studio:
+
+        The application has failed to start because its side-by-side configuration is incorrect. Please see the application event log or use the command-line sxstrace.exe tool for more detail.
+    like explained on this website: https://stackoverflow.com/questions/61630911/microsoft-sql-server-management-studio-error-at-startup *@
+
+@* 18.9.2022. The issue with fail to start sql server management studio
+    leads me to seek another solution like local database with help of this tutorial:
+    https://learn.microsoft.com/en-us/visualstudio/data-tools/create-a-sql-database-by-using-a-designer?view=vs-2022
+    I add project-> new item and notice that I really am missing
+    the parts needed to do the tutorial, quoting the tutorial itself:
+    "To complete this walkthrough, you'll need the .NET desktop development
+    and Data storage and processing workloads installed
+    in Visual Studio. To install them,
+    open Visual Studio Installer and choose Modify (or More > Modify)
+    next to the version of Visual Studio you want to modify."
+    so that's what I do.
+    Actually only Data storage and processing workloads
+    were missing so I install those*@
+
+@* 20.9.2022. I follow tutorial https://learn.microsoft.com/en-us/visualstudio/data-tools/create-a-sql-database-by-using-a-designer?view=vs-2022
+    so I want to add to project Service-based Database which I want to name ClothCombinationPriceEstimationDatabase
+    but there is no Service based database item option, so I use this tutorial instead:
+    https://www.youtube.com/watch?v=R2wbqOFdvUE&ab_channel=ProgrammingProfessor
+    I open Edit -> SQL Server object explorer -> SQL Server
+    -> (localdb)\MSSQLLocalDB -> Databases
+    Which I right click and choose
+    "Add New Database" and name it "ClothCombinationPriceEstimation"
+    then I commit and push to git changes with
+    message "20.9.2022. Adding local database ClothCombinationPriceEstimation"*@
