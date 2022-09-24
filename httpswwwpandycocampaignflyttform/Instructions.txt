@@ -3103,3 +3103,122 @@ SEARCH
 CHAT
 
 BACK
+Attila Starkenius  12:27 AM
+I am connecting facebook to the wordpress page: https://www.facebook.com/Attilastarkeniuscom-101449906011074
+
+Attilastarkenius.com
+facebook.com • 1 min read
+AUG 17
+Toni Babic sent the following message at 6:43 AM
+View Toni’s profileToni Babic
+Toni Babic  6:43 AM
+Hi, hope you are good!
+
+Could you project a rough number for how much you could replicate our web application (www.conesult.com) with custom code, for example now we are building it with bubble.io, while speaking with investors how to scale, we are thinking of this investment.
+
+Hope this is fine for you!
+
+Thanks! Looking forward to hearing from you!
+
+Regards, Toni
+
+Founder and CEO at Conesult
+Conesult - Digital business incubator
+conesult.com • 1 min read
+Conesult is a place where you can develop any concept or connect to other businesses. Community consultation and skill exchange activities. Our mission is to sustain a place where everyone can get consultation, and development assistance, i.e. greater...
+AUG 18
+Attila Starkenius sent the following message at 3:16 AM
+View Attila’s profileAttila Starkenius
+Attila Starkenius  3:16 AM
+Okay I begin working on that: https://bubble.io/page?name=index&id=httpsconesultcom&tab=tabs-1
+
+Bubble Editor - Httpsconesultcom
+bubble.io • 1 min read
+Toni Babic sent the following message at 6:03 AM
+View Toni’s profileToni Babic
+Toni Babic  6:03 AM
+On what? Don't build yet the custom code web app.. 😁
+SEP 9
+Attila Starkenius sent the following message at 8:06 PM
+View Attila’s profileAttila Starkenius
+Attila Starkenius  8:06 PM
+I keep working on that😉
+Toni Babic sent the following message at 9:07 PM
+View Toni’s profileToni Babic
+Toni Babic  9:07 PM
+Hahaha, no come on, have you finished your website?
+SEP 10
+Attila Starkenius sent the following message at 12:06 AM
+View Attila’s profileAttila Starkenius
+Attila Starkenius  12:06 AM
+Almost
+Toni Babic sent the following message at 12:27 PM
+View Toni’s profileToni Babic
+Toni Babic  12:27 PM
+No, really? Where are you within the website development? What is your occupation nowadays, and where do you go?
+SEP 12
+Attila Starkenius sent the following message at 1:12 PM
+View Attila’s profileAttila Starkenius
+Attila Starkenius  1:12 PM
+I try to make the conesult chat feature to work properly(or my rendition of that actually), I still have the internship at Kakmonstret, Web development
+Toni Babic sent the following message at 3:37 PM
+View Toni’s profileToni Babic
+Toni Babic  3:37 PM
+Does the chef feature acts weird on the mobile? While at desktop is fine? Or what is that you see?
+SEP 13
+Attila Starkenius sent the following message at 10:24 PM
+View Attila’s profileAttila Starkenius
+Attila Starkenius  10:24 PM
+Yeah it acts weird on the mobile
+SUNDAY
+Toni Babic sent the following message at 4:01 PM
+View Toni’s profileToni Babic
+Toni Babic  4:01 PM
+What exactly?
+MONDAY
+Attila Starkenius sent the following message at 9:25 PM
+View Attila’s profileAttila Starkenius
+Attila Starkenius  9:25 PM
+Everything
+TUESDAY
+Toni Babic sent the following message at 10:24 AM
+View Toni’s profileToni Babic
+Toni Babic  10:24 AM
+Wow, what a specific feedback! It's soo clear for me what are you speaking about.. 😁
+Attila Starkenius sent the following message at 12:30 PM
+View Attila’s profileAttila Starkenius
+Attila Starkenius  12:30 PM
+Haha ;)
+THURSDAY
+Toni Babic sent the following message at 7:35 AM
+View Toni’s profileToni Babic
+Toni Babic  7:35 AM
+Okay, finally, here is one interesting task for you if you will!
+
+https://developers.google.com/maps/documentation/javascript/examples/circle-simple#try-it-yourself
+
+Here is our map, where we will add our partners, and even channels from the platform.
+
+https://conesult.com/version-test/map
+
+What do you think?
+
+Here is one more link by Google: https://developers.google.com/maps/documentation/javascript/shapes#maps_circle_simple-javascript
+Attila Starkenius sent the following message at 10:21 PM
+View Attila’s profileAttila Starkenius
+Attila Starkenius  10:21 PM
+I will check those out
+TODAY
+Toni Babic sent the following message at 1:41 PM
+View Toni’s profileToni Babic
+Toni Babic  1:41 PM
+Okay, it seems is not possible to tweak that much Google Maps, or it takes a bit of more budget.
+
+I think I've found option for us, with another third party Map, that uses Google maps within the API itself.
+Attila Starkenius sent the following message at 11:57 PM
+View Attila’s profileAttila Starkenius
+Attila Starkenius  11:57 PM
+What about storemapper: https://www.storemapper.com/
+
+Store Locator App & Widget - Storemapper
+storemapper.com • 1 min read

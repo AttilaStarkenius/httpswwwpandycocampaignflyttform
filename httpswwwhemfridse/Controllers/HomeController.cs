@@ -10,6 +10,8 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
+//using System.Web.Mvc;
+
 
 namespace httpswwwhemfridse.Controllers
 {
@@ -29,7 +31,15 @@ namespace httpswwwhemfridse.Controllers
         //}
         public IActionResult Index()
         {
-            return View();
+            // Add action logic here
+            throw new NotImplementedException();
+            //return View();
+        }
+
+        public ActionResult Details(int Id)
+        {
+
+            return View("Details");
         }
 
         public IActionResult Privacy()

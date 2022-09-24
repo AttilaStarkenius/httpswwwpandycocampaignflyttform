@@ -1,4 +1,1080 @@
-﻿@* 8.8.2022. I want to learn to make in Javascript language
+﻿@* 21.9.2022. When I build solution I get error in HomeController: Severity	Code	Description	Project	File	Line	Suppression State
+            Error	CS0234	The type or namespace name 'Mvc' does not exist in the namespace 'System.Web' (are you missing an assembly reference?)	httpswwwhemfridse	C:\Users\Attila\source\repos\httpswwwpandycocampaignflyttform\httpswwwhemfridse\Controllers\HomeController.cs	13	Active
+        so I am about download the nuget package System.Web.Mvc
+        and I notice the name is actually Microsoft.AspNet.Mvc so I download it
+        also I get addti: Attila Starkenius  12:27 AM
+    I am connecting facebook to the wordpress page: https://www.facebook.com/Attilastarkeniuscom-101449906011074
+
+    Attilastarkenius.com
+    facebook.com • 1 min read
+    AUG 17
+    Toni Babic sent the following message at 6:43 AM
+    View Toni’s profileToni Babic
+    Toni Babic  6:43 AM
+    Hi, hope you are good!
+
+    Could you project a rough number for how much you could replicate our web application (www.conesult.com) with custom code, for example now we are building it with bubble.io, while speaking with investors how to scale, we are thinking of this investment.
+
+    Hope this is fine for you!
+
+    Thanks! Looking forward to hearing from you!
+
+    Regards, Toni
+
+    Founder and CEO at Conesult
+    Conesult - Digital business incubator
+    conesult.com • 1 min read
+    Conesult is a place where you can develop any concept or connect to other businesses. Community consultation and skill exchange activities. Our mission is to sustain a place where everyone can get consultation, and development assistance, i.e. greater...
+    AUG 18
+    Attila Starkenius sent the following message at 3:16 AM
+    View Attila’s profileAttila Starkenius
+    Attila Starkenius  3:16 AM
+    Okay I begin working on that: https://bubble.io/page?name=index&id=httpsconesultcom&tab=tabs-1
+
+    Bubble Editor - Httpsconesultcom
+    bubble.io • 1 min read
+    Toni Babic sent the following message at 6:03 AM
+    View Toni’s profileToni Babic
+    Toni Babic  6:03 AM
+    On what? Don't build yet the custom code web app.. 😁
+    SEP 9
+    Attila Starkenius sent the following message at 8:06 PM
+    View Attila’s profileAttila Starkenius
+    Attila Starkenius  8:06 PM
+    I keep working on that😉
+    Toni Babic sent the following message at 9:07 PM
+    View Toni’s profileToni Babic
+    Toni Babic  9:07 PM
+    Hahaha, no come on, have you finished your website?
+    SEP 10
+    Attila Starkenius sent the following message at 12:06 AM
+    View Attila’s profileAttila Starkenius
+    Attila Starkenius  12:06 AM
+    Almost
+    Toni Babic sent the following message at 12:27 PM
+    View Toni’s profileToni Babic
+    Toni Babic  12:27 PM
+    No, really? Where are you within the website development? What is your occupation nowadays, and where do you go?
+    SEP 12
+    Attila Starkenius sent the following message at 1:12 PM
+    View Attila’s profileAttila Starkenius
+    Attila Starkenius  1:12 PM
+    I try to make the conesult chat feature to work properly(or my rendition of that actually), I still have the internship at Kakmonstret, Web development
+    Toni Babic sent the following message at 3:37 PM
+    View Toni’s profileToni Babic
+    Toni Babic  3:37 PM
+    Does the chef feature acts weird on the mobile? While at desktop is fine? Or what is that you see?
+    SEP 13
+    Attila Starkenius sent the following message at 10:24 PM
+    View Attila’s profileAttila Starkenius
+    Attila Starkenius  10:24 PM
+    Yeah it acts weird on the mobile
+    SUNDAY
+    Toni Babic sent the following message at 4:01 PM
+    View Toni’s profileToni Babic
+    Toni Babic  4:01 PM
+    What exactly?
+    MONDAY
+    Attila Starkenius sent the following message at 9:25 PM
+    View Attila’s profileAttila Starkenius
+    Attila Starkenius  9:25 PM
+    Everything
+    TUESDAY
+    Toni Babic sent the following message at 10:24 AM
+    View Toni’s profileToni Babic
+    Toni Babic  10:24 AM
+    Wow, what a specific feedback! It's soo clear for me what are you speaking about.. 😁
+    Attila Starkenius sent the following message at 12:30 PM
+    View Attila’s profileAttila Starkenius
+    Attila Starkenius  12:30 PM
+    Haha ;)
+    TODAY
+    Toni Babic sent the following message at 7:35 AM
+    View Toni’s profileToni Babic
+    Toni Babic  7:35 AM
+    Okay, finally, here is one interesting task for you if you will!
+
+    https://developers.google.com/maps/documentation/javascript/examples/circle-simple#try-it-yourself
+
+    Here is our map, where we will add our partners, and even channels from the platform.
+
+    https://conesult.com/version-test/map
+
+    What do you think?
+
+    Here is one more link by Google: https://developers.google.com/maps/documentation/javascript/shapes#maps_circle_simple-javascript
+    Attila Starkenius sent the following message at 10:21 PM
+    View Attila’s profileAttila Starkenius
+    Attila Starkenius  10:21 PM
+    I will check those out
+*@
+
+@* 23.9.2022. When I run project I get in Homecontroller.cs the error: "Severity	Code
+        Description	Project	File	Line	Suppression State Error	CS0104	'Controller' is an
+            ambiguous reference between 'Microsoft.AspNetCore.Mvc.Controller' and
+            'System.Web.Mvc.Controller'	httpswwwhemfridse
+            C:\Users\Attila\source\repos\httpswwwpandycocampaignflyttform\httpswwwhemfridse\Controllers\HomeController.cs
+            18	Active
+            I use the tutorial https://learn.microsoft.com/en-us/aspnet/mvc/overview/older-versions-1/unit-testing/creating-unit-tests-for-asp-net-mvc-applications-cs
+            and I honestly I just in Homecontroller.cs comment out using System.Web.Mvc;
+        and it solves the issue. I create unit test class ProductControllerTest.cs: "using System.Web.Mvc;
+        using Microsoft.VisualStudio.TestTools.UnitTesting;
+        using Store.Controllers;
+
+        namespace StoreTests.Controllers
+        {
+             [TestClass]
+             public class ProductControllerTest
+             {
+                  [TestMethod]
+                  public void TestDetailsView()
+                  {
+                       var controller = new ProductController();
+                       var result = controller.Details(2) as ViewResult;
+                       Assert.AreEqual("Details", result.ViewName);
+
+                  }
+             }
+        }"
+        and I get error: "Severity	Code	Description	Project	File	Line	Suppression State
+    Error	CS0234	The type or namespace name 'TestTools' does not exist in the namespace 'Microsoft.VisualStudio' (are you missing an assembly reference?)	httpswwwhemfridse	C:\Users\Attila\source\repos\httpswwwpandycocampaignflyttform\httpswwwhemfridse\Controllers\ProductControllerTest.cs	2	Active
+    "
+        " so I try to install nuget Microsoft.VisualStudio.TestTools.UnitTesting;
+    I find that https://stackoverflow.com/questions/13602508/where-to-find-microsoft-visualstudio-testtools-unittesting-missing-dll
+    vs.qualitytools.unittestframework is what is needed so I install that nuget package
+*@
+
+@* 24.9.2022. Installing Microsoft.VisualStudio.TestTools.UnitTesting nuget package
+        doesn't help so I try to install Microsoft.TestPlatform instead
+            and I get additiona l instructions in
+            https://www.linkedin.com/messaging/thread/2-YTA3MjBjNjQtZWUyYy00MWE5LThlODEtODIwMGRmOGEyYjJhXzAxMw==/
+        like this:"Attila Starkenius  12:27 AM
+    I am connecting facebook to the wordpress page: https://www.facebook.com/Attilastarkeniuscom-101449906011074
+
+    Attilastarkenius.com
+    facebook.com • 1 min read
+    AUG 17
+    Toni Babic sent the following message at 6:43 AM
+    View Toni’s profileToni Babic
+    Toni Babic  6:43 AM
+    Hi, hope you are good!
+
+    Could you project a rough number for how much you could replicate our web application (www.conesult.com) with custom code, for example now we are building it with bubble.io, while speaking with investors how to scale, we are thinking of this investment.
+
+    Hope this is fine for you!
+
+    Thanks! Looking forward to hearing from you!
+
+    Regards, Toni
+
+    Founder and CEO at Conesult
+    Conesult - Digital business incubator
+    conesult.com • 1 min read
+    Conesult is a place where you can develop any concept or connect to other businesses. Community consultation and skill exchange activities. Our mission is to sustain a place where everyone can get consultation, and development assistance, i.e. greater...
+    AUG 18
+    Attila Starkenius sent the following message at 3:16 AM
+    View Attila’s profileAttila Starkenius
+    Attila Starkenius  3:16 AM
+    Okay I begin working on that: https://bubble.io/page?name=index&id=httpsconesultcom&tab=tabs-1
+
+    Bubble Editor - Httpsconesultcom
+    bubble.io • 1 min read
+    Toni Babic sent the following message at 6:03 AM
+    View Toni’s profileToni Babic
+    Toni Babic  6:03 AM
+    On what? Don't build yet the custom code web app.. 😁
+    SEP 9
+    Attila Starkenius sent the following message at 8:06 PM
+    View Attila’s profileAttila Starkenius
+    Attila Starkenius  8:06 PM
+    I keep working on that😉
+    Toni Babic sent the following message at 9:07 PM
+    View Toni’s profileToni Babic
+    Toni Babic  9:07 PM
+    Hahaha, no come on, have you finished your website?
+    SEP 10
+    Attila Starkenius sent the following message at 12:06 AM
+    View Attila’s profileAttila Starkenius
+    Attila Starkenius  12:06 AM
+    Almost
+    Toni Babic sent the following message at 12:27 PM
+    View Toni’s profileToni Babic
+    Toni Babic  12:27 PM
+    No, really? Where are you within the website development? What is your occupation nowadays, and where do you go?
+    SEP 12
+    Attila Starkenius sent the following message at 1:12 PM
+    View Attila’s profileAttila Starkenius
+    Attila Starkenius  1:12 PM
+    I try to make the conesult chat feature to work properly(or my rendition of that actually), I still have the internship at Kakmonstret, Web development
+    Toni Babic sent the following message at 3:37 PM
+    View Toni’s profileToni Babic
+    Toni Babic  3:37 PM
+    Does the chef feature acts weird on the mobile? While at desktop is fine? Or what is that you see?
+    SEP 13
+    Attila Starkenius sent the following message at 10:24 PM
+    View Attila’s profileAttila Starkenius
+    Attila Starkenius  10:24 PM
+    Yeah it acts weird on the mobile
+    SUNDAY
+    Toni Babic sent the following message at 4:01 PM
+    View Toni’s profileToni Babic
+    Toni Babic  4:01 PM
+    What exactly?
+    MONDAY
+    Attila Starkenius sent the following message at 9:25 PM
+    View Attila’s profileAttila Starkenius
+    Attila Starkenius  9:25 PM
+    Everything
+    TUESDAY
+    Toni Babic sent the following message at 10:24 AM
+    View Toni’s profileToni Babic
+    Toni Babic  10:24 AM
+    Wow, what a specific feedback! It's soo clear for me what are you speaking about.. 😁
+    Attila Starkenius sent the following message at 12:30 PM
+    View Attila’s profileAttila Starkenius
+    Attila Starkenius  12:30 PM
+    Haha ;)
+    THURSDAY
+    Toni Babic sent the following message at 7:35 AM
+    View Toni’s profileToni Babic
+    Toni Babic  7:35 AM
+    Okay, finally, here is one interesting task for you if you will!
+
+    https://developers.google.com/maps/documentation/javascript/examples/circle-simple#try-it-yourself
+
+    Here is our map, where we will add our partners, and even channels from the platform.
+
+    https://conesult.com/version-test/map
+
+    What do you think?
+
+    Here is one more link by Google: https://developers.google.com/maps/documentation/javascript/shapes#maps_circle_simple-javascript
+    Attila Starkenius sent the following message at 10:21 PM
+    View Attila’s profileAttila Starkenius
+    Attila Starkenius  10:21 PM
+    I will check those out
+    TODAY
+    Toni Babic sent the following message at 1:41 PM
+    View Toni’s profileToni Babic
+    Toni Babic  1:41 PM
+    Okay, it seems is not possible to tweak that much Google Maps, or it takes a bit of more budget.
+
+    I think I've found option for us, with another third party Map, that uses Google maps within the API itself.
+    Attila Starkenius sent the following message at 11:57 PM
+    View Attila’s profileAttila Starkenius
+    Attila Starkenius  11:57 PM
+    What about storemapper: https://www.storemapper.com/
+
+    Store Locator App & Widget - Storemapper
+    storemapper.com • 1 min read
+    " nad I commit and push to git changes wigh message "25.9.2022. Installing Microsoft.Tests and
+    getting instruction "
+            commit and push with message ""*@
+
+@* 21.9.2022. I move working fromm Searchresult to here.
+                I want to learn unit testing so I simply google
+                https://www.google.com/search?q=unit+test&oq=unit+test&aqs=chrome..69i57.5988j0j7&sourceid=chrome&ie=UTF-8
+                In the first result I see see example
+                written in java so I change to tutorial
+                written in C# instead:
+            https://learn.microsoft.com/en-us/aspnet/mvc/overview/older-versions-1/unit-testing/creating-unit-tests-for-asp-net-mvc-applications-cs
+            To make it easier I just test HomeController
+            which I change from this: using httpswwwhemfridse.Models;
+        using Microsoft.AspNetCore.Mvc;
+        using Microsoft.Extensions.Logging;
+        using System;
+        using System.Collections.Generic;
+        using System.Diagnostics;
+        using System.Drawing;
+        using System.Drawing.Imaging;
+        using System.IO;
+        using System.Linq;
+        using System.Net;
+        using System.Threading.Tasks;
+
+        namespace httpswwwhemfridse.Controllers
+        {
+            public class HomeController : Controller
+            {
+                private readonly ILogger<HomeController> _logger;
+
+                public HomeController(ILogger<HomeController> logger)
+                {
+                    _logger = logger;
+                }
+
+                //2.3.2022. I add "Swedish kronas per hour with RUT-deduction" like this:
+                //public IActionResult WeeklyCleaningPrice()
+                //{
+                //    return View();
+                //}
+                public IActionResult Index()
+                {
+                    return View();
+                }
+
+                public IActionResult Privacy()
+                {
+                    return View();
+                }
+
+                //     10.3.2022. I create to https://www.hemfrid.se/flyttstadning corresponding
+                //    FinalCleaning.cshtml and add with help of this website https://www.formget.com/javascript-auto-submit-form/:
+                //    // Form submit function.
+                //function submitform()
+                //    {
+                //        if (validate()) // Calling validate function.
+                //        {
+                //            alert('Form is submitting.....');
+                //            document.getElementById("form").submit();
+                //        }
+                //    }
+                //    I also add FinalCleaning action method in Homecontroller
+                /*and in that FinalCleaning method I add code for counting of
+                FinalCleaning price with help of this website: https://www.infoworld.com/article/3568209/how-to-pass-parameters-to-action-methods-in-asp-net-core-mvc.html public IActionResult FinalCleaning()
+        so I create a mapp "Repositories" and add CleaningModelRepository.cs to it: List<Author> authors = new List<Author>()
+                {
+                    new Author
+                    {
+                        Id = 1,
+                        FirstName = "Joydip",
+                        LastName = "Kanjilal"
+                    },
+                    new Author
+                    {
+                        Id = 2,
+                        FirstName = "Steve",
+                        LastName = "Smith"
+                    }
+                };
+                public Author GetAuthor(int id)
+                {
+                    return authors.FirstOrDefault(a => a.Id == id);
+                }
+                public List<Author> GetAuthors(int pageNumber = 1)
+                {
+                    int pageSize = 10;
+                    int skip = pageSize * (pageNumber - 1);
+                    if (authors.Count < pageSize)
+                        pageSize = authors.Count;
+                    return authors
+                      .Skip(skip)
+                      .Take(pageSize).ToList();
+                }
+                public bool Save(Author author)
+                {
+                    var result = authors.Where(a => a.Id == author.Id);
+                    if (result != null)
+                    {
+                        if (result.Count() == 0)
+                        {
+                            authors.Add(author);
+                            return true;
+                        }
+                    }
+                    return false;
+                }
+
+                and add this to FinalCleaning action method in Homecontroller:
+        [HttpGet]
+        [Route("Default/GetAuthor/{authorId:int}")]
+        public IActionResult GetAuthor(int authorId)
+        {
+           var data = authorRepository.GetAuthor(authorId);
+           return View(data);
+        }*/
+
+                public IActionResult ClothCombinationPriceEstimation()
+                {
+                    return View();
+                }
+
+                public IActionResult FinalCleaning()
+                {
+                    return View();
+                }
+
+                public IActionResult Cleaning()
+                {
+                    using (WebClient webClient = new WebClient())
+                    {
+                        //byte[] data = webClient.DownloadData("https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-xpf1/v/t34.0-12/10555140_10201501435212873_1318258071_n.jpg?oh=97ebc03895b7acee9aebbde7d6b002bf&oe=53C9ABB0&__gda__=1405685729_110e04e71d9");
+                        /*9.3.2022. I change this: byte[] data = webClient.DownloadData("https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-xpf1/v/t34.0-12/10555140_10201501435212873_1318258071_n.jpg?oh=97ebc03895b7acee9aebbde7d6b002bf&oe=53C9ABB0&__gda__=1405685729_110e04e71d9");
+                        to my facebook image page link: byte[] data = webClient.DownloadData("https://scontent-arn2-1.xx.fbcdn.net/v/t39.30808-1/271976368_10224722170354716_5953490547982226678_n.jpg?stp=c0.8.50.50a_cp0_dst-jpg_p50x50&_nc_cat=104&ccb=1-5&_nc_sid=bbed71&_nc_ohc=AaohApX2LuQAX_5QQhz&_nc_ht=scontent-arn2-1.xx&oh=00_AT9HKosEtIfAJePg7ZsDg78J5uL2XI6FgW4ywU8rIi2FgA&oe=622CC622");
+                        */
+                        byte[] data = webClient.DownloadData("https://scontent-arn2-1.xx.fbcdn.net/v/t39.30808-1/271976368_10224722170354716_5953490547982226678_n.jpg?stp=c0.8.50.50a_cp0_dst-jpg_p50x50&_nc_cat=104&ccb=1-5&_nc_sid=bbed71&_nc_ohc=AaohApX2LuQAX_5QQhz&_nc_ht=scontent-arn2-1.xx&oh=00_AT9HKosEtIfAJePg7ZsDg78J5uL2XI6FgW4ywU8rIi2FgA&oe=622CC622");
+
+                        using (MemoryStream mem = new MemoryStream(data))
+                        {
+                            using (var yourImage = Image.FromStream(mem))
+                            {
+
+                                /*I try to add with help of this website: https://bytes.com/topic/c-sharp/answers/233627-how-create-empty-image
+                                an empty jpg file like this: Stream stream = new FileStream( "image.jpg", FileMode.xxx, FileAccess.xxx )
+                                */
+                                //Stream stream = new FileStream("image.jpg", FileMode.xxx, FileAccess.xxx)
+                                /*It doesn't work, it still requires an existing image file so I download
+                                it as facebookProfilePicture.jpg to C:\Users\symph\source\repos\httpswwwpandycocampaignflyttform\httpswwwhemfridse\facebookProfilePicture.jpg:
+                                so I change                         yourImage.Save("path_to_your_file.jpg", ImageFormat.Jpeg);
+        to:                         yourImage.Save("C:\Users\symph\source\repos\httpswwwpandycocampaignflyttform\httpswwwhemfridse\facebookProfilePicture.jpg
+        ", ImageFormat.Jpeg);
+                                and obviously I have to create Cleaning.cshtml in Views/Home map
+                                and I use CleaningModel.cs
+                                as the model for the Cleaning.csthml view and choose "Details" template
+                                and it looks like this: @model httpswwwhemfridse.Models.CleaningModel
+
+        @{
+            ViewData["Title"] = "Cleaning";
+        }
+
+        <h1>
+            Städning för hem och kontor
+        </h1>
+
+        <div>
+            <h4>CleaningModel</h4>
+            <hr />
+            <dl class="row">
+                <dt class = "col-sm-2">
+                    @Html.DisplayNameFor(model => model.firstName)
+                </dt>
+                <dd class = "col-sm-10">
+                    @Html.DisplayFor(model => model.firstName)
+                </dd>
+            </dl>
+        </div>
+        <div>
+            @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey
+                            }) |
+
+        < a asp - action = "Index" > Back to List</ a >
+        </ div >
+        9.3.2022. I commit and push with message: "Fixing Cleaning action method and Cleaning.cshtml 9.3.2022."
+        */
+
+                                yourImage.Save("C:/Users/symph/source/repos/httpswwwpandycocampaignflyttform/httpswwwhemfridse/facebookProfilePicture.jpg", ImageFormat.Jpeg);
+                                return View();
+
+                            }
+                        }
+
+                    }
+
+
+
+        //                using (WebClient webClient = new WebClient())
+        //{
+        //    byte[] data = webClient.DownloadData("https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-xpf1/v/t34.0-12/10555140_10201501435212873_1318258071_n.jpg?oh=97ebc03895b7acee9aebbde7d6b002bf&oe=53C9ABB0&__gda__=1405685729_110e04e71d9");
+
+        //   using (MemoryStream mem = new MemoryStream(data))
+        //   {
+        //       using (var yourImage = Image.FromStream(mem))
+        //       {
+        //          // If you want it as Png
+        //           yourImage.Save("path_to_your_file.png", ImageFormat.Png) ;
+
+        //          // If you want it as Jpeg
+        //           yourImage.Save("path_to_your_file.jpg", ImageFormat.Jpeg) ;
+        //       }
+        //   }
+
+        //}
+
+        //}
+                    //return View();
+                }
+
+                /*9.3.2022. I create  public IActionResult Cleaning()
+                {
+                    return View();
+            }
+        where I move this code from CleaningModel.cs:         using (WebClient webClient = new WebClient())
+        {
+            byte[] data = webClient.DownloadData("https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-xpf1/v/t34.0-12/10555140_10201501435212873_1318258071_n.jpg?oh=97ebc03895b7acee9aebbde7d6b002bf&oe=53C9ABB0&__gda__=1405685729_110e04e71d9");
+
+           using (MemoryStream mem = new MemoryStream(data))
+           {
+               using (var yourImage = Image.FromStream(mem))
+               {
+                  // If you want it as Png
+                   yourImage.Save("path_to_your_file.png", ImageFormat.Png) ;
+
+                  // If you want it as Jpeg
+                   yourImage.Save("path_to_your_file.jpg", ImageFormat.Jpeg) ;
+               }
+           }
+
+        }
+
+        }
+
+                //        using (WebClient webClient = new WebClient())
+        //{
+        //    byte[] data = webClient.DownloadData("https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-xpf1/v/t34.0-12/10555140_10201501435212873_1318258071_n.jpg?oh=97ebc03895b7acee9aebbde7d6b002bf&oe=53C9ABB0&__gda__=1405685729_110e04e71d9");
+
+        //   using (MemoryStream mem = new MemoryStream(data))
+        //   {
+        //       using (var yourImage = Image.FromStream(mem))
+        //       {
+        //          // If you want it as Png
+        //           yourImage.Save("path_to_your_file.png", ImageFormat.Png) ;
+
+        //          // If you want it as Jpeg
+        //           yourImage.Save("path_to_your_file.jpg", ImageFormat.Jpeg) ;
+        //       }
+        //   }
+
+        //}
+
+        //}
+
+
+
+
+
+            //Also Homecontroller.cs just returns views which is not a lot for a controller in a MVC application.
+            //    I create IActionResult Veckostadning, just like there is similar Index and
+            //    Privacy methods: public IActionResult Veckostadning()
+            //    {
+            //        return View();
+            //}
+
+            //public IActionResult Veckostadning()
+            //    {
+            //        return View();
+            //    }
+            //2.2.2022. I think the issue is
+            //this I change in HomeController from: public IActionResult Veckostadning()
+
+            //            {
+            //        return View();
+            //}
+            //to:  public IActionResult WeeklyCleaning()
+            //{
+            //    return View();
+            //}
+            //It works, even though this site doesn't work:https://localhost:44379/WeeklyCleaning/WeeklyCleaning
+            //this site works: https://localhost:44379/Home/WeeklyCleaning
+            //I also try to pass values from WeeklyCleaning.cshtml
+            //that user inputs by changing from:  public IActionResult WeeklyCleaning()
+            //    {
+            //        return View();
+            //}
+            //to: [HttpPost]
+            //public IActionResult WeeklyCleaning(WeeklyCleaningModel model)
+            //{
+            //    return View();
+            //}
+            //2.2.2022. I commit all and push with message "Fixing Models, Views and Controllers
+            //for https://localhost:44379/Home/WeeklyCleaning 2.2.2022."
+
+            /*2.2.2022. I create a local wordpress database with help
+                of this tutorial: https://themeisle.com/blog/install-xampp-and-wordpress-locally/
+            to be able to modify the code of website more than on the wordpress
+            web edit page https://wordpress.com/page/attilastarkenius.com/30
+            a "critical error has occurred" is the only
+            thing that I see on http://localhost/attilastarkenius/wordpress/wp-admin/setup-config.php?step=2
+            so I instead edit https://wordpress.com/page/attilastarkenius.com/30 and because I still
+            haven't found working input text box in wordpress I add from menu block -> form -> no specific form
+            because the suggestions didn't fit now the block looks like this: Veckostädning
+            Postnummer(måste anges)
+            Boyta i Kvadratmeter(måste anges)
+            Fyll i postnummer och boyta så får du en prisuppskattning direkt
+            Kontakta oss
+
+            I use this website to try to add
+            Wordpress project in this Visual Studio project: https://codewithmukesh.com/blog/running-wordpress-on-aspnet-core/
+            I also use this site as an additional help: https://www.youtube.com/watch?v=TaixtoHZNaA&ab_channel=Hacked
+            I install from php visual studio extensions.
+            */
+
+                                /*5.2.2022. I try to add
+                                  my wordpress project to my visual studio with help of these two websites: https://codewithmukesh.com/blog/running-wordpress-on-aspnet-core/
+                                and: https://www.youtube.com/watch?v=TaixtoHZNaA&ab_channel=Hacked
+                                I install wordpress nuget package: Install-Package PeachPied.WordPress.AspNetCore -Version 5.5.1-preview1
+                                I commit and push with message "Install Wordpress package called PeachPied 5.2.2022."
+                                */
+
+                                /*5.2.2022. I continue to edit wordpress site https://attilastarkenius.com/
+                                in the edit page https://wordpress.com/page/attilastarkenius.com/2
+                                by trying to add menu with help of this website:
+                                https://www.wpbeginner.com/beginners-guide/how-to-add-navigation-menu-in-wordpress-beginners-guide/
+                                First I go to the https://attilastarkenius.wordpress.com/wp-admin/nav-menus.php page,
+                                then add Menu with name Top Navigation Menu, and then "Save Menu"
+                                and then edit settings in https://attilastarkenius.wordpress.com/wp-admin/nav-menus.php?action=edit&menu=1372324
+                                like: Check "Add automatically new pages with the menu"
+                                and check also all existing pages and "Save Menu". I commit and push with
+                                message "Add Wordpress menu to attilastarkenius.com 5.2.2022.*/
+
+                                /*7.2.2022. Now there is the menu
+                                I made and https://attilastarkenius.com/ looks like this:
+                                WEBBPLATSRUBRIK Hem Veckostädning and https://attilastarkenius.com/veckostadning/
+                                has the same menu. I am about to add things like "Så hanterar vi covid-19"-menu
+                                which I do by going to: https://attilastarkenius.wordpress.com/wp-admin/nav-menus.php
+                                and "Create a menu" and give it a name "covid-19" and check
+                                "automatically add pages to this menu" and click "Create the menu".
+                                Then, now that the menu is created, I add "custom link" https://www.hemfrid.se/covid-19
+                                with the link text: Så hanterar vi covid-19
+                                Because that menu doesn't show up I go to https://attilastarkenius.wordpress.com/wp-admin/nav-menus.php?menu=1372326
+                                "add to every page" and save menu. Because still nothing shows up
+                                I go to https://attilastarkenius.wordpress.com/wp-admin/nav-menus.php?action=locations
+                                There is text "Your theme supports only 2 menus. Please choose: Primary navigation or Social navigation
+                                so I save "covid-19" as Social navigation. Now
+                                https://attilastarkenius.com/ looks like this: WEBBPLATSRUBRIK
+                                Hem
+                                Veckostädning
+                                with an image xmlns="http://www.w3.org/2000/svg" with links leading
+                                to https://attilastarkenius.com/, https://attilastarkenius.com/veckostadning/ and
+                                https://www.hemfrid.se/covid-19. I commit and push with message
+                                "Add covid-19 menu to https://attilastarkenius.com/ 7.2.2022."*/
+
+                                /*18.2.2022. When I run the project I come
+                                 to page https://localhost:44379/ which has a menu
+                                that looks like this: httpswwwhemfridse Home Privacy
+                                I try to change it to similar to Hemfrid.se like this:
+                            Städning
+                            Veckostädning Storstädning Flyttstädning Fönsterputs Kontorsstädning
+
+                            Flytt
+                            Flytthjälp Flyttstädning Enklare hantverk Återvinning Kontorsflytt
+
+                            Trädgård
+                            Trädgårdshjälp Trädbeskärning
+
+                            Omsorg
+                            Vardagsomsorg
+
+                            För företag
+                            För bostadsrättsföreningar Kontorsstädning Kontorsflytt Löneförmån
+
+                            Här finns vi
+                            Stockholm Göteborg Malmö Uppsala Västerås Linköping & Norrköping
+                            Om Hemfrid
+                            Vanliga frågor Kontakt Jobba hos oss Hållbarhet Rutavdrag Hemfrids app
+                            Beställ städning so I
+                            go to Views\Shared\_Layout.cshtml file and edit there*/
+
+
+                                //[HttpPost]
+                                public IActionResult WeeklyCleaning(WeeklyCleaningModel model)
+        {
+        return View();
+        }
+
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error()
+        {
+        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+        }
+        }
+        to this:
+            using httpswwwhemfridse.Models;
+        using Microsoft.AspNetCore.Mvc;
+        using Microsoft.Extensions.Logging;
+        using System;
+        using System.Collections.Generic;
+        using System.Diagnostics;
+        using System.Drawing;
+        using System.Drawing.Imaging;
+        using System.IO;
+        using System.Linq;
+        using System.Net;
+        using System.Threading.Tasks;
+        using System.Web.Mvc;
+
+
+        namespace httpswwwhemfridse.Controllers
+        {
+            public class HomeController : Controller
+            {
+                private readonly ILogger<HomeController> _logger;
+
+                public HomeController(ILogger<HomeController> logger)
+                {
+                    _logger = logger;
+                }
+
+                //2.3.2022. I add "Swedish kronas per hour with RUT-deduction" like this:
+                //public IActionResult WeeklyCleaningPrice()
+                //{
+                //    return View();
+                //}
+                public IActionResult Index()
+                {
+                    // Add action logic here
+                    throw new NotImplementedException();
+                    //return View();
+                }
+
+                public ActionResult Details(int Id)
+                {
+
+                    return View("Details");
+                }
+
+                public IActionResult Privacy()
+                {
+                    return View();
+                }
+
+                //     10.3.2022. I create to https://www.hemfrid.se/flyttstadning corresponding
+                //    FinalCleaning.cshtml and add with help of this website https://www.formget.com/javascript-auto-submit-form/:
+                //    // Form submit function.
+                //function submitform()
+                //    {
+                //        if (validate()) // Calling validate function.
+                //        {
+                //            alert('Form is submitting.....');
+                //            document.getElementById("form").submit();
+                //        }
+                //    }
+                //    I also add FinalCleaning action method in Homecontroller
+                /*and in that FinalCleaning method I add code for counting of
+                FinalCleaning price with help of this website: https://www.infoworld.com/article/3568209/how-to-pass-parameters-to-action-methods-in-asp-net-core-mvc.html public IActionResult FinalCleaning()
+        so I create a mapp "Repositories" and add CleaningModelRepository.cs to it: List<Author> authors = new List<Author>()
+                {
+                    new Author
+                    {
+                        Id = 1,
+                        FirstName = "Joydip",
+                        LastName = "Kanjilal"
+                    },
+                    new Author
+                    {
+                        Id = 2,
+                        FirstName = "Steve",
+                        LastName = "Smith"
+                    }
+                };
+                public Author GetAuthor(int id)
+                {
+                    return authors.FirstOrDefault(a => a.Id == id);
+                }
+                public List<Author> GetAuthors(int pageNumber = 1)
+                {
+                    int pageSize = 10;
+                    int skip = pageSize * (pageNumber - 1);
+                    if (authors.Count < pageSize)
+                        pageSize = authors.Count;
+                    return authors
+                      .Skip(skip)
+                      .Take(pageSize).ToList();
+                }
+                public bool Save(Author author)
+                {
+                    var result = authors.Where(a => a.Id == author.Id);
+                    if (result != null)
+                    {
+                        if (result.Count() == 0)
+                        {
+                            authors.Add(author);
+                            return true;
+                        }
+                    }
+                    return false;
+                }
+
+                and add this to FinalCleaning action method in Homecontroller:
+        [HttpGet]
+        [Route("Default/GetAuthor/{authorId:int}")]
+        public IActionResult GetAuthor(int authorId)
+        {
+           var data = authorRepository.GetAuthor(authorId);
+           return View(data);
+        }*/
+
+                public IActionResult ClothCombinationPriceEstimation()
+                {
+                    return View();
+                }
+
+                public IActionResult FinalCleaning()
+                {
+                    return View();
+                }
+
+                public IActionResult Cleaning()
+                {
+                    using (WebClient webClient = new WebClient())
+                    {
+                        //byte[] data = webClient.DownloadData("https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-xpf1/v/t34.0-12/10555140_10201501435212873_1318258071_n.jpg?oh=97ebc03895b7acee9aebbde7d6b002bf&oe=53C9ABB0&__gda__=1405685729_110e04e71d9");
+                        /*9.3.2022. I change this: byte[] data = webClient.DownloadData("https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-xpf1/v/t34.0-12/10555140_10201501435212873_1318258071_n.jpg?oh=97ebc03895b7acee9aebbde7d6b002bf&oe=53C9ABB0&__gda__=1405685729_110e04e71d9");
+                        to my facebook image page link: byte[] data = webClient.DownloadData("https://scontent-arn2-1.xx.fbcdn.net/v/t39.30808-1/271976368_10224722170354716_5953490547982226678_n.jpg?stp=c0.8.50.50a_cp0_dst-jpg_p50x50&_nc_cat=104&ccb=1-5&_nc_sid=bbed71&_nc_ohc=AaohApX2LuQAX_5QQhz&_nc_ht=scontent-arn2-1.xx&oh=00_AT9HKosEtIfAJePg7ZsDg78J5uL2XI6FgW4ywU8rIi2FgA&oe=622CC622");
+                        */
+                        byte[] data = webClient.DownloadData("https://scontent-arn2-1.xx.fbcdn.net/v/t39.30808-1/271976368_10224722170354716_5953490547982226678_n.jpg?stp=c0.8.50.50a_cp0_dst-jpg_p50x50&_nc_cat=104&ccb=1-5&_nc_sid=bbed71&_nc_ohc=AaohApX2LuQAX_5QQhz&_nc_ht=scontent-arn2-1.xx&oh=00_AT9HKosEtIfAJePg7ZsDg78J5uL2XI6FgW4ywU8rIi2FgA&oe=622CC622");
+
+                        using (MemoryStream mem = new MemoryStream(data))
+                        {
+                            using (var yourImage = Image.FromStream(mem))
+                            {
+
+                                /*I try to add with help of this website: https://bytes.com/topic/c-sharp/answers/233627-how-create-empty-image
+                                an empty jpg file like this: Stream stream = new FileStream( "image.jpg", FileMode.xxx, FileAccess.xxx )
+                                */
+                                //Stream stream = new FileStream("image.jpg", FileMode.xxx, FileAccess.xxx)
+                                /*It doesn't work, it still requires an existing image file so I download
+                                it as facebookProfilePicture.jpg to C:\Users\symph\source\repos\httpswwwpandycocampaignflyttform\httpswwwhemfridse\facebookProfilePicture.jpg:
+                                so I change                         yourImage.Save("path_to_your_file.jpg", ImageFormat.Jpeg);
+        to:                         yourImage.Save("C:\Users\symph\source\repos\httpswwwpandycocampaignflyttform\httpswwwhemfridse\facebookProfilePicture.jpg
+        ", ImageFormat.Jpeg);
+                                and obviously I have to create Cleaning.cshtml in Views/Home map
+                                and I use CleaningModel.cs
+                                as the model for the Cleaning.csthml view and choose "Details" template
+                                and it looks like this: @model httpswwwhemfridse.Models.CleaningModel
+
+        @{
+            ViewData["Title"] = "Cleaning";
+        }
+
+        <h1>
+            Städning för hem och kontor
+        </h1>
+
+        <div>
+            <h4>CleaningModel</h4>
+            <hr />
+            <dl class="row">
+                <dt class = "col-sm-2">
+                    @Html.DisplayNameFor(model => model.firstName)
+                </dt>
+                <dd class = "col-sm-10">
+                    @Html.DisplayFor(model => model.firstName)
+                </dd>
+            </dl>
+        </div>
+        <div>
+            @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey
+                            }) |
+
+        < a asp - action = "Index" > Back to List</ a >
+        </ div >
+        9.3.2022. I commit and push with message: "Fixing Cleaning action method and Cleaning.cshtml 9.3.2022."
+        */
+
+                                yourImage.Save("C:/Users/symph/source/repos/httpswwwpandycocampaignflyttform/httpswwwhemfridse/facebookProfilePicture.jpg", ImageFormat.Jpeg);
+                                return View();
+
+                            }
+                        }
+
+                    }
+
+
+
+        //                using (WebClient webClient = new WebClient())
+        //{
+        //    byte[] data = webClient.DownloadData("https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-xpf1/v/t34.0-12/10555140_10201501435212873_1318258071_n.jpg?oh=97ebc03895b7acee9aebbde7d6b002bf&oe=53C9ABB0&__gda__=1405685729_110e04e71d9");
+
+        //   using (MemoryStream mem = new MemoryStream(data))
+        //   {
+        //       using (var yourImage = Image.FromStream(mem))
+        //       {
+        //          // If you want it as Png
+        //           yourImage.Save("path_to_your_file.png", ImageFormat.Png) ;
+
+        //          // If you want it as Jpeg
+        //           yourImage.Save("path_to_your_file.jpg", ImageFormat.Jpeg) ;
+        //       }
+        //   }
+
+        //}
+
+        //}
+                    //return View();
+                }
+
+                /*9.3.2022. I create  public IActionResult Cleaning()
+                {
+                    return View();
+            }
+        where I move this code from CleaningModel.cs:         using (WebClient webClient = new WebClient())
+        {
+            byte[] data = webClient.DownloadData("https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-xpf1/v/t34.0-12/10555140_10201501435212873_1318258071_n.jpg?oh=97ebc03895b7acee9aebbde7d6b002bf&oe=53C9ABB0&__gda__=1405685729_110e04e71d9");
+
+           using (MemoryStream mem = new MemoryStream(data))
+           {
+               using (var yourImage = Image.FromStream(mem))
+               {
+                  // If you want it as Png
+                   yourImage.Save("path_to_your_file.png", ImageFormat.Png) ;
+
+                  // If you want it as Jpeg
+                   yourImage.Save("path_to_your_file.jpg", ImageFormat.Jpeg) ;
+               }
+           }
+
+        }
+
+        }
+
+                //        using (WebClient webClient = new WebClient())
+        //{
+        //    byte[] data = webClient.DownloadData("https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-xpf1/v/t34.0-12/10555140_10201501435212873_1318258071_n.jpg?oh=97ebc03895b7acee9aebbde7d6b002bf&oe=53C9ABB0&__gda__=1405685729_110e04e71d9");
+
+        //   using (MemoryStream mem = new MemoryStream(data))
+        //   {
+        //       using (var yourImage = Image.FromStream(mem))
+        //       {
+        //          // If you want it as Png
+        //           yourImage.Save("path_to_your_file.png", ImageFormat.Png) ;
+
+        //          // If you want it as Jpeg
+        //           yourImage.Save("path_to_your_file.jpg", ImageFormat.Jpeg) ;
+        //       }
+        //   }
+
+        //}
+
+        //}
+
+
+
+
+
+            //Also Homecontroller.cs just returns views which is not a lot for a controller in a MVC application.
+            //    I create IActionResult Veckostadning, just like there is similar Index and
+            //    Privacy methods: public IActionResult Veckostadning()
+            //    {
+            //        return View();
+            //}
+
+            //public IActionResult Veckostadning()
+            //    {
+            //        return View();
+            //    }
+            //2.2.2022. I think the issue is
+            //this I change in HomeController from: public IActionResult Veckostadning()
+
+            //            {
+            //        return View();
+            //}
+            //to:  public IActionResult WeeklyCleaning()
+            //{
+            //    return View();
+            //}
+            //It works, even though this site doesn't work:https://localhost:44379/WeeklyCleaning/WeeklyCleaning
+            //this site works: https://localhost:44379/Home/WeeklyCleaning
+            //I also try to pass values from WeeklyCleaning.cshtml
+            //that user inputs by changing from:  public IActionResult WeeklyCleaning()
+            //    {
+            //        return View();
+            //}
+            //to: [HttpPost]
+            //public IActionResult WeeklyCleaning(WeeklyCleaningModel model)
+            //{
+            //    return View();
+            //}
+            //2.2.2022. I commit all and push with message "Fixing Models, Views and Controllers
+            //for https://localhost:44379/Home/WeeklyCleaning 2.2.2022."
+
+            /*2.2.2022. I create a local wordpress database with help
+                of this tutorial: https://themeisle.com/blog/install-xampp-and-wordpress-locally/
+            to be able to modify the code of website more than on the wordpress
+            web edit page https://wordpress.com/page/attilastarkenius.com/30
+            a "critical error has occurred" is the only
+            thing that I see on http://localhost/attilastarkenius/wordpress/wp-admin/setup-config.php?step=2
+            so I instead edit https://wordpress.com/page/attilastarkenius.com/30 and because I still
+            haven't found working input text box in wordpress I add from menu block -> form -> no specific form
+            because the suggestions didn't fit now the block looks like this: Veckostädning
+            Postnummer(måste anges)
+            Boyta i Kvadratmeter(måste anges)
+            Fyll i postnummer och boyta så får du en prisuppskattning direkt
+            Kontakta oss
+
+            I use this website to try to add
+            Wordpress project in this Visual Studio project: https://codewithmukesh.com/blog/running-wordpress-on-aspnet-core/
+            I also use this site as an additional help: https://www.youtube.com/watch?v=TaixtoHZNaA&ab_channel=Hacked
+            I install from php visual studio extensions.
+            */
+
+                                /*5.2.2022. I try to add
+                                  my wordpress project to my visual studio with help of these two websites: https://codewithmukesh.com/blog/running-wordpress-on-aspnet-core/
+                                and: https://www.youtube.com/watch?v=TaixtoHZNaA&ab_channel=Hacked
+                                I install wordpress nuget package: Install-Package PeachPied.WordPress.AspNetCore -Version 5.5.1-preview1
+                                I commit and push with message "Install Wordpress package called PeachPied 5.2.2022."
+                                */
+
+                                /*5.2.2022. I continue to edit wordpress site https://attilastarkenius.com/
+                                in the edit page https://wordpress.com/page/attilastarkenius.com/2
+                                by trying to add menu with help of this website:
+                                https://www.wpbeginner.com/beginners-guide/how-to-add-navigation-menu-in-wordpress-beginners-guide/
+                                First I go to the https://attilastarkenius.wordpress.com/wp-admin/nav-menus.php page,
+                                then add Menu with name Top Navigation Menu, and then "Save Menu"
+                                and then edit settings in https://attilastarkenius.wordpress.com/wp-admin/nav-menus.php?action=edit&menu=1372324
+                                like: Check "Add automatically new pages with the menu"
+                                and check also all existing pages and "Save Menu". I commit and push with
+                                message "Add Wordpress menu to attilastarkenius.com 5.2.2022.*/
+
+                                /*7.2.2022. Now there is the menu
+                                I made and https://attilastarkenius.com/ looks like this:
+                                WEBBPLATSRUBRIK Hem Veckostädning and https://attilastarkenius.com/veckostadning/
+                                has the same menu. I am about to add things like "Så hanterar vi covid-19"-menu
+                                which I do by going to: https://attilastarkenius.wordpress.com/wp-admin/nav-menus.php
+                                and "Create a menu" and give it a name "covid-19" and check
+                                "automatically add pages to this menu" and click "Create the menu".
+                                Then, now that the menu is created, I add "custom link" https://www.hemfrid.se/covid-19
+                                with the link text: Så hanterar vi covid-19
+                                Because that menu doesn't show up I go to https://attilastarkenius.wordpress.com/wp-admin/nav-menus.php?menu=1372326
+                                "add to every page" and save menu. Because still nothing shows up
+                                I go to https://attilastarkenius.wordpress.com/wp-admin/nav-menus.php?action=locations
+                                There is text "Your theme supports only 2 menus. Please choose: Primary navigation or Social navigation
+                                so I save "covid-19" as Social navigation. Now
+                                https://attilastarkenius.com/ looks like this: WEBBPLATSRUBRIK
+                                Hem
+                                Veckostädning
+                                with an image xmlns="http://www.w3.org/2000/svg" with links leading
+                                to https://attilastarkenius.com/, https://attilastarkenius.com/veckostadning/ and
+                                https://www.hemfrid.se/covid-19. I commit and push with message
+                                "Add covid-19 menu to https://attilastarkenius.com/ 7.2.2022."*/
+
+                                /*18.2.2022. When I run the project I come
+                                 to page https://localhost:44379/ which has a menu
+                                that looks like this: httpswwwhemfridse Home Privacy
+                                I try to change it to similar to Hemfrid.se like this:
+                            Städning
+                            Veckostädning Storstädning Flyttstädning Fönsterputs Kontorsstädning
+
+                            Flytt
+                            Flytthjälp Flyttstädning Enklare hantverk Återvinning Kontorsflytt
+
+                            Trädgård
+                            Trädgårdshjälp Trädbeskärning
+
+                            Omsorg
+                            Vardagsomsorg
+
+                            För företag
+                            För bostadsrättsföreningar Kontorsstädning Kontorsflytt Löneförmån
+
+                            Här finns vi
+                            Stockholm Göteborg Malmö Uppsala Västerås Linköping & Norrköping
+                            Om Hemfrid
+                            Vanliga frågor Kontakt Jobba hos oss Hållbarhet Rutavdrag Hemfrids app
+                            Beställ städning so I
+                            go to Views\Shared\_Layout.cshtml file and edit there*/
+
+
+                                //[HttpPost]
+                                public IActionResult WeeklyCleaning(WeeklyCleaningModel model)
+        {
+        return View();
+        }
+
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error()
+        {
+        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+        }
+        }
+    In HomeController.cs using System.Web.Mvc;
+    gives me error Severity	Code	Description	Project	File	Line	Suppression State
+    Error	CS0234	The type or namespace name 'Mvc' does not exist in the namespace 'System.Web' (are you missing an assembly reference?)	httpswwwhemfridse	C:\Users\Attila\source\repos\httpswwwpandycocampaignflyttform\httpswwwhemfridse\Controllers\HomeController.cs	13	Active
+    so I google a solution in web page https://stackoverflow.com/questions/22325964/the-type-or-namespace-name-mvc-does-not-exist
+        which means I "browse for the MVC package (Tools -> Nuget Package Manager -> Manage Nuget Packages for Solution)"*@
+
+@* 8.8.2022. I want to learn to make in Javascript language
         Price comparison page similar to https://www.pricerunner.se/
         so I begin with
         help of website https://www.w3schools.com/howto/howto_css_search_button.asp
