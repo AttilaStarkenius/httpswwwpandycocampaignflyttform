@@ -314,3 +314,10 @@ Now, I hope you understand the need and importance of Generics in C#.*/
 
 /* 18.10.2022. I commit and push to git changes with message "18.10.2022. Making BlazorApp and beginning
 working with GenericsDemo*/
+
+/*21.10.2022. After I have bought new computer I get issue
+"No active git repository" so I clone git repository
+on this website: https://github.com/login/oauth/authorize?client_id=a200baed193bb2088a6e&redirect_uri=http%3A%2F%2Flocalhost%3A61630%2F&scope=user%2Crepo%2Cgist%2Cwrite%3Apublic_key%2Cread%3Aorg%2Cworkflow&state=381791dc-d529-444d-b61b-b69f3f4b07d9
+like this: Skip to content Authorize Visual Studio @AttilaStarkeniusVisual Studio by GitHub wants to access your AttilaStarkenius account Gists Read and write access Organizations and teams Read-only access Repositories Public and private Personal user data Full access Workflow Update GitHub Action Workflow files. Public SSH keys Read and write access Authorizing will redirect to http://localhost:61630 Owned & operated by GitHub Created 8 years ago More than 1K GitHub users Learn more about OAuth
+I commit and push to Git Changes with 
+message: "21.10.2022. Cloning Github repository to my new computer"*/

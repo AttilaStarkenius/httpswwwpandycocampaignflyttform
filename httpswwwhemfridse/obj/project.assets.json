@@ -18797,24 +18797,28 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Attila\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\symph\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Attila\\source\\repos\\httpswwwpandycocampaignflyttform\\httpswwwhemfridse\\httpswwwhemfridse.csproj",
+      "projectUniqueName": "C:\\Users\\symph\\Source\\Repos\\AttilaStarkenius\\httpswwwpandycocampaignflyttform\\httpswwwhemfridse\\httpswwwhemfridse.csproj",
       "projectName": "httpswwwhemfridse",
-      "projectPath": "C:\\Users\\Attila\\source\\repos\\httpswwwpandycocampaignflyttform\\httpswwwhemfridse\\httpswwwhemfridse.csproj",
-      "packagesPath": "C:\\Users\\Attila\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Attila\\source\\repos\\httpswwwpandycocampaignflyttform\\httpswwwhemfridse\\obj\\",
+      "projectPath": "C:\\Users\\symph\\Source\\Repos\\AttilaStarkenius\\httpswwwpandycocampaignflyttform\\httpswwwhemfridse\\httpswwwhemfridse.csproj",
+      "packagesPath": "C:\\Users\\symph\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\symph\\Source\\Repos\\AttilaStarkenius\\httpswwwpandycocampaignflyttform\\httpswwwhemfridse\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Attila\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\symph\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -18890,7 +18894,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   },
